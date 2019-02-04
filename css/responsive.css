@@ -1,0 +1,770 @@
+@media (min-width: 1920px) {	
+}
+/* Normal desktop :1170px. */
+@media (min-width: 1170px) and (max-width: 1349px) {	
+}
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {	
+.header-area.stick .main-menu ul.navbar-nav li a {
+    padding: 28px 0px;
+}
+.well-services {
+    padding: 30px 15px;
+}
+.number{
+	font-size: 150px;
+}
+.single-service {
+    padding: 20px 12px 5px;
+}
+.single-service h4 {
+    font-size: 19px;
+}
+.fun-content {
+    padding: 60px 20px;
+}
+.project-headline h3 {
+    font-size: 25px;
+}
+.single-awesome-project:hover .add-actions {
+    top: 10%;
+}
+.quote-contact {
+    padding: 0px 30px;
+}
+.single-contact {
+    padding-right: 10px;
+}
+.single-contact span {
+    font-size: 15px;
+}
+.blog-content {
+    padding: 30px 10px;
+}	
+.blog-content a h4 {
+    font-size: 17px;
+}	
+.blog-content p {
+    font-size: 14px;
+}	
+span.share-link {
+    margin-left: 20%;
+}	
+.intro-2 .layer-1 h1 {
+    max-width: 880px;
+}	
+.about-content h3 {
+    font-size: 24px;
+}	
+span.about-icon {
+    float: none;
+    display: block;
+}	   
+    
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.header-area .main-menu ul.navbar-nav > li > a {
+    font-size: 12px;
+    margin: 0px 12px;
+    padding: 30px 0px;
+}
+.header-area.stick .header-right-link a.main-search {
+    padding: 17px 0px 18px 5px;
+}	
+.header-area.stick .main-menu ul.navbar-nav > li > a{
+    font-size: 12px;
+    margin: 0px 12px;
+    padding: 27px 0px;
+}
+.header-area.stick .logo a {
+    padding: 11px 0;
+}
+.logo a {
+    padding: 13px 0;
+}
+.header-right-link a.main-search {
+    padding: 20px 0px 20px 5px;
+}
+.layer-1 h1 {
+    font-size: 34px;
+    line-height: 44px;
+    margin: 10px 0px;
+    max-width: 630px;
+}	
+.layer-2 p {
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 26px;
+}
+.slider-content {
+    margin-top: -135px;
+}
+.about-content p{
+	display: none;
+}	
+.about-content h3 {
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}	
+.left-head h4 {
+    font-size: 20px;
+}
+.single-service {
+    padding: 20px 15px 5px;
+}	
+.fun-content {
+    padding: 60px 10px;
+}
+.quote-contact {
+    padding: 0px 30px;
+}
+.project-headline h3 {
+    font-size: 20px;
+    line-height: 28px;
+    padding-right: 15px;
+}	
+.project-headline p {
+    padding-left: 15px;
+}	
+.project-single {
+    width: 50%;
+}	
+.testi-img img{
+	max-width: 80px;
+}
+.brand-items {
+    padding: 0px 10px;
+}
+.banner-content h3 {
+    font-size: 24px;
+    padding: 0px 20px;
+}	
+.blog-content a h4 {
+    font-size: 16px;
+}	
+.footer-services-link ul.footer-list {
+    width: 100%;
+    float: none;
+}	
+.footer-icons ul li a {
+    margin-right: 0px;
+}
+.header-area.header-area-2 .main-menu ul.navbar-nav > li > a {
+    padding: 22px 0px;
+}
+.header-area.header-area-2 .logo a {
+    padding: 8px 0;
+}
+.header-area.header-area-2 .header-right-link a.main-search {
+    padding: 12px 0px 12px 5px;
+}
+.intro-2 .layer-1 h1 {
+    max-width: 580px;
+}	
+.intro-2 .layer-2 p {
+    max-width: 560px;
+}
+.intro-2 .slider-content {
+    margin-top: -80px;
+}	
+.about-2 .about-content {
+    padding: 80px 30px 80px 30px;
+}
+span.about-icon {
+    float: none;
+    margin-right: 0px;
+    display: block;
+    margin-bottom: 10px;
+}	
+.blog-right-column .blog-image {
+    display: none;
+}	
+.blog-right-column .blog-content {
+    width: 100%;
+}
+.header-area.header-area-3 .main-menu ul.navbar-nav > li > a {
+    padding: 20px 0px;
+}
+.header-middle-area .header-info:first-child {
+    display: none;
+}
+.header-middle-area .header-info {
+    width: 50%;
+    float: left;
+}
+.about-3 .about-content {
+    padding: 0px;
+}	
+.about-3 .about-content h3 {
+    line-height: 30px;
+    font-size: 22px;
+}	
+span.sign {
+    width: 110px;
+}
+.header-area.header-area-4 .main-menu ul.navbar-nav > li > a {
+    padding: 22px 0px;
+}
+.header-area.header-area-4 .logo a {
+    padding: 8px 0;
+}
+.header-area.header-area-4 .header-right-link a.main-search {
+    padding: 12px 0px 12px 5px;
+}
+.intro-4 .slider-content {
+    margin-top: -85px;
+}
+.intro-4 .layer-1 h1 {
+    max-width: 580px;
+	margin-bottom: 10px;
+}
+.welcome-3 .well-services,
+.welcome-4 .well-services{
+    padding: 40px 15px 25px;
+}
+.welcome-3 .number, 
+.welcome-4 .number {
+    left: 55%;
+}	
+.welcome-3 .well-icon,
+.welcome-4 .well-icon{
+    display:block;
+    float: none;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}	
+.center-head h3 {
+    max-width: 590px;
+    font-size: 26px;
+    line-height: 36px;
+}	
+.project-3 .awesome-img img {
+    width: 100%;
+}	
+.project-3 .add-actions {
+    left: 10%;
+    top: 13%;
+    width: 80%;
+}	
+.intro-4 .layer-1 h1{
+  max-width: inherit;
+}
+.intro-5 .layer-1 h1 {
+    line-height: 42px;
+}
+.intro-5 .layer-2 p {
+    max-width: 600px;
+}
+.intro-5 .slider-content {
+    margin-top: -120px;
+}
+.video-content {
+    margin-top: -50px;
+}
+.team-content {
+    min-height: 450px;
+}
+.header-area.header-area-6 .main-menu ul.navbar-nav > li > a {
+    padding: 22px 0px;
+}
+.header-area.header-area-6 .logo a {
+    padding: 8px 0;
+}
+.header-area.header-area-6 .header-right-link a.main-search {
+    padding: 12px 0px 12px 5px;
+}
+.intro-6 .layer-1 h1 {
+    font-size: 32px;
+    line-height: 38px;
+}
+.intro-6 .slider-content {
+    margin-top: -70px;
+}
+.welcome-6 .well-services {
+    padding: 50px 15px 30px;
+}
+.intro-2 .intro-content, .intro-2 .slider-images img,
+.intro-4 .intro-content, .intro-4 .slider-images img,
+.intro-6 .intro-content, .intro-6 .slider-images img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+}
+span.share-link {
+    margin-left: 30%;
+}	
+.topbar-left ul li:last-child{
+	display: none;
+}	
+.footer-5 .footer-about-top {
+    padding: 60px 30px;
+    margin-bottom: -179px;
+}	
+.main-menu ul.nav li ul.sub-menu {
+    left: -50px;
+}
+.header-area-3.stick .header-right-link a.main-search {
+    padding: 10px 0px 10px 10px;
+}
+.header-area-3 .main-menu ul.nav li ul.sub-menu {
+    left: 0px;
+}	
+.project-headline p {
+    font-size: 14px;
+    margin-top: 0;
+}	
+.feature-service h5 {
+    font-size: 16px;
+}	
+.faq-full {
+    margin-top: 30px;
+}	
+.fullwidth-service	.faq-full {
+    margin-top: 0px;
+}
+.add-actions {
+    padding: 15px;
+}	
+.project-page-4 .project-single {
+    width: 33.33%;
+    float: left;
+}	
+.contact-head {
+    margin-top: 30px;
+}	
+.recent-post .post-img {
+    display: none;
+}	
+.recent-post .pst-content {
+    float: none;
+    width: 100%;
+    padding-left: 0px;
+}	
+.blog-search-option input {
+    width: 75%;
+}	
+.blog-details .blog-content h4 {
+    font-size: 20px;
+    line-height: 28px;
+}
+.comments-list-img {
+    width: 60px;
+    height: auto;
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {width:300px}
+.logo {
+    height: inherit;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    z-index: 999999;
+    max-width: 130px;
+}
+.logo a {
+    padding: 0px;
+}
+.slider-content {
+    margin-top: -90px;
+}
+.intro-3 .slider-content {
+    margin-top: -105px;
+}
+.intro-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev, 
+.intro-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
+.testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev, 
+.testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
+.services-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev, 
+.services-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next{
+	display: none !important;
+}
+.layer-1 {
+    margin: 5px 0;
+}
+.layer-1 h1 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
+}
+.layer-2 p {
+    display: none;
+}
+ .ready-btn.right-btn {
+    margin-left: 5px;
+}   
+.ready-btn {
+    margin-top: 0px;
+    padding: 6px 0px;
+    width: 128px;
+    font-size: 12px;
+}   
+.intro-area {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    margin-top: 0px;
+}
+.intro-content,
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+}
+.about-content h3 {
+    line-height: 28px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.video-play.vid-zone {
+    font-size: 24px;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+}
+.left-head {
+    margin-bottom: 40px;
+}
+.single-service {
+    padding: 20px 12px 5px;
+}
+.fun-content {
+    padding: 60px 20px;
+}
+.single-fun {
+    margin: 15px 0px;
+}
+.project-headline h3 {
+    width: 100%;
+    float: none;
+    padding-right: 0px;
+	margin-bottom: 20px;
+}
+.project-headline p {
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+	margin-bottom: 40px;
+}
+.project-headline::after{
+	display: none;
+}
+.project-single,
+.project-page-2 .project-single,
+.project-page-3 .project-single,
+.project-page-4 .project-single{
+    width: 100%;
+    float: none;
+}
+.project-menu {
+    margin: 0px 0px 30px;
+}
+.project-menu li {
+    width: 50%;
+}		
+.quote-contact {
+    padding: 0px 30px;
+}	
+.single-contact {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+}
+.testi-img {
+    margin-right: 10px;
+}
+.testi-img img {
+    max-width: 60px;
+}	
+.single-testi {
+    padding: 30px 10px;
+}	
+.testi-text {
+    padding-left: 75px;
+}	
+.banner-content h3 {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0px 15px;
+}
+.single-brand-item {
+    float: none;
+    width: 100%;
+}		
+.footer-content{
+	margin-top: 50px;
+}	
+.footer-about-top {
+    background: transparent;
+    padding: 91px 0px;
+	margin-top: 0px;
+}
+.footer-5 .footer-about-top {
+    background: none;
+}
+.about-2 .about-content {
+    padding: 80px 15px 80px 15px;
+}	
+.single-about {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+.services-images {
+    margin-top: 30px;
+}
+.choose-content {
+    padding-left: 95px;
+}	
+.choose-image {
+    margin-top: 30px;
+}	
+.blog-right-column .blog-image {
+    display: none;
+}	
+.blog-right-column .blog-content {
+    float: none;
+    width: 100%;
+    padding: 15px 15px;
+}	
+.blog-content a h4 {
+    font-size: 18px;
+}
+.welcome-3 .well-icon {
+    margin-right: 15px;
+}
+.welcome-3 .number,
+	.welcome-4 .number{
+    left: 65%;
+}
+.counter-2 .single-fun {
+    margin: 20px 0px;
+}	
+.about-3 .about-content h3 {
+    line-height: 32px;
+    font-size: 20px;
+}	
+.about-3 .about-content {
+    padding: 20px 0px 0px 0px;
+}	
+.sign-date span,
+	.sign-name{
+    font-size: 18px;
+}
+.project-3 .project-single{
+	width: 100%;
+	float:none;
+}
+.project-3 .awesome-img img{
+    width: 100%;
+}	
+.project-3 .add-actions {
+    left: 5%;
+    width: 90%;
+	opacity: 0;
+	    transition: all 0.5s ease 0s;
+}	
+.project-3 .single-awesome-project:hover .add-actions{
+    transition: all 0.5s ease 0s;
+	opacity: 1;
+}	
+.blog-3 .blog-content p{
+   opacity: 0;
+}	
+.intro-4 .layer-1 h1 {
+    font-size: 22px;
+}
+.welcome-4 .well-icon {
+    margin-right: 15px;
+}	
+.project-menu li a {
+    font-size: 17px;
+}	
+.comments-content-wrap {
+    margin: 0 0 15px 85px;
+}
+.intro-5 .slider-content {
+    margin-top: -90px;
+}
+.intro-5 .layer-1 h1 {
+    line-height: 33px;
+    font-size: 22px;
+}	
+.center-head h3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+.services-5 .single-service h4 {
+    padding: 0px 0px;
+}
+.team-img {
+    width: 100%;
+    float: none;
+}
+.team-content {
+    width: 100%;
+    float: none;
+    min-height: 320px;
+}
+.intro-6 .layer-1 h1 {
+    font-size: 22px;
+    line-height: 34px;
+}		
+.intro-2 .slider-content,	
+.intro-4 .slider-content,	
+.intro-6 .slider-content{
+    margin-top: -55px;
+}
+.intro-2 .intro-content, .intro-2 .slider-images img,
+.intro-4 .intro-content, .intro-4 .slider-images img,
+.intro-6 .intro-content, .intro-6 .slider-images img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+.breadcrumb-bg {
+    padding: 22px 10px;
+}	
+.faq-page-area .faq-content {
+    margin-top: 30px;
+}
+.faq-page-area .faq-content h4 {
+	font-size: 20px;
+}	
+.company-faq .left-headline h3{
+	font-size: 24px;
+}
+.high-text {
+    font-size: 100px;
+    line-height: 100px;
+}	
+.high-text span,
+.high-text span img{
+    width: 100px;
+    height: 100px;
+}	
+.high-text span {
+    margin-left: -25px;
+}	
+.error-easy-text {
+    font-size: 24px;
+}	
+.error-bot {
+    font-size: 18px;
+}
+.breadcrumb ul li {
+    font-size: 14px;
+}
+.breadcrumb .section-headline h3 {
+    font-size: 32px;
+}	
+.faq-full {
+    margin-top: 30px;
+}	
+.faq-details h4.check-title {
+    font-size: 15px;
+}	
+.single-well .marker-list {
+    margin-bottom: 30px;
+}
+.breadcrumb-bg {
+    max-width: 94%;
+}
+.project-history {
+    padding: 50px 15px;
+    margin-top: 30px;
+}	
+.project-details h4 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 20px;
+}	
+.blog-search-option input {
+    width: 75%;
+}
+.blog-pagination {
+    margin-bottom: 30px;
+}
+.blog-details .blog-content h4 {
+    font-size: 18px;
+    line-height: 28px;
+}
+li.threaded-comments {
+    margin-left: 10px;
+}
+.single-post-comments {
+    margin-bottom: 50px;
+}
+.contact-head {
+    padding: 40px 15px;
+    margin-top: 40px;
+}
+	
+	
+	
+}
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+.layer-1-2 h1 {
+    font-size: 24px;
+    line-height: 32px;
+}
+.intro-area-4 .layer-1-2 h1 {
+    font-size: 24px;
+    line-height: 32px;
+}
+ .service-content h4 {
+    font-size: 26px;
+} 
+.breadcrumb .section-headline h3 {
+    font-size: 34px;
+}	
+.container-full .section-headline p {
+    max-width: 360px;
+}	
+.about-name .video-play.vid-zone {
+    margin-top: 0px;
+}	
+.single-client {
+    float: left;
+    width: 50%;
+}
+.blog-content a h4 {
+    font-size: 20px;
+}	
+.intro-content,
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}	
+.intro-2 .slider-content {
+    margin-top: -70px;
+}				
+.breadcrumb-bg {
+    max-width: 80%;
+}	
+.blog-search-option input {
+    width: 80%;
+}
+
+    
+}
+ 
