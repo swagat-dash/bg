@@ -16,3 +16,9 @@ the "distributor directory is the distributor panel...
 
 
 admin panel and e-KYC page will be commited tomorrow!
+
+
+NOTE: currently all your php files have www.rmdtechnologies.in as the header location... change it to bgtechno.in
+
+
+also, i will make a page to show insted of "die"
