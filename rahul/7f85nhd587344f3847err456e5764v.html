@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Manual Transaction Verification | BG Techno</title>
+    <title>Transaction Verification | BG Techno</title>
   
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
@@ -165,30 +165,6 @@ function getRandomImage(imgAr, path) {
       <h2 style="display: none;">Fill this form to manually verify your transaction</h2>
       <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
-    <li class="user-profile treeview">
-        <a href="services.html">
-            <span>Services Basic Info</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-        </a>
- 		<ul class="treeview-menu">
-            <li><a href="../pan.html" target="_blank">PAN card</a></li>
-            <li><a href="../gst.html" target="_blank">GST</a></li>
-            <li><a href="../aeps.html" target="_blank">AEPS</a></li>
-            <li><a href="../itr.html" target="_blank">Income Tax Returns</a></li>
-            <li><a href="../trademarks.html" target="_blank">ISO &amp; Trademarks</a></li>
-            <li><a href="../irctc.html" target="_blank">Rail Ticket Booking</a></li>
-            <li><a href="../web.html" target="_blank">Website Solutions</a></li>
-            <li><a href="../business.html" target="_blank">Business Registration</a></li>
-            <li><a href="../jharsewa.html" target="_blank">JHAR Sewa</a></li>
-            <li><a href="../digital.html" target="_blank">Digital Signature</a></li>
-            <li><a href="../software.html" target="_blank">Inventory Management</a></li>
-            <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
-        </ul>
-    </li>
-
-    <li class="nav-devider"></li>
     <li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     <li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
@@ -212,17 +188,6 @@ function getRandomImage(imgAr, path) {
           <div class="row">
             <div class="col">
             	<form novalidate>
-					<div class="form-group">
-						<h5>Full Name <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="name" class="form-control" required data-validation-required-message="Enter your full name"> </div>
-						<div class="form-control-feedback"><small>This name should match your account's name.</small></div>
-					</div>
-					<div class="form-group">
-						<h5>Email <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="email" name="email" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Enter your email"></div><div class="form-control-feedback"><small>This email should match your account's email.</small></div>
-					</div>
 					<div class="form-group">
 						<h5>Payment Method <span class="text-danger">*</span></h5>
 						<div class="controls">
@@ -257,54 +222,15 @@ function getRandomImage(imgAr, path) {
                   </span>
                 </div>
               </div>
-				<div class="bootstrap-timepicker">
-                <div class="form-group">
-                  <h5>Time of Transaction </h5>
-                  <div class="input-group">
-                    <input type="text" class="form-control timepicker" id="timepicker">
-					   <span class="input-group-addon">
-                      <i class="fa fa-clock-o"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
 
-					<div class="form-group">
-						<h5>Upload Screenshot </h5>
-						<div class="controls">
-							<input type="file" name="file" class="form-control" required> </div>
-					</div>
-					
-					<!-- 
-						<div class="form-group">
-						<h5>Product / Service <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<select name="productlist" id="productlist" required class="form-control">
-								<option value="">Select Your Product</option>
-								<option value="1">GST</option>
-								<option value="2">PAN</option>
-								<option value="3">Aadhar</option>
-								<option value="4">AePS</option>
-								<option value="5">ITR</option>
-								<option value="5">Railway Ticket Booking</option>
-								<option value="5">Web design</option>
-								<option value="6">Bulk SMS</option>
-								<option value="7">Business Registration</option>
-								<option value="8">Jhar Sewa</option>
-								<option value="9">Digital Signature</option>
-								<option value="10">Software Services</option>
-							</select>
-						</div>
-					</div>
 					<div class="form-group">
 						<h5>Amount <span class="text-danger">*</span></h5>
 						<div class="input-group"> <span class="input-group-addon">$</span>
 							<input type="number" name="onlyNum" class="form-control" required data-validation-required-message="This field is required"> <span class="input-group-addon">.00</span> </div>
 					</div> 
-					-->
 					
 					<div class="text-xs-right">
-						<button type="submit" class="btn btn-info">Verify my Transaction</button>
+						<button type="submit" class="btn btn-info">Successfull Transaction</button>
 					</div>
 				</form>
             	

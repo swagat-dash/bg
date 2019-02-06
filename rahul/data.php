@@ -1,26 +1,36 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["admin"]) || $_SESSION["admin"]!==true)
+{
+
+header("location: http://www.rmdtechnologies.in");
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Manual Transaction Verification | BG Techno</title>
-  
+    <title>Distributor's Dashboard | BG Techno</title>
+
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-<script>
+	<script type="text/javascript">
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png','avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png','avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png','avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png','avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
     
 function getRandomImage(imgAr, path) {
@@ -32,11 +42,13 @@ function getRandomImage(imgAr, path) {
 }
 </script>
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -67,29 +79,29 @@ function getRandomImage(imgAr, path) {
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <script>getRandomImage(random_images_array, '../assets/images/avatar/')</script>
+              <script type="text/javascript">getRandomImage(random_images_array, '../assets/images/avatar/')</script>
             </a>
             <ul class="dropdown-menu scale-up">
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p>Dynamic name by php variable</p>
-                  <p>Dynamic email by php variable</p></div>
+                <p><?php echo "$_SESSION[fname]" ; ?></p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
@@ -158,11 +170,32 @@ function getRandomImage(imgAr, path) {
 </div>
 <!-- inbox Modal ends -->
 
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <h4 class="modal-title">Referral Code</h4>
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+			<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
+
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <h2 style="display: none;">Fill this form to manually verify your transaction</h2>
+      
       <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="user-profile treeview">
@@ -189,183 +222,147 @@ function getRandomImage(imgAr, path) {
     </li>
 
     <li class="nav-devider"></li>
-    <li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    <li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+    <li class="active"><a href="#"><i class="fa fa-users"></i><span>Retailers</span></a></li>
+    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
-
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">  
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data Tables
+      </h1>
+    </section>
+
     <!-- Main content -->
     <section class="content">
-     
-     <!-- Basic Forms -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Transaction Update</h3>
-          <h6 class="box-subtitle">Fill the below form for verification of completion your UPI / Paytm / PhonePe or any Wallet transaction.</h6>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="row">
-            <div class="col">
-            	<form novalidate>
-					<div class="form-group">
-						<h5>Full Name <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="name" class="form-control" required data-validation-required-message="Enter your full name"> </div>
-						<div class="form-control-feedback"><small>This name should match your account's name.</small></div>
-					</div>
-					<div class="form-group">
-						<h5>Email <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="email" name="email" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Enter your email"></div><div class="form-control-feedback"><small>This email should match your account's email.</small></div>
-					</div>
-					<div class="form-group">
-						<h5>Payment Method <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<select name="payment" id="payment" required class="form-control">
-								<option value="">Select Your Payment Method</option>
-								<option value="1">Google Pay</option>
-								<option value="2">Paytm</option>
-								<option value="3">PhonePe</option>
-								<option value="4">BHIM UPI</option>
-								<option value="5">Account Transfer</option>
-								<option value="5">NEFT</option>
-								<option value="5">IMPS</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<h5>Transaction ID / Reference Number<span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="transaction-ID" class="form-control" required data-validation-required-message="Enter the transaction ID" pattern="^[a-z0-9]{6,72}$|^[A-Z0-9]{6,72}$"> </div>
-					</div>
-					<div class="form-group">
-						<h5>Confirm Transaction ID / Reference Number<span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="transaction-ID2" data-validation-match-match="transaction-ID" class="form-control" required> </div>
-					</div>
-               		<div class="form-group">
-                <h5>Date of Transaction <span class="text-danger">*</span></h5>
-                <div class="input-group date">
-           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-					<span class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </span>
-                </div>
-              </div>
-				<div class="bootstrap-timepicker">
-                <div class="form-group">
-                  <h5>Time of Transaction </h5>
-                  <div class="input-group">
-                    <input type="text" class="form-control timepicker" id="timepicker">
-					   <span class="input-group-addon">
-                      <i class="fa fa-clock-o"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-					<div class="form-group">
-						<h5>Upload Screenshot </h5>
-						<div class="controls">
-							<input type="file" name="file" class="form-control" required> </div>
-					</div>
-					
-					<!-- 
-						<div class="form-group">
-						<h5>Product / Service <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<select name="productlist" id="productlist" required class="form-control">
-								<option value="">Select Your Product</option>
-								<option value="1">GST</option>
-								<option value="2">PAN</option>
-								<option value="3">Aadhar</option>
-								<option value="4">AePS</option>
-								<option value="5">ITR</option>
-								<option value="5">Railway Ticket Booking</option>
-								<option value="5">Web design</option>
-								<option value="6">Bulk SMS</option>
-								<option value="7">Business Registration</option>
-								<option value="8">Jhar Sewa</option>
-								<option value="9">Digital Signature</option>
-								<option value="10">Software Services</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<h5>Amount <span class="text-danger">*</span></h5>
-						<div class="input-group"> <span class="input-group-addon">$</span>
-							<input type="number" name="onlyNum" class="form-control" required data-validation-required-message="This field is required"> <span class="input-group-addon">.00</span> </div>
-					</div> 
-					-->
-					
-					<div class="text-xs-right">
-						<button type="submit" class="btn btn-info">Verify my Transaction</button>
-					</div>
-				</form>
-            	
+      <div class="row">
+       <div class="col-12">
+        <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">My Retailers</h3>
+              <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
             </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						
+					</tr>
+				</tfoot>
+								<tbody>
+					
+<?php 
+
+$ap=mysqli_connect("sql310.epizy.com","epiz_23125428","JYuDJZ1qbAqqlK","epiz_23125428_anu");
+
+
+    if(!$ap)
+        {
+            die("connection failed:".mysqli_error());
+        }
+$ap5=mysqli_query($ap,"SELECT fname,lname,email,phn FROM retailers WHERE refrallcode='$_SESSION[refrallcode]' ");
+
+if(!$ap5)
+
+{
+    echo "error";
+}
+
+
+
+    if(mysqli_num_rows($ap5)>0)
+{
+        
+    while($anu=mysqli_fetch_assoc($ap5))
+      {
+            
+     echo "<tr> <td>".$anu["fname"]."</td><td>".$anu["lname"]."</td><td>".$anu["email"]."</td><td>".$anu["phn"]."</td></tr>" ;
+					
+					
+	}				
+					
+}					
+else
+         {
+
+
+             echo "no retailers found";
+
+
+            }
+
+mysqli_close($ap);
+
+
+?>
+					
+				</tbody>
+			</table>
+          	</div>
+          <!-- /.box -->          
         </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
-      
+    </div></div>
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  
+   <!-- /.content-wrapper -->
   <footer class="main-footer">
-      <div class="pull-right d-none d-sm-inline-block">
-        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.swagatdash.com/" target="_blank" style="display:none;">♥</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">FAQ</a>
-          </li>
-        </ul>
-      </div>
-      &copy; 2019 BG Techno. All Rights Reserved.
-    </footer>
+			<div class="pull-right d-none d-sm-inline-block">
+				<ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.swagatdash.com/" target="_blank" style="display:none;">♥</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0)">FAQ</a>
+					</li>
+				</ul>
+			</div>
+			&copy; 2019 BG Techno. All Rights Reserved.
+		</footer>
 
 </div>
 <!-- ./wrapper -->
+
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-	<script src="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
-    <script src="../assets/ser/js/pages/validation.js"></script>
-  
-    <script>
-    ! function(window, document, $) {
-        "use strict";
-			$("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-		}(window, document, jQuery);
-    </script>
-	<script>
-    $(function () {
-    "use strict";
-    $('.timepicker').timepicker({
-      showInputs: false
-    });
-  //Date picker
-    $('#datepicker').datepicker({
-    autoclose: true,
-    todayHighlight: true
-    });
-  });</script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.flash.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/jszip.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/pdfmake.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/vfs_fonts.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../assets/ser/js/pages/data-table.js"></script>
+
 </body>
-</html>
+
+
