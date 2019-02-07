@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="../assets/images/favicon.ico">
+<link rel="icon" href="assets/images/favicon.ico">
 <title>Password Reset | BG Techno</title>
-<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-<link rel="stylesheet" href="../assets/ser/css/master_style.css">
-<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+<link rel="stylesheet" href="assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+<link rel="stylesheet" href="assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="assets/ser/css/master_style.css">
+<link rel="stylesheet" href="assets/ser/css/skins/_all-skins.css">
 <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 
 </head>
@@ -105,15 +105,15 @@
 </footer>
 </div>
 <!-- ./wrapper -->
-<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
-<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
-<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
-<script src="../assets/ser/js/template.js"></script>
-<script src="../assets/ser/js/demo.js"></script>
-<script src="../assets/ser/js/pages/validation.js"></script>
+<script src="assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
+<script src="assets/assets/vendor_components/popper/dist/popper.min.js"></script>
+<script src="assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+<script src="assets/ser/js/template.js"></script>
+<script src="assets/ser/js/demo.js"></script>
+<script src="assets/ser/js/pages/validation.js"></script>
  <script>
     ! function(window, document, $) {
         "use strict";
