@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-if(!isset($_SESSION["admin"]) || $_SESSION["admin"]!==true)
-{
-
-header("location: http://www.rmdtechnologies.in");
-
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +30,11 @@ function getRandomImage(imgAr, path) {
     document.write(imgStr); document.close();
 }
 </script>
+<style>.box-body {
+    overflow-x: auto!important;
+}</style>
+	
+</style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -48,7 +42,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.php" class="logo">
+    <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -85,17 +79,17 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p>Dynamic name by php variable</p>
+                  <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
@@ -179,7 +173,7 @@ function getRandomImage(imgAr, path) {
 			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-			<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p id="to-copy">Dynamic referral code or link here... (this paragraph content will be copied)</p>
 				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 			</div>
 			<div class="modal-footer">
@@ -222,10 +216,10 @@ function getRandomImage(imgAr, path) {
     </li>
 
     <li class="nav-devider"></li>
-    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+    <li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     <li class="active"><a href="#"><i class="fa fa-users"></i><span>Retailers</span></a></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+    <li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
@@ -244,7 +238,7 @@ function getRandomImage(imgAr, path) {
        <div class="col-12">
         <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">My Retailers</h3>
+              <h3 class="box-title">Distributor Table</h3>
               <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
             </div>
             <!-- /.box-header -->
@@ -252,71 +246,85 @@ function getRandomImage(imgAr, path) {
               <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
 				<thead>
 					<tr>
-						
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						
+					<th>Account Type</th>
+                    <th>Distributor ID</th>
+                    <th>Retailer's ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
+					<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
 					</tr>
 				</thead>
 				<tfoot>
 					<tr>
-						
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						
+					<th>Account Type</th>
+                    <th>Distributor ID</th>
+                    <th>Retailer's ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
+					<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
 					</tr>
 				</tfoot>
-								<tbody>
-					
-<?php 
-
-$ap=mysqli_connect("sql310.epizy.com","epiz_23125428","JYuDJZ1qbAqqlK","epiz_23125428_anu");
-
-
-    if(!$ap)
-        {
-            die("connection failed:".mysqli_error());
-        }
-$ap5=mysqli_query($ap,"SELECT fname,lname,email,phn FROM retailers WHERE refrallcode='$_SESSION[refrallcode]' ");
-
-if(!$ap5)
-
-{
-    echo "error";
-}
-
-
-
-    if(mysqli_num_rows($ap5)>0)
-{
-        
-    while($anu=mysqli_fetch_assoc($ap5))
-      {
-            
-     echo "<tr> <td>".$anu["fname"]."</td><td>".$anu["lname"]."</td><td>".$anu["email"]."</td><td>".$anu["phn"]."</td></tr>" ;
-					
-					
-	}				
-					
-}					
-else
-         {
-
-
-             echo "no retailers found";
-
-
-            }
-
-mysqli_close($ap);
-
-
-?>
-					
+				<tbody>
+					<tr>
+						<td>retailer</td>
+						<td>r4543s</td>
+						<td>j6gdge</td>
+						<td>swagat dash</td>
+						<td>SWagat308@gmail.com</td>
+						<td>9904405175</td>
+						<td>c-307 samarpan tower, 132 ft ring road, ankur, naranpura, ahmedabad</td>
+						<td>13-10-2018</td>
+						<td>dfdsfsdfsdf llp</td>
+						<td>no</td>
+						<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
+					</tr>
+					<tr>
+						<td>retailer</td>
+						<td>r4543s</td>
+						<td>p2h127</td>
+						<td>Dipen Kalal</td>
+						<td>171080107009.acet@gmail.com</td>
+						<td>9998627821</td>
+						<td>7 shakti flats, vejalpur ahmedabad</td>
+						<td>13-10-2018</td>
+						<td>dfdsfsdfsdf llp</td>
+						<td>no</td>
+						<th>Address</th>
+					<th>Date of Birth</th>
+					<th>Business Name</th>
+					<th>KYC status</th>
+					</tr>
+					<tr>
+						<td>Distributor</td>
+						<td>hrf434</td>
+						<td>6g57gh</td>
+						<td>Anurag Pandey</td>
+						<td>ethicalhackeranuragpandey@gmail.com</td>
+						<td>9512793422</td>
+						<td>Sarkhej ka patta, ahmedabad</td>
+						<td>13-10-2018</td>
+						<td>dfd pvt ltd</td>
+						<td>yes</td>
+					</tr>
 				</tbody>
 			</table>
           	</div>
