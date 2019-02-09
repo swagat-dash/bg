@@ -49,110 +49,41 @@ document.close();
 			<input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
 	</li>
 	<li class="dropdown user user-menu">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			<script>
-				getRandomImage(random_images_array, '../assets/images/avatar/')
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <script type="text/javascript">getRandomImage(random_images_array, '../assets/images/avatar/')</script>
+            </a>
+            <ul class="dropdown-menu scale-up">
+              <!-- User image -->
+              <li class="user-header">
+                <div class="col-12">
+                <p>Admin</p>
+                  <p>Dynamic email by php variable</p></div>
+                  <div class="col-12">
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                </div>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row no-gutters">
+                <div class="col-12 text-left">
+                  <a href="tools.php"><i class="ion ion-person"></i> Tools</a>
+                 </div>
+                 <div class="col-12 text-left">
+                  <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-person"></i>  Update Transactions</a>
+                 </div>
+        <div role="separator" class="divider col-12"></div>
+        <div class="col-12 text-left">
+                  <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>        
+                </div>
+            </li>
+            </ul>
+          </li>
+       </ul>
+      </div>
+    </nav>
+  </header>
 
-			</script>
-		</a>
-		<ul class="dropdown-menu scale-up">
-			<!-- User image -->
-			<li class="user-header">
-				<div class="col-12">
-					<p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p>
-				</div>
-				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a> </div>
-			</li>
-			<!-- Menu Body -->
-			<li class="user-body">
-				<div class="row no-gutters">
-				<div class="col-12 text-left"> <a href="#"><i class="ion ion-person"></i> My e-KYC</a> </div>
-					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a> </div>
-					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a> </div>
-					<div role="separator" class="divider col-12"></div>
-					<div class="col-12 text-left"> <a href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
-				</div>
-			</li>
-		</ul>
-	</li>
-</ul>
-</div>
-</nav>
-</header>
-<!-- inbox Modal -->
-<div class="modal center-modal fade" data-backdrop="true" id="inbox" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-body">
-	<!--message starts-->
-	<div class="box box-inverse box-success">
-		<div class="box-header">
-			<h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
-			<div class="box-tools pull-right">
-				<ul class="box-controls">
-					<li>
-						<a class="box-btn-close" href="#"></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="box-body"> e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties. </div>
-	</div>
-	<!--message starts-->
-	<div class="box box-inverse box-info">
-		<div class="box-header">
-			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-			<div class="box-tools pull-right">
-				<ul class="box-controls">
-					<li>
-						<a class="box-btn-close" href="#"></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="box-body"> Dynamic body </div>
-	</div>
-	<!--message starts-->
-	<div class="box box-inverse box-danger">
-		<div class="box-header">
-			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-			<div class="box-tools pull-right">
-				<ul class="box-controls">
-					<li>
-						<a class="box-btn-close" href="#"></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="box-body"> Dynamic body </div>
-	</div>
-	<!-- content ends -->
-</div>
-</div>
-</div>
-</div>
-<!-- inbox Modal ends -->
-<!-- referral Modal -->
-<div class="modal modal-primary fade" id="share">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-	<h4 class="modal-title">Referral Code</h4>
-	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
-<div class="modal-body">
-	<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
-	<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
-</div>
-<div class="modal-footer">
-	<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
-	<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
-</div>
-</div>
-</div>
-</div>
-<!-- /.modal -->
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <section class="sidebar">

@@ -247,12 +247,12 @@ function getRandomImage(imgAr, path) {
 					<div class="form-group">
 						<h5>Confirm Transaction ID / Reference Number<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="text" name="transaction-ID2" data-validation-match-match="transaction-ID" class="form-control" required> </div>
+							<input type="text" name="transaction-ID2" data-validation-match-match="transaction-ID" class="form-control" pattern="^[a-z0-9]{6,72}$|^[A-Z0-9]{6,72}$"> </div>
 					</div>
                		<div class="form-group">
                 <h5>Date of Transaction <span class="text-danger">*</span></h5>
                 <div class="input-group date">
-           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required data-validation-required-message="Enter your date of birth">
 					<span class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </span>
@@ -273,7 +273,7 @@ function getRandomImage(imgAr, path) {
 					<div class="form-group">
 						<h5>Upload Screenshot </h5>
 						<div class="controls">
-							<input type="file" name="file" class="form-control" required> </div>
+							<input type="file" name="file" class="form-control"> </div>
 					</div>
 					
 					<!-- 

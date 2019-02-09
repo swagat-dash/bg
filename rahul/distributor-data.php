@@ -79,9 +79,9 @@ function getRandomImage(imgAr, path) {
             <ul class="dropdown-menu scale-up">
               <!-- User image -->
               <li class="user-header">
-              	<div class="col-12">
+                <div class="col-12">
                 <p>Admin</p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                  <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
                   <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
@@ -89,21 +89,18 @@ function getRandomImage(imgAr, path) {
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
-                  <div class="col-12 text-left">
-                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
-                  </div>
-				<div role="separator" class="divider col-12"></div>
-				  <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
-                  </div>				
+                <div class="col-12 text-left">
+                  <a href="tools.php"><i class="ion ion-person"></i> Tools</a>
+                 </div>
+                 <div class="col-12 text-left">
+                  <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-person"></i>  Update Transactions</a>
+                 </div>
+        <div role="separator" class="divider col-12"></div>
+        <div class="col-12 text-left">
+                  <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>        
                 </div>
-      			</li>
+            </li>
             </ul>
           </li>
        </ul>

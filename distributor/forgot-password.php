@@ -10,7 +10,7 @@
 <link rel="icon" href="../assets/images/favicon.ico">
 <title>Password Reset | BG Techno</title>
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="../assets/ser/css/master_style.css">
 <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
 <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
@@ -214,10 +214,11 @@ document.close();
 					<div class="form-control-feedback"><small>This email should match your account's email.</small></div>
 				</div>
 				<div class="form-group">
-					<h5>Security Answer <span class="text-danger">*</span></h5>
-					<div class="controls">
-						<input type="text" name="answer" class="form-control" required data-validation-required-message="Enter your answer"> </div>
-					<div class="form-control-feedback"><small>Email the admin if you forget your security question's answer.</small></div>
+					<h5>Date Of Birth <span class="text-danger">*</span></h5>
+					<div class="input-group date">
+           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required data-validation-required-message="Enter your date of birth">
+					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                </div>
 				</div>
 				<div class="form-group">
 					<h5>New Password <span class="text-danger">*</span></h5>
@@ -260,6 +261,7 @@ document.close();
 <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
+<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 <script src="../assets/ser/js/template.js"></script>
@@ -270,8 +272,15 @@ document.close();
 "use strict";
 $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
 }(window, document, jQuery);
-
 </script>
+<script>
+    $(function () {
+    "use strict";
+    $('#datepicker').datepicker({
+    autoclose: true,
+    todayHighlight: true
+    });
+  });</script>
 </body>
 
 </html>

@@ -78,24 +78,21 @@ function getRandomImage(imgAr, path) {
                 <p>Admin</p>
                   <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
-                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
-                  <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
-                  </div>
+                <div class="col-12 text-left">
+                  <a href="tools.php"><i class="ion ion-person"></i> Tools</a>
+                 </div>
+                 <div class="col-12 text-left">
+                  <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-person"></i>  Update Transactions</a>
+                 </div>
         <div role="separator" class="divider col-12"></div>
-          <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+        <div class="col-12 text-left">
+                  <a href="#"><i class="fa fa-power-off"></i> Logout</a>
                   </div>        
                 </div>
             </li>
@@ -105,59 +102,6 @@ function getRandomImage(imgAr, path) {
       </div>
     </nav>
   </header>
-  <!-- inbox Modal -->
-<div class="modal center-modal fade" data-backdrop="true" id="inbox" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      <!-- message starts-->
-        <div class="box box-inverse box-success">
-            <div class="box-header">
-              <h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
-                  <div class="box-tools pull-right">          
-              <ul class="box-controls">
-                <li><a class="box-btn-close" href="#"></a></li>
-              </ul>
-            </div>
-            </div>
-          <div class="box-body">
-               e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties.
-            </div>
-        </div>
-      <!-- message starts -->
-        <div class="box box-inverse box-info">
-            <div class="box-header">
-              <h4 class="box-title"><strong>Dynamic title</strong></h4>
-                  <div class="box-tools pull-right">          
-              <ul class="box-controls">
-                <li><a class="box-btn-close" href="#"></a></li>
-              </ul>
-            </div>
-            </div>
-          <div class="box-body">
-                    Dynamic body
-            </div>
-        </div>
-      <!-- message starts -->
-        <div class="box box-inverse box-danger">
-            <div class="box-header">
-              <h4 class="box-title"><strong>Dynamic title</strong></h4>
-                  <div class="box-tools pull-right">          
-              <ul class="box-controls">
-                <li><a class="box-btn-close" href="#"></a></li>
-              </ul>
-            </div>
-            </div>
-          <div class="box-body">
-                    Dynamic body
-            </div>
-        </div>
-      <!-- content ends -->
-      </div>
-    </div>
-  </div>
-</div>
-<!-- inbox Modal ends-->
 
   <!-- Left side column. contains the logo and sidebar -->
  <aside class="main-sidebar">

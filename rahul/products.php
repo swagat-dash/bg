@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Transaction Verification | BG Techno</title>
-  
+    <title>Distributor's Dashboard | BG Techno</title>
+
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+	<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-<script>
+	<script type="text/javascript">
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png','avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png','avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png','avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png','avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
     
 function getRandomImage(imgAr, path) {
@@ -32,9 +31,16 @@ function getRandomImage(imgAr, path) {
     document.write(imgStr); document.close();
 }
 </script>
+<style>.box-body {
+    overflow-x: auto!important;
+}</style>
+	
+</style>
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+
   <header class="main-header">
     <!-- Logo -->
     <a href="index.html" class="logo">
@@ -87,7 +93,7 @@ function getRandomImage(imgAr, path) {
                   <a href="tools.php"><i class="ion ion-person"></i> Tools</a>
                  </div>
                  <div class="col-12 text-left">
-                  <a href="#"><i class="ion ion-person"></i>  Update Transactions</a>
+                  <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-person"></i>  Update Transactions</a>
                  </div>
         <div role="separator" class="divider col-12"></div>
         <div class="col-12 text-left">
@@ -101,6 +107,7 @@ function getRandomImage(imgAr, path) {
       </div>
     </nav>
   </header>
+
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <section class="sidebar">
@@ -142,145 +149,219 @@ function getRandomImage(imgAr, path) {
             <li><a href="retailer-data.php">Retailer</a></li>
           </ul>
         </li>
-        <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
+        <li><a href="#"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
         <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
         <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
     </ul>
     </section>
   </aside>
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">  
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Product &amp; Services Management System
+      </h1>
+    </section>
+
     <!-- Main content -->
     <section class="content">
-     
-     <!-- Basic Forms -->
+     <!-- Step wizard -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Transaction Update</h3>
-          <h6 class="box-subtitle">Fill the below form for verification of completion your UPI / Paytm / PhonePe or any Wallet transaction.</h6>
+          <h3 class="box-title">Add Products</h3>
+          <h6 class="box-subtitle">You can add new products or services from here. </a></h6>
+          <div class="box-tools pull-right">
+            <ul class="box-controls pull-right">
+                  <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
+                  <li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li>
+             </ul>
+          </div>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
-          <div class="row">
-            <div class="col">
-            	<form novalidate>
-					<div class="form-group">
-						<h5>Payment Method <span class="text-danger">*</span></h5>
-						<div class="controls">
-							<select name="payment" id="payment" required class="form-control">
-								<option value="">Select Your Payment Method</option>
-								<option value="1">Google Pay</option>
-								<option value="2">Paytm</option>
-								<option value="3">PhonePe</option>
-								<option value="4">BHIM UPI</option>
-								<option value="5">Account Transfer</option>
-								<option value="6">NEFT</option>
-								<option value="7">IMPS</option>
-							</select>
+        <div class="box-body wizard-content">
+			<form action="#" class="tab-wizard wizard-circle">
+				<!-- Step 1 -->
+				<h6>Title</h6>
+				<section>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="mainHeader">Main Header :</label>
+								<input type="text" class="form-control" id="mainHeader"> </div>
 						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="theme">Theme :</label>
+								<select class="custom-select form-control" id="theme" name="theme">
+									<option value="">Select Theme</option>
+									<option value="orange">Orange</option>
+									<option value="blue">Blue</option>
+									<option value="green">Green</option>
+									<option value="purple">Purple</option>
+									<option value="red">Red</option>
+								</select>
+							</div>
 					</div>
-					<div class="form-group">
-						<h5>Transaction ID / Reference Number<span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="transaction-ID" class="form-control" required data-validation-required-message="Enter the transaction ID" pattern="^[a-z0-9]{6,72}$|^[A-Z0-9]{6,72}$"> </div>
+					
 					</div>
-					<div class="form-group">
-						<h5>Confirm Transaction ID / Reference Number<span class="text-danger">*</span></h5>
-						<div class="controls">
-							<input type="text" name="transaction-ID2" data-validation-match-match="transaction-ID" class="form-control" required> </div>
+				</section>
+				<!-- Step 2 -->
+				<h6>Home Tab</h6>
+				<section>
+					<div class="row fieldGroupTab">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="productId">ID :</label>
+								<input type="text" name="productId[]" class="form-control" id="productId[]"> </div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<label for="productName">Name :</label>
+								<input type="text" name="productId[]" class="form-control" id="productName[]">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label for="price">Price :</label>
+								<input type="number" name="price[]" id="price[]" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label for="commission">Commission :</label>
+								<input type="number" name="commission[]" id="commission[]" class="form-control">
+							</div>
+						</div>
+						<a href="#" class="btn btn-success addMoreTab"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
 					</div>
-               		<div class="form-group">
-                <h5>Date of Transaction <span class="text-danger">*</span></h5>
-                <div class="input-group date">
-           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-					<span class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </span>
-                </div>
-              </div>
 
-					<div class="form-group">
-						<h5>Amount <span class="text-danger">*</span></h5>
-						<div class="input-group"> <span class="input-group-addon">$</span>
-							<input type="number" name="onlyNum" class="form-control" required data-validation-required-message="This field is required"> <span class="input-group-addon">.00</span> </div>
-					</div> 
-					<div class="form-group">
-            <h5>Update Status <span class="text-danger">*</span></h5>
-            <div class="controls">
-              <select name="payment" id="payment" required class="form-control">
-                <option value="">Select the transaction state</option>
-                <option value="Complete">Complete</option>
-                <option value="Pending">Pending</option>
-                <option value="Processing">Processing</option>
-                <option value="Refund">Refund</option>
-                <option value="Cancelled">Cancelled</option>
-              </select>
-            </div>
-          </div>
-					<div class="text-xs-right">
-						<button type="submit" class="btn btn-info">Update Status</button>
+					<div class="row fieldGroupTabCopy" style="display: none;">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="productId">ID :</label>
+								<input type="text" name="productId[]" class="form-control" id="productId[]"> </div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<label for="productName">Name :</label>
+								<input type="text" name="productId[]" class="form-control" id="productName[]">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label for="price">Price :</label>
+								<input type="number" name="price[]" id="price[]" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label for="commission">Commission :</label>
+								<input type="number" name="commission[]" id="commission[]" class="form-control">
+							</div>
+						</div>
+						<a href="#" class="btn btn-danger removeTab"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</a>
 					</div>
-				</form>
-            	
-            </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
+				</section>
+				<!-- Step 3 -->
+				<h6>Tab Contents</h6>
+				<section>
+					<div class="row fieldGroupContent">
+							<div class="col-md-12">
+								<div class="form-group">
+								<label for="heading">Tab Heading :</label>
+								<input type="text" class="form-control" id="heading">
+							</div>
+							<div class="form-group">
+								<label for="tabContents">Tab Contents :</label>
+								<textarea name="tabContents" id="tabContents" rows="6" class="form-control"></textarea>
+							</div>
+							<a href="#" class="btn btn-success addMoreContent"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
+					</div>
+					<div class="row fieldGroupContentCopy" style="display: none;">
+							<div class="col-md-12">
+								<div class="form-group">
+								<label for="heading">Tab Heading :</label>
+								<input type="text" class="form-control" id="heading">
+							</div>
+							<div class="form-group">
+								<label for="tabContents">Tab Contents :</label>
+								<textarea name="tabContents" id="tabContents" rows="6" class="form-control"></textarea>
+							</div>
+							<a href="#" class="btn btn-danger removeContent"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</a>
+					</div>
+				</section>
+			</form>
         </div>
         <!-- /.box-body -->
       </div>
       <!-- /.box -->
-      
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  
+   <!-- /.content-wrapper -->
   <footer class="main-footer">
-      <div class="pull-right d-none d-sm-inline-block">
-        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.swagatdash.com/" target="_blank" style="display:none;">♥</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">FAQ</a>
-          </li>
-        </ul>
-      </div>
-      &copy; 2019 BG Techno. All Rights Reserved.
-    </footer>
+			<div class="pull-right d-none d-sm-inline-block">
+				<ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.swagatdash.com/" target="_blank" style="display:none;">♥</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0)">FAQ</a>
+					</li>
+				</ul>
+			</div>
+			&copy; 2019 BG Techno. All Rights Reserved.
+		</footer>
 
 </div>
 <!-- ./wrapper -->
+
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-	<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-	<script src="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
-    <script src="../assets/ser/js/pages/validation.js"></script>
-  
-    <script>
-    ! function(window, document, $) {
-        "use strict";
-			$("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-		}(window, document, jQuery);
-    </script>
-	<script>
-    $(function () {
-    "use strict";
-    $('.timepicker').timepicker({
-      showInputs: false
+	<script src="../assets/assets/vendor_components/jquery-steps-master/build/jquery.steps.js"></script>
+	<script src="../assets/ser/js/pages/steps.js"></script>
+
+<script>
+	$(document).ready(function(){
+    //group add limit
+    var maxGroup = 7;
+    //add more fields group
+    $(".addMoreTab").click(function(){
+        if($('body').find('.fieldGroupTab').length < maxGroup){
+            var fieldHTML = '<div class="row fieldGroupTab">'+$(".fieldGroupTabCopy").html()+'</div>';
+            $('body').find('.fieldGroupTab:last').after(fieldHTML);
+        }else{
+            alert('Maximum '+maxGroup+' groups are allowed.');
+        }
     });
-  //Date picker
-    $('#datepicker').datepicker({
-    autoclose: true,
-    todayHighlight: true
+    //remove fields group
+    $("body").on("click",".removeTab",function(){ 
+        $(this).parents(".fieldGroupTab").remove();
     });
-  });</script>
+
+    $(".addMoreContent").click(function(){
+        if($('body').find('.fieldGroupContent').length < maxGroup){
+            var fieldHTML = '<div class="row fieldGroupContent">'+$(".fieldGroupContentCopy").html()+'</div>';
+            $('body').find('.fieldGroupContent:last').after(fieldHTML);
+        }else{
+            alert('Maximum '+maxGroup+' groups are allowed.');
+        }
+    });
+    //remove fields group
+    $("body").on("click",".removeContent",function(){ 
+        $(this).parents(".fieldGroupContent").remove();
+    });
+});
+</script>
+
 </body>
-</html>
+
+

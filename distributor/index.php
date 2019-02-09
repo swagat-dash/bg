@@ -229,7 +229,7 @@ function getRandomImage(imgAr, path) {
                  <div class="box-header bg-orange">
                 <h4 class="box-title"><strong>GST Return With Sales &amp; Purchases</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -375,7 +375,7 @@ function getRandomImage(imgAr, path) {
                  <div class="box-header bg-olive">
                 <strong><h4 class="box-title">Chartered Accounting Services</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -563,7 +563,7 @@ function getRandomImage(imgAr, path) {
                  <div class="box-header bg-danger">
                 <h4 class="box-title"><strong>Director's Appointment or Resignation</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -653,7 +653,7 @@ function getRandomImage(imgAr, path) {
                  <div class="box-header bg-teal">
                 <h4 class="box-title"><strong>Company Registration</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -800,7 +800,7 @@ director's education, mobile number, email ID etc information in excel format</d
                  <div class="box-header bg-purple">
                 <h4 class="box-title"><strong>GST Registration</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -859,7 +859,7 @@ director's education, mobile number, email ID etc information in excel format</d
                  <div class="box-header bg-orange">
                 <h4 class="box-title"><strong>Intellectual Property</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -983,7 +983,7 @@ Trademarks in India are registered by the Controller General of Patents Designs 
                  <div class="box-header bg-teal">
                 <h4 class="box-title"><strong>Website Design &amp; Development</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1193,7 +1193,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                  <div class="box-header bg-purple">
                 <h4 class="box-title"><strong>Graphics Designing</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1308,7 +1308,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                  <div class="box-header bg-orange">
                 <h4 class="box-title"><strong>Bulk SMS</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1465,7 +1465,7 @@ All SMS content needs to be transactional and should not contain any promotional
                  <div class="box-header bg-olive">
                 <h4 class="box-title"><strong>Digital Signature Certificate</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1549,7 +1549,7 @@ All SMS content needs to be transactional and should not contain any promotional
                  <div class="box-header bg-danger">
                 <h4 class="box-title"><strong>Non-Profits and Trust Registration</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1659,7 +1659,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
                  <div class="box-header bg-teal">
                 <h4 class="box-title"><strong>Tax Solutions</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->

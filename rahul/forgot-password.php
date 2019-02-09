@@ -11,7 +11,6 @@
 <title>Password Reset | BG Techno</title>
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="../assets/ser/css/master_style.css">
 <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
 <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
@@ -35,7 +34,7 @@ document.close();
 <div class="wrapper">
 <header class="main-header">
 <!-- Logo -->
-<a href="index.html" class="logo">
+<a href="index.php" class="logo">
 <!-- mini logo for sidebar mini 50x50 pixels --><b class="logo-mini"> <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span> <span class="dark-logo"><img src="../assets/images/aries-dark.png" alt="logo"></span> </b>
 <!-- logo for regular state and mobile devices --><span class="logo-lg"> <img src="../assets/images/logo-light-text.png" alt="logo" class="light-logo"> <img src="../assets/images/logo-dark-text.png" alt="logo" class="dark-logo"> </span> </a>
 <!-- Header Navbar: style can be found in header.less -->
@@ -58,18 +57,19 @@ document.close();
 		<ul class="dropdown-menu scale-up">
 			<!-- User image -->
 			<li class="user-header">
-				<div class="col-12">
-					<p>Dynamic name by php variable</p>
-					<p>Dynamic email by php variable</p>
-				</div>
-				<div class="col-12"> <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a> </div>
-			</li>
+              	<div class="col-12">
+                <p><?php echo "$_SESSION[fname]" ; ?></p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                  <div class="col-12">
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                </div>
+              </li>
 			<!-- Menu Body -->
 			<li class="user-body">
 				<div class="row no-gutters">
 				<div class="col-12 text-left"> <a href="#"><i class="ion ion-person"></i> My e-KYC</a> </div>
 					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a> </div>
-					<div class="col-12 text-left"> <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a> </div>
+					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a> </div>
 					<div role="separator" class="divider col-12"></div>
 					<div class="col-12 text-left"> <a href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
 				</div>
@@ -133,6 +133,26 @@ document.close();
 </div>
 </div>
 <!-- inbox Modal ends -->
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+	<h4 class="modal-title">Referral Code</h4>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+	<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+	<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+	<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+</div>
+</div>
+</div>
+</div>
+<!-- /.modal -->
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 <!-- sidebar: style can be found in sidebar.less -->
@@ -158,10 +178,10 @@ document.close();
 	</ul>
 </li>
 <li class="nav-devider"></li>
-<li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-
-<li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-<li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+<li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+<li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
+<li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+<li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 </ul>
 </section>
 </aside>
@@ -194,11 +214,10 @@ document.close();
 					<div class="form-control-feedback"><small>This email should match your account's email.</small></div>
 				</div>
 				<div class="form-group">
-					<h5>Date Of Birth <span class="text-danger">*</span></h5>
-					<div class="input-group date">
-           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required data-validation-required-message="Enter your date of birth">
-					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                </div>
+					<h5>Security Answer <span class="text-danger">*</span></h5>
+					<div class="controls">
+						<input type="text" name="answer" class="form-control" required data-validation-required-message="Enter your answer"> </div>
+					<div class="form-control-feedback"><small>Email the admin if you forget your security question's answer.</small></div>
 				</div>
 				<div class="form-group">
 					<h5>New Password <span class="text-danger">*</span></h5>
@@ -241,7 +260,6 @@ document.close();
 <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 <script src="../assets/ser/js/template.js"></script>
@@ -252,15 +270,8 @@ document.close();
 "use strict";
 $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
 }(window, document, jQuery);
+
 </script>
-<script>
-    $(function () {
-    "use strict";
-    $('#datepicker').datepicker({
-    autoclose: true,
-    todayHighlight: true
-    });
-  });</script>
 </body>
 
 </html>
