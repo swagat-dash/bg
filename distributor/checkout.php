@@ -78,7 +78,7 @@ document.write(imgStr); document.close();
                 <p><?php echo "$_SESSION[fname]" ; ?></p>
                   <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
 								<!-- Menu Body -->

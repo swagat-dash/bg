@@ -76,7 +76,7 @@ function getRandomImage(imgAr, path) {
                 <p><?php echo "$_SESSION[fname]" ; ?></p>
                   <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -255,8 +255,8 @@ function getRandomImage(imgAr, path) {
 								<option value="3">PhonePe</option>
 								<option value="4">BHIM UPI</option>
 								<option value="5">Account Transfer</option>
-								<option value="5">NEFT</option>
-								<option value="5">IMPS</option>
+								<option value="6">NEFT</option>
+								<option value="7">IMPS</option>
 							</select>
 						</div>
 					</div>
