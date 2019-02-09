@@ -1,12 +1,5 @@
 # bgtechno
 
-For the cms of "products page" for admin panel, I have made x-editable form. It will require you to include php inside json.
-
-https://stackoverflow.com/questions/31315570/including-php-inside-json-file
-
-
-
-
 temporary hosting (for 2-3 days)
 
 freewebhostingarea.com 
