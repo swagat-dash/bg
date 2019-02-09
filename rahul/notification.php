@@ -183,22 +183,18 @@ function getRandomImage(imgAr, path) {
 	</div>
 </div>
 <!-- /.modal -->
-  
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
+   <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
     <section class="sidebar">
-      
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="user-profile treeview">
-          <a href="services.html">
+<ul class="sidebar-menu" data-widget="tree">
+    <li class="user-profile treeview">
+        <a href="services.html">
             <span>Services Basic Info</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
-          </a>
-		  <ul class="treeview-menu">
+        </a>
+    <ul class="treeview-menu">
             <li><a href="../pan.html" target="_blank">PAN card</a></li>
             <li><a href="../gst.html" target="_blank">GST</a></li>
             <li><a href="../aeps.html" target="_blank">AEPS</a></li>
@@ -213,16 +209,27 @@ function getRandomImage(imgAr, path) {
             <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
         </ul>
     </li>
-
-    <li class="nav-devider"></li>
-    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    <li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li class="active"><a href="#"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+  <li class="nav-devider"></li>
+    <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li class="active"><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
+    <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>User Data</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="distributor-data.php">Distributor</a></li>
+            <li><a href="retailer-data.php">Retailer</a></li>
+          </ul>
+        </li>
+        <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
+        <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
+        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
     </ul>
     </section>
   </aside>
-
    <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

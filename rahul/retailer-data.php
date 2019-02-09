@@ -9,13 +9,13 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Distributor's Dashboard | BG Techno</title>
+    <title>Admin Dashboard | BG Techno</title>
 
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,8 +33,7 @@ function getRandomImage(imgAr, path) {
 </script>
 <style>.box-body {
     overflow-x: auto!important;
-}</style>
-	
+} 
 </style>
 </head>
 
@@ -43,7 +42,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -80,17 +79,17 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p>Dynamic name by php variable</p>
-                  <p>Dynamic email by php variable</p></div>
+                <p>Admin</p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
@@ -110,85 +109,13 @@ function getRandomImage(imgAr, path) {
       </div>
     </nav>
   </header>
-              
-<!-- inbox Modal -->
-<div class="modal center-modal fade" data-backdrop="true" id="inbox" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-body">
-			<!--message starts-->
-				<div class="box box-inverse box-success">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
-           				<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-               			e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties.
-    				</div>
-				</div>
-			<!--message starts-->
-				<div class="box box-inverse box-info">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-            			<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-               			Dynamic body
-    				</div>
-				</div>
-			<!--message starts-->
-				<div class="box box-inverse box-danger">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-            			<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-                		Dynamic body
-    				</div>
-				</div>
-			<!-- content ends -->
-			</div>
-		</div>
-	</div>
-</div>
-<!-- inbox Modal ends -->
-
-<!-- referral Modal -->
-<div class="modal modal-primary fade" id="share">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-			  <h4 class="modal-title">Referral Code</h4>
-			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<div class="modal-body">
-				<p id="to-copy">Dynamic referral code or link here... (this paragraph content will be copied)</p>
-				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- /.modal -->
 
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="user-profile treeview">
         <a href="services.html">
@@ -197,7 +124,7 @@ function getRandomImage(imgAr, path) {
               <i class="fa fa-angle-right pull-right"></i>
             </span>
         </a>
-    <ul class="treeview-menu">
+ 		<ul class="treeview-menu">
             <li><a href="../pan.html" target="_blank">PAN card</a></li>
             <li><a href="../gst.html" target="_blank">GST</a></li>
             <li><a href="../aeps.html" target="_blank">AEPS</a></li>
@@ -212,7 +139,7 @@ function getRandomImage(imgAr, path) {
             <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
         </ul>
     </li>
-  <li class="nav-devider"></li>
+    <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
@@ -223,14 +150,14 @@ function getRandomImage(imgAr, path) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="distributor-data.php">Distributor</a></li>
-            <li><a href="retailer-data.php">Retailer</a></li>
+            <li><a href="distributor-data.html">Distributor</a></li>
+            <li class="active"><a href="#">Retailer</a></li>
           </ul>
         </li>
         <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
         <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
-        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
-    </ul>
+        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>        
+</ul>
     </section>
   </aside>
   <!-- Content Wrapper. Contains page content -->
@@ -238,7 +165,7 @@ function getRandomImage(imgAr, path) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Tables
+        All Retailers
       </h1>
     </section>
 
@@ -248,93 +175,42 @@ function getRandomImage(imgAr, path) {
        <div class="col-12">
         <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Distributor Table</h3>
+              <h3 class="box-title">Retailer's Information</h3>
               <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
 				<thead>
-					<tr>
-					<th>Account Type</th>
-                    <th>Distributor ID</th>
-                    <th>Retailer's ID</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
+					<tr>	
+						<th>Account ID</th>
+            			<th>Referral ID</th>
+						<th>Full Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Address</th>
+            			<th>Date of Joining</th>
+            			<th>Wallet Balance</th>
+            			<th>KYC status</th>
 					</tr>
 				</thead>
 				<tfoot>
-					<tr>
-					<th>Account Type</th>
-                    <th>Distributor ID</th>
-                    <th>Retailer's ID</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
+					<tr> 
+            <th>Account ID</th>
+            <th>Referral ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Date of Joining</th>
+            <th>Wallet Balance</th>
+            <th>KYC status</th>
+          </tr>
 				</tfoot>
-				<tbody>
-					<tr>
-						<td>retailer</td>
-						<td>r4543s</td>
-						<td>j6gdge</td>
-						<td>swagat dash</td>
-						<td>SWagat308@gmail.com</td>
-						<td>9904405175</td>
-						<td>c-307 samarpan tower, 132 ft ring road, ankur, naranpura, ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfdsfsdfsdf llp</td>
-						<td>no</td>
-						<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-					<tr>
-						<td>retailer</td>
-						<td>r4543s</td>
-						<td>p2h127</td>
-						<td>Dipen Kalal</td>
-						<td>171080107009.acet@gmail.com</td>
-						<td>9998627821</td>
-						<td>7 shakti flats, vejalpur ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfdsfsdfsdf llp</td>
-						<td>no</td>
-						<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-					<tr>
-						<td>Distributor</td>
-						<td>hrf434</td>
-						<td>6g57gh</td>
-						<td>Anurag Pandey</td>
-						<td>ethicalhackeranuragpandey@gmail.com</td>
-						<td>9512793422</td>
-						<td>Sarkhej ka patta, ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfd pvt ltd</td>
-						<td>yes</td>
-					</tr>
+								<tbody>
+
+                  <!--- All retailers data here: account ID, referral ID (to identify their distributor), name,email,phone,address,date of joining, kyc status(boolean) etc -->
+
 				</tbody>
 			</table>
           	</div>
@@ -365,7 +241,7 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
+  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>

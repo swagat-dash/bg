@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css"> 
+
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -112,10 +113,7 @@ function getRandomImage(imgAr, path) {
 
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      
-      <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="user-profile treeview">
         <a href="services.html">
@@ -139,12 +137,9 @@ function getRandomImage(imgAr, path) {
             <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
         </ul>
     </li>
-
-    <li class="nav-devider"></li>
-    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Notifications</span></a></li>
-		
+  <li class="nav-devider"></li>
+    <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
           <a href="#">
             <i class="fa fa-users"></i> <span>User Data</span>
@@ -153,11 +148,14 @@ function getRandomImage(imgAr, path) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="distributor-data.html">Distributor</a></li>
-            <li class="active"><a href="#">Retailer</a></li>
+            <li class="active"><a href="#">Distributor</a></li>
+            <li><a href="retailer-data.php">Retailer</a></li>
           </ul>
-        </li>        
-</ul>
+        </li>
+        <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
+        <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
+        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
+		</ul>
     </section>
   </aside>
   <!-- Content Wrapper. Contains page content -->
@@ -165,7 +163,7 @@ function getRandomImage(imgAr, path) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        All Retailers
+        All Distributors
       </h1>
     </section>
 
@@ -175,7 +173,7 @@ function getRandomImage(imgAr, path) {
        <div class="col-12">
         <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Retailer's Information</h3>
+              <h3 class="box-title">Distributor's Information</h3>
               <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
             </div>
             <!-- /.box-header -->
@@ -184,25 +182,25 @@ function getRandomImage(imgAr, path) {
 				<thead>
 					<tr>	
 						<th>Account ID</th>
-            			<th>Referral ID</th>
 						<th>Full Name</th>
 						<th>Email</th>
 						<th>Phone</th>
 						<th>Address</th>
-            			<th>Date of Joining</th>
-            			<th>Wallet Balance</th>
-            			<th>KYC status</th>
+            <th>Date of Joining</th>
+            <th>Company name</th>
+            <th>Wallet Balance</th>
+            <th>KYC status</th>
 					</tr>
 				</thead>
 				<tfoot>
 					<tr> 
             <th>Account ID</th>
-            <th>Referral ID</th>
             <th>Full Name</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Address</th>
             <th>Date of Joining</th>
+            <th>Company name</th>
             <th>Wallet Balance</th>
             <th>KYC status</th>
           </tr>
