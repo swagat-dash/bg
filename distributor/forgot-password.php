@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 <link rel="stylesheet" href="../assets/ser/css/master_style.css">
 <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 <script>
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png', 'avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png', 'avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png', 'avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
@@ -258,6 +259,7 @@ document.close();
 <script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 <script src="../assets/ser/js/template.js"></script>

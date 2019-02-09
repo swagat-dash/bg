@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/flat/blue.css">
   <link href="../assets/assets/vendor_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -299,6 +300,7 @@ function getRandomImage(imgAr, path) {
 	</script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
+  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
