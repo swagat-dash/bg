@@ -1,5 +1,37 @@
 # bgtechno
 
+
+DIRECTORY ACCESS PERMISSIONS:
+
+NAME(of file/directory)                                                USER
+
+distributor                                                          distributor only after logging
+
+retailer                                                              retailer only after logging
+
+rahul                                                                  admin only after logging
+
+assets                                                                  all
+
+js                                                                      all
+
+css                                                                     all
+
+fonts                                                                   all
+
+img                                                                     all
+
+php                                                                     all(but should not view the code)
+
+all other frontend files in root directory                              all
+
+
+
+
+
+
+
+
 temporary hosting (for 2-3 days)
 
 freewebhostingarea.com 
