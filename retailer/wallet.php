@@ -39,7 +39,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -86,13 +86,13 @@ function getRandomImage(imgAr, path) {
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
@@ -192,10 +192,10 @@ function getRandomImage(imgAr, path) {
     </li>
 
     <li class="nav-devider"></li>
-    <li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     
-    <li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
@@ -220,7 +220,7 @@ function getRandomImage(imgAr, path) {
                   </h3>
 
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-danger" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-danger" href="checkout.php">Add Money</a>
                 </div>
               </div>
 
@@ -230,7 +230,7 @@ function getRandomImage(imgAr, path) {
                     <sup>&#8377;</sup>1499
                   </h3>
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
                 </div>
               </div>
 
@@ -240,7 +240,7 @@ function getRandomImage(imgAr, path) {
                     <sup>&#8377;</sup>1999
                   </h3>
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
 
@@ -254,7 +254,7 @@ function getRandomImage(imgAr, path) {
                   </h3>
 
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-danger" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-danger" href="checkout.php">Add Money</a>
                 </div>
               </div>
 
@@ -264,7 +264,7 @@ function getRandomImage(imgAr, path) {
                     <sup>&#8377;</sup>2999
                   </h3>
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
                 </div>
               </div>
 
@@ -274,7 +274,7 @@ function getRandomImage(imgAr, path) {
                     <sup>&#8377;</sup>3499
                   </h3>
                   <br>
-                  <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.html">Add Money</a>
+                  <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
 

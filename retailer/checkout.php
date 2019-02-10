@@ -39,7 +39,7 @@ document.write(imgStr); document.close();
 
 		<header class="main-header">
 			<!-- Logo -->
-			<a href="index.html" class="logo">
+			<a href="index.php" class="logo">
 				<!-- mini logo for sidebar mini 50x50 pixels -->
 				<b class="logo-mini">
 					<span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -80,20 +80,20 @@ document.write(imgStr); document.close();
 										<p>Dynamic email by php variable</p>
 									</div>
 									<div class="col-12">
-										<a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+										<a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
 									</div>
 								</li>
 								<!-- Menu Body -->
 								<li class="user-body">
 									<div class="row no-gutters">
 										<div class="col-12 text-left">
-											<a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+											<a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
 										</div>
 										<div class="col-12 text-left">
 											<a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
 										</div>
 										<div class="col-12 text-left">
-											<a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
+											<a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
 										</div>
 										<div role="separator" class="divider col-12"></div>
 										<div class="col-12 text-left">
@@ -193,9 +193,9 @@ document.write(imgStr); document.close();
 					</li>
 
 					<li class="nav-devider"></li>
-					<li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-					<li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-					<li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+					<li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+					<li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+					<li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 				</ul>
 			</section>
 		</aside>
@@ -440,7 +440,7 @@ document.write(imgStr); document.close();
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-bold btn-pure btn-secondary" data-dismiss="modal">Cancel</button>
-						<a href="7f85nhd587344f3847err456e5764v.html"><button type="button" class="btn btn-bold btn-pure btn-primary float-right">Done</button></a>
+						<a href="7f85nhd587344f3847err456e5764v.php"><button type="button" class="btn btn-bold btn-pure btn-primary float-right">Done</button></a>
 					</div>
 				</div>
 			</div>

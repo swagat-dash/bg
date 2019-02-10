@@ -35,7 +35,7 @@ document.close();
 <div class="wrapper">
 <header class="main-header">
 <!-- Logo -->
-<a href="index.html" class="logo">
+<a href="index.php" class="logo">
 <!-- mini logo for sidebar mini 50x50 pixels --><b class="logo-mini"> <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span> <span class="dark-logo"><img src="../assets/images/aries-dark.png" alt="logo"></span> </b>
 <!-- logo for regular state and mobile devices --><span class="logo-lg"> <img src="../assets/images/logo-light-text.png" alt="logo" class="light-logo"> <img src="../assets/images/logo-dark-text.png" alt="logo" class="dark-logo"> </span> </a>
 <!-- Header Navbar: style can be found in header.less -->
@@ -62,14 +62,14 @@ document.close();
 					<p>Dynamic name by php variable</p>
 					<p>Dynamic email by php variable</p>
 				</div>
-				<div class="col-12"> <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a> </div>
+				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a> </div>
 			</li>
 			<!-- Menu Body -->
 			<li class="user-body">
 				<div class="row no-gutters">
 				<div class="col-12 text-left"> <a href="#"><i class="ion ion-person"></i> My e-KYC</a> </div>
 					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a> </div>
-					<div class="col-12 text-left"> <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a> </div>
+					<div class="col-12 text-left"> <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a> </div>
 					<div role="separator" class="divider col-12"></div>
 					<div class="col-12 text-left"> <a href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
 				</div>
@@ -158,9 +158,9 @@ document.close();
 	</ul>
 </li>
 <li class="nav-devider"></li>
-<li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-<li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-<li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+<li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+<li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+<li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 </ul>
 </section>
 </aside>

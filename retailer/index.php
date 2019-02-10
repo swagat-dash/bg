@@ -38,7 +38,7 @@ function getRandomImage(imgAr, path) {
 <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -75,20 +75,20 @@ function getRandomImage(imgAr, path) {
                 <p>Dynamic name by php variable</p>
                   <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
-                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
@@ -186,8 +186,8 @@ function getRandomImage(imgAr, path) {
     </li>
     <li class="nav-devider"></li>
     <li class="active"><a href="#"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    <li><a href="transactions.html"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
@@ -279,11 +279,11 @@ function getRandomImage(imgAr, path) {
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">GSTR1</a></li>
-    <li><a href="checkout.html">GSTR2</a></li>
-    <li><a href="checkout.html">GSTR3</a></li>
-	<li><a href="checkout.html">GSTR4</a></li>
-    <li><a href="checkout.html">GSTR5</a></li>
+    <li><a href="checkout.php">GSTR1</a></li>
+    <li><a href="checkout.php">GSTR2</a></li>
+    <li><a href="checkout.php">GSTR3</a></li>
+	<li><a href="checkout.php">GSTR4</a></li>
+    <li><a href="checkout.php">GSTR5</a></li>
   </ul>
 </div>
                 </div>
@@ -296,7 +296,7 @@ function getRandomImage(imgAr, path) {
 					<dd>List of all invoices issued to persons or companies.</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-		<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+		<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="13">
 				<h4>GST 1 Regular Return Quarterly (upto 100 sales and purchases bills)</h4>
@@ -307,7 +307,7 @@ function getRandomImage(imgAr, path) {
 					<dd>List of all invoices issued to persons or companies.</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-		<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+		<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="14">
                  <h4>GST Composition Return Quarterly (upto 100 sales and purchases bills)</h4>
@@ -318,7 +318,7 @@ function getRandomImage(imgAr, path) {
 					<dd>List of all invoices issued to persons or companies.</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-	<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
 				  <div class="tab-pane fade" id="15">
                  <h4>GST 1 Regular &amp; Composition Return Quarterly (less than 500 sales and purchases bills)</h4>
@@ -329,7 +329,7 @@ function getRandomImage(imgAr, path) {
 					<dd>List of all invoices issued to persons or companies.</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-	<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
 				  <div class="tab-pane fade" id="16">
                  <h4>GST 1 Regular &amp; Composition Return Quarterly (more than 500 sales and purchases bills)</h4>
@@ -340,7 +340,7 @@ function getRandomImage(imgAr, path) {
 					<dd>List of all invoices issued to persons or companies.</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-	<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -428,12 +428,12 @@ function getRandomImage(imgAr, path) {
           <div class="btn-group">
   <button class="btn bg-olive dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">PBS</a></li>
-    <li><a href="checkout.html">EBS</a></li>
-    <li><a href="checkout.html">CAC</a></li>
-    <li><a href="checkout.html">PR</a></li>
-    <li><a href="checkout.html">ADT1</a></li>
-    <li><a href="checkout.html">ADT2</a></li>
+    <li><a href="checkout.php">PBS</a></li>
+    <li><a href="checkout.php">EBS</a></li>
+    <li><a href="checkout.php">CAC</a></li>
+    <li><a href="checkout.php">PR</a></li>
+    <li><a href="checkout.php">ADT1</a></li>
+    <li><a href="checkout.php">ADT2</a></li>
   </ul>
 </div>
                 </div>
@@ -445,7 +445,7 @@ function getRandomImage(imgAr, path) {
               </dl>
             <p>The balance sheet provides a snapshot of a company's accounts at a given point in time. The balance sheet, along with the income and cash flow statement, is an important tool for owners but also for investors because it is used to gain insight into a company and its financial operations.</p>
             <p>Projected balance sheet is used to analyse and predict the data for the next financial year.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="23">
                   <h4>Estimated Balance Sheet</h4>
@@ -455,7 +455,7 @@ function getRandomImage(imgAr, path) {
               </dl>
             <p>The balance sheet provides a snapshot of a company's accounts at a given point in time. The balance sheet, along with the income and cash flow statement, is an important tool for owners but also for investors because it is used to gain insight into a company and its financial operations.</p>
             <p>Projected balance sheet is used to analyse and predict the data for the current financial year.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="24">
                   <h4>CA Letter</h4>
@@ -474,7 +474,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Address proof of the Firm/Company/HUF</dd>
 					<dd>ID and address proof of all partners/directors</dd>
 				</dl>         
-            <p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+            <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="25">
                   <h4>Project Report</h4>
@@ -492,7 +492,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Long-term projection and planning</dd>
 					<dd>5 years projected balance sheet &amp; Cashflow/Fundflow</dd>
 				</dl>        
-            <p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+            <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
 				  <div class="tab-pane fade" id="26">
                  <h4>Audit (School or NGO or Trust or Partnership Firm)</h4>
@@ -506,7 +506,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Tally backup data</dd>
               </dl>
               <p>A tax audit is a formal examination conducted by the IRS to verify information or uncover fraud and inaccurate tax returns. The IRS selects tax returns to examine both randomly and intentionally. If the audit is selected randomly, the IRS will simply take a closer look to make sure all information are accurate.</p>
-	<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="27">
                  <h4>Audit (PVT LTD or LLP or Company)</h4>
@@ -520,7 +520,7 @@ function getRandomImage(imgAr, path) {
           <dd>Tally backup data</dd>
               </dl>
               <p>A tax audit is a formal examination conducted by the IRS to verify information or uncover fraud and inaccurate tax returns. The IRS selects tax returns to examine both randomly and intentionally. If the audit is selected randomly, the IRS will simply take a closer look to make sure all information are accurate.</p>
-  <p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+  <p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -577,8 +577,8 @@ function getRandomImage(imgAr, path) {
 					<div class="btn-group">
   <button class="btn bg-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">DIR1</a></li>
-    <li><a href="checkout.html">DIR2</a></li>
+    <li><a href="checkout.php">DIR1</a></li>
+    <li><a href="checkout.php">DIR2</a></li>
   </ul>
 </div>
                 </div>
@@ -595,7 +595,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Photograph</dd>
               </dl>
               <p>Directors are appointed by the shareholders of a Company for the management of a Company. As per Companies Law of 1956, a Private Limited Company is required to have a minimum of two Directors and a Limited Company is required to have a minimum of three Directors. On the other hand, a Limited Liability Partnership (LLP) has Designated Partners and Limited Liability Partnership Act, 2008 requires each LLP to have a minimum of two Designated Partners. Appointment or removal of a Director or Designated Partners maybe required due to various reasons. IndiaFilings can help you file the necessary filings to add or remove a Director from your Company or add or remove a Designated Partner from you LLP. To add a Director or Designated Partner, Digital Signature must first be obtained for the proposed Director. Once, Digital Signature is obtained, the proposed Director can be added into the Company with the consent of the shareholders. To remove a Director from a Company or LLP, it is important to ensure the Company or a LLP would have the minimum required number of Director or Designated Partner after removal of the Director. If so, then the resignation letter along with the required form must be filed to effect the resignation of the Director.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="33">
                   <h4>Resignation of existing Director</h4>
@@ -609,7 +609,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Photograph</dd>
               </dl>
               <p>Directors are the said to be brain of the company. They are the managerial personnel who control and administer the company’s operations. The rotation of directors takes place in one or the other way – either by appointment of new director or resignation of existing. Aim to carry out change of directors is always to ensure optimum combination of experts on board for interest of company. The authority to approve the resignation of the director lies with the members of BoD whereas the appointment must be made through consent of shareholders. Whether it is an appointment, removal or resignation, the change does not take effect until the intimation is made to Ministry of corporate affairs.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -688,11 +688,11 @@ function getRandomImage(imgAr, path) {
 					<div class="btn-group">
   <button class="btn bg-teal dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">CMPR1</a></li>
-    <li><a href="checkout.html">CMPR2</a></li>
-    <li><a href="checkout.html">CMPR3</a></li>
-	<li><a href="checkout.html">CMPR4</a></li>
-    <li><a href="checkout.html">CMPR5</a></li>
+    <li><a href="checkout.php">CMPR1</a></li>
+    <li><a href="checkout.php">CMPR2</a></li>
+    <li><a href="checkout.php">CMPR3</a></li>
+	<li><a href="checkout.php">CMPR4</a></li>
+    <li><a href="checkout.php">CMPR5</a></li>
   </ul>
 </div>
                 </div>
@@ -707,7 +707,7 @@ function getRandomImage(imgAr, path) {
 					<dd>Director Pan card</dd><dd>Aadhar card</dd><dd>5 Company name in Excel format</dd><dd>Director Identification Number (DIN)</dd><dd>Minumum 3
 director's education, mobile number, email ID etc information in excel format</dd>
               </dl>
-			<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+			<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="43">
                 <h4>One Person Company (OPC) Registration</h4>
@@ -717,7 +717,7 @@ director's education, mobile number, email ID etc information in excel format</d
                 <dt>Documents required</dt>
 					<dd>Reservation application of name in INC-1</dd><dd>Identity proof, address proof and PAN card copy of nominee and member</dd><dd>Written Consent of Nominee in form INC-3</dd><dd>Memorandum and Affidavit of sharer for form INC-9</dd><dd>Application for Company Registration</dd><dd>Registrar Office Address in Form INC-22</dd><dd>Registered office's address proof</dd>
               </dl>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="44">
                  <h4>Private Limited (PVT LTD) Company Registration</h4>
@@ -727,7 +727,7 @@ director's education, mobile number, email ID etc information in excel format</d
                 <dt>Documents required</dt>
 					<dd>Digital Signature Certificate</dd><dd>Director Identification Number (DIN)</dd><dd>Application for Reservation of Name of company in e-Form INC–1</dd><dd>Form SPICE INC-32</dd><dd>MOA(INC-33) and AOA(INC-34)</dd><dd>PAN(form 49A) and TAN(form 49B) Application</dd>
               </dl><p>For Name availability under RUN Web service, there is no prior requirement to obtain DSC and DIN . It can be done with account login on MCA portal.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
 				  <div class="tab-pane fade" id="45">
                  <h4>Limited Company Registration</h4>
@@ -738,7 +738,7 @@ director's education, mobile number, email ID etc information in excel format</d
 					<dd>PAN card copy with Self-attestation</dd><dd>Latest passport size photo</dd><dd>Copy of No Objection Certificate(NOC) from the owner of the property</dd><dd>If owned property, a copy of Sale Deed and Electricity bill is sufficient</dd><dd>Identity proof with self attestation</dd><dd>Latest Utility Bill or bank statement</dd><dd>Proof of Office registration, with rental or lease agreement</dd>
               </dl>
 					  <p>In case of NRI or Foreign national, Passport copy has to be notarized at the Indian Embassy of the particular country.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
 				  <div class="tab-pane fade" id="46">
                  <h4>Limited Liablity Partnership Company (LLP) Registration</h4>
@@ -749,7 +749,7 @@ director's education, mobile number, email ID etc information in excel format</d
 					<dd>PAN Card of the Partners</dd><dd>Address Proof of the Partners</dd><dd>Utility Bill of the proposed Registered Office of the LLP</dd><dd>No-Objection Certificate (NOC) from the Landlord</dd><dd>Rental Agreement Copy between the LLP and the Landlord</dd><dd>Director Identification Number (DIN) for Partners</dd><dd>Application for Reservation of Name</dd><dd>Filing for Incorporation</dd>
               </dl>
 					  <p>The Partners then have 60 days to file the required incorporation documents and register the LLP. In case the LLP is not formed within 60 days of name approval letter, the approval for name for the LLP would have to be re-obtained.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -794,7 +794,7 @@ director's education, mobile number, email ID etc information in excel format</d
                 </tbody>
               </table>
 					</div>
-				<a href="checkout.html"><button type="button" class="btn bg-purple margin">Buy Now</button></a>
+				<a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a>
                 </div>
                 <div class="tab-pane fade" id="52">
                   <h4>New GST Registration</h4>
@@ -807,7 +807,7 @@ director's education, mobile number, email ID etc information in excel format</d
           <dd>Email Address</dd><dd>Mobile Number</dd><dd>Father and Mother's name</dd>
               </dl>
             <p>All documents must be self attested and scanned pdf format</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -870,9 +870,9 @@ director's education, mobile number, email ID etc information in excel format</d
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">ISO</a></li>
-    <li><a href="checkout.html">TMP</a></li>
-    <li><a href="checkout.html">TMC</a></li>
+    <li><a href="checkout.php">ISO</a></li>
+    <li><a href="checkout.php">TMP</a></li>
+    <li><a href="checkout.php">TMC</a></li>
   </ul>
 </div>
                 </div>
@@ -892,7 +892,7 @@ director's education, mobile number, email ID etc information in excel format</d
 <li>Aims to enhance customer satisfaction through the effective application of the system, including processes for improvement of the system and the assurance of conformity to customer and applicable statutory and regulatory requirements.</li></ul>
 All the requirements of ISO 9001:2015 are generic and are intended to be applicable to any organization, regardless of its type or size, or the products and services it provides.
 </p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="63">
                    <h4>Trademarks Registration (Individual or Propertiorship)</h4>
@@ -906,7 +906,7 @@ All the requirements of ISO 9001:2015 are generic and are intended to be applica
               </dl>
             <p>A trademark is a visual symbol, which may be a word, name, device, label or numerals used by a business to distinguish it goods or services from other similar goods or services originating from a different business. A registered trademark is an intangible asset or intellectual property for a business and is used to protect the company's investment in the brand or symbol. A trademark is registrable if it is distinctive for the goods and services you provide. Proposed trademarks that are similar or identical to an existing registered trademark cannot be registered. Also, trademarks are not registrable if it is offensive, generic, deceptive, not distinctive, contains specially protected emblems, etc.
 Trademarks in India are registered by the Controller General of Patents Designs and Trademarks, Ministry of Commerce and Industry, Government of India. Trademarks are registered under the Trademark Act, 1999 and provide the trademark owner with a right to sue for damages when infringements of trademarks occur. Once a trademark is registered, R symbol can be used and the registration will be valid for 10 years. Registered trademarks nearing expiry can be easily renewed by filing a trademark renewal application for a period of another 10 years.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="64">
                   <h4>Trademarks Registration (Partnership or LLP or Company)</h4>
@@ -920,7 +920,7 @@ Trademarks in India are registered by the Controller General of Patents Designs 
               </dl>
             <p>A trademark is a visual symbol, which may be a word, name, device, label or numerals used by a business to distinguish it goods or services from other similar goods or services originating from a different business. A registered trademark is an intangible asset or intellectual property for a business and is used to protect the company's investment in the brand or symbol. A trademark is registrable if it is distinctive for the goods and services you provide. Proposed trademarks that are similar or identical to an existing registered trademark cannot be registered. Also, trademarks are not registrable if it is offensive, generic, deceptive, not distinctive, contains specially protected emblems, etc.
 Trademarks in India are registered by the Controller General of Patents Designs and Trademarks, Ministry of Commerce and Industry, Government of India. Trademarks are registered under the Trademark Act, 1999 and provide the trademark owner with a right to sue for damages when infringements of trademarks occur. Once a trademark is registered, R symbol can be used and the registration will be valid for 10 years. Registered trademarks nearing expiry can be easily renewed by filing a trademark renewal application for a period of another 10 years.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -1022,13 +1022,13 @@ Trademarks in India are registered by the Controller General of Patents Designs 
           <div class="btn-group">
   <button class="btn bg-teal dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">WEB1</a></li>
-    <li><a href="checkout.html">WEB2</a></li>
-    <li><a href="checkout.html">WEB3</a></li>
-  <li><a href="checkout.html">WEB4</a></li>
-    <li><a href="checkout.html">WEB5</a></li>
-  <li><a href="checkout.html">WEB6</a></li>
-    <li><a href="checkout.html">WEB7</a></li>
+    <li><a href="checkout.php">WEB1</a></li>
+    <li><a href="checkout.php">WEB2</a></li>
+    <li><a href="checkout.php">WEB3</a></li>
+  <li><a href="checkout.php">WEB4</a></li>
+    <li><a href="checkout.php">WEB5</a></li>
+  <li><a href="checkout.php">WEB6</a></li>
+    <li><a href="checkout.php">WEB7</a></li>
   </ul>
 </div>
                 </div>
@@ -1045,7 +1045,7 @@ Trademarks in India are registered by the Controller General of Patents Designs 
             <p>In digital marketing, a landing page is a standalone web page, created specifically for the purposes of a marketing or advertising campaign. It’s where a visitor “lands” when they have clicked on a Google AdWords ad or similar. In simple words, landing pages act like one page website.
 Landing pages are designed with a single focused objective – known as a Call to Action (CTA).
 This simplicity is what makes landing pages the best option for increasing the conversion rates of your Google AdWords campaigns and lowering your cost of acquiring a lead or sale.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="73">
                   <h4>Business &amp; Startup Website</h4>
@@ -1058,7 +1058,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, SSL, branding, SEO optimization, CTAs, Display products or services, Newsletter subscription, FAQ section, blogs(static), live-chat etc.</dd>
               </dl>
             <p>According to a survey people spend 6 hours a day on the Internet. There are numerous benefits of having a website for your small business. A website is not an expense. It is an investment because you should expect a return on your money within a period of time. If you want an effective website or one that can help you take your business to another level, you have to be prepared to invest in one.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="74">
                   <h4>e-Commerce Website</h4>
@@ -1071,7 +1071,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, SEO optimization, high conversion CTAs, Display products or services, email marketing integration, login/register feature, Payment Gateway Integration, Woocommerce Admin Panel (CMS), promo code and discounts feature, tax calculations, search and filter products, wishlist, order management, reporting tools, email notification, blogs, live-chat, responsive and secure.</dd>
               </dl>
             <p>Take your business into new heights by selling online. Whether you have a book store or a clothing brand or a general store, e-Commerce is the future for every business. Adapt to online store to get passive income without any hassle.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="75">
                   <h4>Blog Website</h4>
@@ -1084,7 +1084,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, SEO optimization, Modern UI/UX and typography, Newsletter subscription, comments with anti spam filter, donate button, Wordpress (CMS), email marketing, sell merchandises, responsive and secure.</dd>
               </dl>
             <p>Blogging is a great way to show your talents and interests to prospective employers, while adding an edge to your resume. If you blog consistently it shows your dedication, passions and creativity - all of which are key attributes employers look for in job candidates. Blogging is also the best way for content marketing and promotion of products.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                  <div class="tab-pane fade" id="76">
                   <h4>Personal Website (Digital v-card/resume)</h4>
@@ -1101,7 +1101,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, showcase your skills and interests, Modern UI/UX and typography, Newsletter subscription, portfolio gallery for showing your collection, education and experiences, free visual resume, responsive and secure.</dd>
               </dl>
             <p>It is important in todays generation to turn your personal name into a brand as it is the only thing you are going to have throughout your life. According to a recent survey, having a personal website with your own name as your domain helps in getting high salary jobs easily. Personal websites have many features like portfolio, resume, contact details, and blogs.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                  <div class="tab-pane fade" id="77">
                   <h4>Search Engine Optimization (SEO)</h4>
@@ -1114,7 +1114,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, showcase your skills and interests, Modern UI/UX and typography, Newsletter subscription, portfolio gallery for showing your collection, education and experiences, free visual resume responsive and secure.</dd>
               </dl>
             <p>You can’t just open a website and expect people to flood in. If you really want to succeed you have to create traffic. What is better than 1st rank on google? SEO helps to index your web pages properly with appropriate keywords and white hat SEO techniques. Why pay for ads or PPC marketing when you can do that for free using SEO. What you do after you create your content is what truly counts. SEO makes your site indexable by popular search engines like Google, Yahoo, Bing, Baidu and Yandex.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                  <div class="tab-pane fade" id="78">
                   <h4>Domain, Hosting and SSL Certificate</h4>
@@ -1126,7 +1126,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dt>Security Features</dt>
                 <dd>Fast And Global Content Delivery Network, Improve Visitor Experiences Through Load Balancing, Web Content Optimization, Enterprise-Class Web Application Firewall, Rate Limiting, HSTS, SSL, DDoS Protection, DNSSEC etc.</dd>
               </dl> <p> All the above features(except domain) are free with any website plan.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -1192,9 +1192,9 @@ This simplicity is what makes landing pages the best option for increasing the c
 					<div class="btn-group">
   <button class="btn bg-purple dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">GD1</a></li>
-    <li><a href="checkout.html">GD2</a></li>
-    <li><a href="checkout.html">GD3</a></li>
+    <li><a href="checkout.php">GD1</a></li>
+    <li><a href="checkout.php">GD2</a></li>
+    <li><a href="checkout.php">GD3</a></li>
   </ul>
 </div>
                 </div>
@@ -1210,7 +1210,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, showcase your skills and interests, Modern UI/UX and typography, Newsletter subscription, portfolio gallery for showing your collection, education and experiences, free visual resume, responsive and secure.</dd>
               </dl>
             <p>It is important in todays generation to turn your personal name into a brand as it is the only thing you are going to have throughout your life. According to a recent survey, having a personal website with your own name as your domain helps in getting high salary jobs easily. Personal websites have many features like portfolio, resume, contact details, and blogs.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="83">
                   <h4>Pamphlet and Banner Designing</h4>
@@ -1224,7 +1224,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, showcase your skills and interests, Modern UI/UX and typography, Newsletter subscription, portfolio gallery for showing your collection, education and experiences, free visual resume, responsive and secure.</dd>
               </dl>
             <p>It is important in todays generation to turn your personal name into a brand as it is the only thing you are going to have throughout your life. According to a recent survey, having a personal website with your own name as your domain helps in getting high salary jobs easily. Personal websites have many features like portfolio, resume, contact details, and blogs.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="84">
                   <h4>Visual CV or Resume</h4>
@@ -1238,7 +1238,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                 <dd>professional design, showcase your skills and interests, Modern UI/UX and typography, Newsletter subscription, portfolio gallery for showing your collection, education and experiences, free visual resume, responsive and secure.</dd>
               </dl>
             <p>It is important in todays generation to turn your personal name into a brand as it is the only thing you are going to have throughout your life. According to a recent survey, having a personal website with your own name as your domain helps in getting high salary jobs easily. Personal websites have many features like portfolio, resume, contact details, and blogs.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -1325,14 +1325,14 @@ This simplicity is what makes landing pages the best option for increasing the c
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">PSMS1</a></li>
-    <li><a href="checkout.html">PSMS2</a></li>
-    <li><a href="checkout.html">PSMS3</a></li>
-    <li><a href="checkout.html">TSMS1</a></li>
-    <li><a href="checkout.html">TSMS2</a></li>
-    <li><a href="checkout.html">TSMS3</a></li>
-    <li><a href="checkout.html">RPSMS</a></li>
-    <li><a href="checkout.html">RTSMS</a></li>
+    <li><a href="checkout.php">PSMS1</a></li>
+    <li><a href="checkout.php">PSMS2</a></li>
+    <li><a href="checkout.php">PSMS3</a></li>
+    <li><a href="checkout.php">TSMS1</a></li>
+    <li><a href="checkout.php">TSMS2</a></li>
+    <li><a href="checkout.php">TSMS3</a></li>
+    <li><a href="checkout.php">RPSMS</a></li>
+    <li><a href="checkout.php">RTSMS</a></li>
   </ul>
 </div>
                 </div>
@@ -1349,9 +1349,9 @@ Cost is the driving factor for using Promotional SMS Service. With its lowest pr
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">PSMS-5000</a></li>
-    <li><a href="checkout.html">PSMS-10000</a></li>
-    <li><a href="checkout.html">PSMS-100000</a></li>
+    <li><a href="checkout.php">PSMS-5000</a></li>
+    <li><a href="checkout.php">PSMS-10000</a></li>
+    <li><a href="checkout.php">PSMS-100000</a></li>
   </ul>
 </div>
                 </div>
@@ -1368,9 +1368,9 @@ All SMS content needs to be transactional and should not contain any promotional
           <div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">TSMS-5000</a></li>
-    <li><a href="checkout.html">TSMS-10000</a></li>
-    <li><a href="checkout.html">TSMS-100000</a></li>
+    <li><a href="checkout.php">TSMS-5000</a></li>
+    <li><a href="checkout.php">TSMS-10000</a></li>
+    <li><a href="checkout.php">TSMS-100000</a></li>
   </ul></div>
                 </div>
                 <div class="tab-pane fade" id="94">
@@ -1386,8 +1386,8 @@ All SMS content needs to be transactional and should not contain any promotional
           <div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">RPSMS</a></li>
-    <li><a href="checkout.html">RTSMS</a></li>
+    <li><a href="checkout.php">RPSMS</a></li>
+    <li><a href="checkout.php">RTSMS</a></li>
   </ul></div>
                 </div>
               </div>
@@ -1443,8 +1443,8 @@ All SMS content needs to be transactional and should not contain any promotional
 					<div class="btn-group">
   <button class="btn bg-olive dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">DSC1</a></li>
-    <li><a href="checkout.html">DSC2</a></li>
+    <li><a href="checkout.php">DSC1</a></li>
+    <li><a href="checkout.php">DSC2</a></li>
   </ul>
 </div>
                 </div>
@@ -1458,7 +1458,7 @@ All SMS content needs to be transactional and should not contain any promotional
 					<dd>Proof of identity - PAN card</dd><dd>Proof of residence - utility bill</dd>
               </dl>
 					  <p>These are issued to the director/signatory authorities of the companies for the purpose of e-filing with the Registrar of Companies (ROC). Class 2 certificate is mandatory for individuals who have to sign manual documents while filing of returns with the ROC.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="103">
                   <h4>DSC class 3</h4>
@@ -1470,7 +1470,7 @@ All SMS content needs to be transactional and should not contain any promotional
 					<dd>Proof of identity - PAN card</dd><dd>Proof of residence - utility bill</dd>
               </dl>
 					  <p>These certificates are used in online participation/bidding in e-auctions and online tenders anywhere in India. The vendors who wish to participate in the online tenders must have a Class 3 digital signature certificate.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -1532,9 +1532,9 @@ All SMS content needs to be transactional and should not contain any promotional
 					<div class="btn-group">
   <button class="btn bg-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">ORG1</a></li>
-    <li><a href="checkout.html">ORG2</a></li>
-    <li><a href="checkout.html">ORG3</a></li>
+    <li><a href="checkout.php">ORG1</a></li>
+    <li><a href="checkout.php">ORG2</a></li>
+    <li><a href="checkout.php">ORG3</a></li>
   </ul>
 </div>
                 </div>
@@ -1550,7 +1550,7 @@ All SMS content needs to be transactional and should not contain any promotional
             NGO may be defined as association having a definite cultural, educational, economical, religious or social association organization. They are not owned by any one and cannot distribute profits as such. Whatever profits they may earn from economic activities are reinvested or spent on appropriate non profit activities. The typical sources of revenue or non governmental organizations are donations, membership fees, interest and dividends on investments. Task-oriented and driven by people with a common interest, NGOs do a variety of service and humanitarian functions, bring resident issues to Governments, advocate and display policies and encourage political participation through arrangement of info. Some are arranged around particular concerns such as human rights, environment or wellness.</p>
             <p>
 A Non Profit Organization can get income tax benefit by getting itself registered and abiding by certain other process, but such NGO  does not provide any profit to the persons making donations. The Income Tax Act 1961 has certain provisions which offer tax benefits to the "donors" like 35ac where donor gets 100% tax rebate and 80G where donor gets 50% tax rebate. In India non profit / public charitable companies can be registered as trusts, societies, or a personal limited non earnings business, under section 25 Companies Act 1956. Non-profit organizations in India exist independently of the state. They are self-governed by a board of trustees or 'handling committee'/ governing council.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="113">
                  <h4>Trust Registration</h4>
@@ -1561,7 +1561,7 @@ A Non Profit Organization can get income tax benefit by getting itself registere
           <dd>Proof of identity and proof of residence of all trustees, settlers/authors</dd><dd>Passport size photographs of all trustees</dd><dd>Name and address of Trust</dd><dd>Trust deed (MOA, objectives and rules)</dd>
               </dl>
             <p>A trust is a legal arrangement pursuant to which one person (the “grantor” or “settlor”) entrusts assets to another person or organization (the “trustee”) to manage for the benefit of others (the “beneficiaries”). Now, this is an oversimplified definition, and with certain types of trusts, a single person can serve as grantor, trustee, and beneficiary; but, this provides a good foundation for our discussion of charitable trusts. When a person wants his or her properties and money to be managed by a certain body, it is a trust. Trusts also assist in doing charitable work for the entire body of mankind whether it is medical, educational, labor, etc. Trusts are not dependent on the programs of the government. Trusts have their own policies since they can be public or private trusts. It does not need any aid from the government or any organization. NGOs can receive financial assistance from the government while trusts cannot.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="114">
                  <h4>Section 8 Company Registration</h4>
@@ -1574,7 +1574,7 @@ A Non Profit Organization can get income tax benefit by getting itself registere
             <p>Section 8 Company is named Section 8 of the Companies Act, 2013, for promoting commerce, art, science, sports, education, research, social welfare, religion, charity, protection of environment or any such other object', provided the profits, if any, or other income is applied for promoting only the objects of the company and no dividend is paid to its members. Therefore, Section 8 Company or Section 25 Company is a company registered under the Companies Act, 2013 for charitable or not-for-profit purposes.
 
 A Section 8 Company is similar to a Trust or Society except, a section 8 Company is registered under the Central Government's Ministry of Corporate Affairs. Trusts and Societies are registered under State Government regulations. A section 8 company has various advantages when compared to Trust or Society like improved recognition and better legal standing. Section 8 company also has higher credibility amongst donors, Government departments and other stakeholders.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>
@@ -1654,11 +1654,11 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
 					<div class="btn-group">
   <button class="btn bg-teal dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.html">10E</a></li>
-    <li><a href="checkout.html">AIR</a></li>
-    <li><a href="checkout.html">ITR</a></li>
-	<li><a href="checkout.html">TDS</a></li>
-  <li><a href="checkout.html">AFC</a></li>
+    <li><a href="checkout.php">10E</a></li>
+    <li><a href="checkout.php">AIR</a></li>
+    <li><a href="checkout.php">ITR</a></li>
+	<li><a href="checkout.php">TDS</a></li>
+  <li><a href="checkout.php">AFC</a></li>
   </ul>
 </div>
                 </div>
@@ -1671,7 +1671,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
           <dd>Form-16</dd><dd>Arrear sheet</dd>
              </dl>
             <p>If you have received some salary in arrears, it is likely you have heard of Form 10E. The income tax department recently made filing of Form 10E mandatory for those claiming income tax relief. Tax relief is allowed if you have received past dues in the current year. This relief makes sure there is no extra tax burden on you.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="123">
                   <h4>Annual Information Returns</h4>
@@ -1683,7 +1683,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
           <dd>PAN card</dd>
           <dd>Aadhar card</dd></dl>
             <p>As per the amendment to Section 285BA of the Income Tax Act, 1961, specified entities (Filers) are required to furnish an Annual Information Return (AIR) in respect of specified financial transactions registered/recorded by them during the financial year (beginning on or after April 1, 2004) to the income tax authority or such other prescribed authority. An entity who is required to file AIR is required to file one single AIR for the whole organization.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="124">
                   <h4>Income Tax Returns File (with balance sheet and computation)</h4>
@@ -1694,7 +1694,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
           <dd>PAN card</dd><dd>Aadhar Card</dd><dd>Details of all bank accounts (Account number, IFSC code, MICR code)</dd><dd>All sources of Income</dd><dd>TDS and advance tax payments</dd>
           <dt>Deductions</dt><dd>LIC</dd><dd>Tution Fees</dd><dd>GPF</dd><dd>PPF</dd><dd>And other deductions claimed under Section 80</dd></dl>
             <p>Irrespective of whether you live in India currently or not, filing an income tax return is compulsory, if your total Indian income exceeds Rs.2,50,000. Even if you don't meet the Rs.2,50,000 threshold, it's a good practice to file or e-file your income tax return. An income tax return is an important document that you must produce at the time of availing a home loan, as it reflects your financial prosperity. An income tax return—as a proof of income—shows your capacity to repay a loan. If you are planning to go abroad for higher studies, or are about to take up a job outside of India, you'll need at least three years' filed income tax returns to show as proof of income. People processing your visa application may request for this financial information to evaluate your financial health, which in return shows that you can support yourself on your own in their country.</p><p>As per the source of income select the right type of income tax return form as it is the most important part in filing yoiur returns. Income tax department has prescribed different ITR forms to file the returns like ITR-1 (Sahaj), ITR-2, ITR-3, ITR-4, ITR-4S (Sugam). Assessees should choose the right form as required by them to file returns correctly.</p>
-					<p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="125">
                   <h4>TDS Returns File</h4>
@@ -1704,7 +1704,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
                 <dd>PAN card</dd><dd>Aadhar Card</dd><dd>Tax payment challans (self-assessment or advance tax)</dd><dd>All sources of Income and salary certificate</dd><dd>Details of all bank accounts (Account number, IFSC code, MICR code)</dd><dd>Form-16</dd><dd>Form-26AS</dd>
               </dl>
             <p>Tax Deducted at Source or TDS is a type of advance tax which is deducted from the earnings of an individual or an organization before the money is actually credited into that entity’s account, according to the Indian Taxation Code. The government is able to generate revenues by implementing the provisions of TDS on the earnings of individuals as well as businesses. Rules and regulations regarding TDS are controlled and governed under the Income Tax Act, 1961 by the Central Board of Direct Taxes (CBDT). As the name suggests, “Tax Deducted at Source” implies that the payee or the employer deducts the tax before making a payment to the receiver. Tax Deducted at Source is applicable on income earned regularly and also on the income earned occasionally or irregularly. Thus, TDS is applicable on various incomes, including, but not limited to Salary, Commission, Rent, Professional Fees and Interest.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
                 <div class="tab-pane fade" id="126">
                   <h4>Annual filings of company</h4>
@@ -1714,7 +1714,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
                 <dt>Documents required</dt>
          <dd>Tax audit with CA seal and signature</dd></dl>
             <p>All companies registered in India like private limited company, one person company, limited company, and section 8 company must file MCA annual return and income tax return each year. Companies must conduct an Annual General Meeting at the end of each financial year and file an annual return with the Ministry of Corporate Affair to maintain compliance. For newly incorporated Companies, the Annual General Meeting should be held within 18 months from date of incorporation or 9 months from the date of closing of financial year, whichever is earlier. Subsequent Annual General Meetings should be held within 6 months from the end of that financial year. In India, normally the financial year starts on April 1st and end on 31st March. So a Company's annual return would be due on or before September 30th.</p><p>Annual return consists of information and documents that include the Balance Sheet of the Company, Profit & Loss Account, Compliance Certificate, Registered Office Address, Register of Member, Shares and Debentures details, Debt details and information about the Management of the Company. The annual return would also disclose the shareholding structure of the Company, changes in Directorship and details of transfers of securities.</p><p>In addition to MCA annual return, companies must also file income tax return irrespective of income, profit or loss. Hence, even dormant companies with no transactions are required to file income tax return each year. Private limited companies, limited companies and one person companies would be required to file Form ITR -6. The due date for filing income tax return for a company is on or before the 30th of September.</p>
-          <p align="center"><a href="checkout.html"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
+          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
                 </div>
               </div>
             </div>

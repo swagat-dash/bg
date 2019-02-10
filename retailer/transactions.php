@@ -38,7 +38,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
     <b class="logo-mini">
       <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -78,20 +78,20 @@ function getRandomImage(imgAr, path) {
                 <p>Dynamic name by php variable</p>
                   <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
-                  <a href="wallet.html" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="kyc.html"><i class="ion ion-person"></i> My e-KYC</a>
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
                   </div>
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.html"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">
@@ -189,9 +189,9 @@ function getRandomImage(imgAr, path) {
     </li>
 
     <li class="nav-devider"></li>
-    <li><a href="index.html"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+    <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     <li class="active"><a href="#"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
-    <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Support</span></a></li>
+    <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
@@ -211,7 +211,7 @@ function getRandomImage(imgAr, path) {
 				<div class="box">
 					<div class="box-header with-border">						
 						<h4 class="box-title">My Transactions History</h4>
-						<h6 class="box-subtitle">Manual transactions must be verified by <a href="7f85nhd587344f3847err456e5764v.html"> clicking here</a></h6>
+						<h6 class="box-subtitle">Manual transactions must be verified by <a href="7f85nhd587344f3847err456e5764v.php"> clicking here</a></h6>
 					</div>
 					<div class="box-body">
 						<div class="row mb-30">
