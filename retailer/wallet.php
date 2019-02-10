@@ -13,9 +13,15 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/Magnific-Popup-master/dist/magnific-popup.css">
+	<link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/all.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <style>
+form .hidden { display: none; }
+
+form .visible { display: block; }
+</style>
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -318,31 +324,57 @@ function getRandomImage(imgAr, path) {
           <h3 class="box-title">Withdraw Money</h3>
         </div>
         <div class="box-body">
-			<a class="popup-with-form btn btn-success" href="#test-form">Proceed</a>
+			<a class="popup-with-form btn btn-success" href="#withdraw-form">Proceed</a>
 			
 			<!-- form itself -->
-			<form id="test-form" class="mfp-hide white-popup-block">
+			<form id="withdraw-form" class="mfp-hide white-popup-block" action="">
 				<h1>Withdrawl Request</h1>
 				<fieldset style="border:0;">
-					<p>You can withdraw your money anytime by requesting here. You can choose any payment method like PayTm, PhonePe or directly to you account.</p>
+					<p>You can withdraw your money anytime by requesting here. You can choose any payment method like UPI, PayTm, PhonePe or directly to you account.</p>
 					<div class="form-group">
-						<label class="control-label" for="upi">UPI</label>
-						<input type="text" class="form-control" id="upi" name="upi" placeholder="Google Pay or BHIM UPI">
-					</div>
-					<div class="form-group">
-						<label class="control-label" for="paytm">PayTm</label>
-						<input type="email" class="form-control" id="paytm" name="paytm" placeholder="PayTm Number" required="">
-					</div>
-					<div class="form-group">
-						<label class="control-label" for="phonepe">PhonePe</label>
-						<input type="tel" class="form-control" id="phonepe" name="phonepe" placeholder="PhonePe Number">
-					</div>
-					<div class="form-group">
-						<label class="control-label" for="textarea">Account Details</label>
-						<br>
-						<textarea class="form-control" id="textarea">Enter your Name, Account Number, IFSC code, Bank Name and Branch.</textarea>
-					</div>
+					<input name="paymentMethod" type="radio" class="with-gap" id="upi" checked/>
+						<label for="upi">UPI</label></div>
+						<div class="form-group">
+					<input name="paymentMethod" type="radio" class="with-gap" id="phonepe" />
+							<label for="phonepe">PhonePe</label></div>
+							<div class="form-group">
+					<input name="paymentMethod" type="radio" class="with-gap" id="paytm"/>
+								<label for="paytm">PayTm</label></div>
+								<div class="form-group">
+					<input name="paymentMethod" type="radio" class="with-gap" id="bank" />
+									<label for="bank">Bank Transfer</label></div>
+    					<div class="box form-group" data-show="upi" data-hide="paymentMethod">
+    					<div class="controls">
+						<input type="text" class="form-control" name="upi" placeholder="Google Pay or BHIM UPI">
+							</div></div>
+    					<div class="box form-group" data-show="phonepe" data-hide="paymentMethod">
+    					<div class="controls">
+						<input type="tel" class="form-control" name="phonepe" placeholder="PhonePe Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
+							</div></div>
+   				 		<div class="box form-group" data-show="paytm" data-hide="paymentMethod">
+   				 		<div class="controls">
+						<input type="tel" class="form-control" name="paytm" placeholder="PayTm Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
+							</div></div>
+    					<div class="box form-group" data-show="bank" data-hide="paymentMethod">
+    					<div class="controls">
+						<input type="text" class="form-control" name="name" placeholder="Account Holder's Name" pattern="^[A-z ]{3,72}$">
+							</div>
+							<div class="controls">
+						<input type="text" class="form-control" name="phone" placeholder="registered mobile number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
+							</div>
+ 				 		<div class="controls">
+						<input type="text" class="form-control" name="accountNumber" placeholder="Account Number" pattern="^[\d]{11,17}$">
+							</div>
+ 				 		<div class="controls">
+						<input type="text" class="form-control" name="bankName" placeholder="Bank name and branch" pattern="^[A-z,. \d]{3,72}$">
+							</div>
+ 				 		<div class="controls">
+						<input type="text" class="form-control" name="ifsc" placeholder="IFSC Code" pattern="^[a-z0-9]{11}$|^[A-Z0-9]{11}$">
+							</div>
+  				 		</div>
+   				 		<button type="submit" class="btn btn-info">Withdraw</button>
 				</fieldset>
+				
 			</form>
         </div>
         <!-- /.box-body -->
@@ -383,6 +415,13 @@ function getRandomImage(imgAr, path) {
     <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
   <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/assets/vendor_plugins/iCheck/icheck.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
+	<script src="../assets/assets/vendor_components/jquery.formalist.min.js"></script>
+	<script>
+$(function(){
+  $('#withdraw-form').formalist();
+});
+</script>

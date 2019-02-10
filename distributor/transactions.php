@@ -236,45 +236,6 @@ function getRandomImage(imgAr, path) {
 						<h6 class="box-subtitle">List of past transactions of your retailers</h6>
 					</div>
 					<div class="box-body">
-						<div class="row mb-30">
-							<!-- Column -->
-							<div class="col-md-6 col-lg-3 col-xlg-3">
-								<div class="box box-inverse box-info">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">2,064</h1>
-										<h6 class="text-white mb-10">Total Transactions</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-6 col-lg-3 col-xlg-3">
-								<div class="box box-success box-inverse">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1,738</h1>
-										<h6 class="text-white mb-10">Responded</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-6 col-lg-3 col-xlg-3">
-								<div class="box box-inverse box-danger">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1100</h1>
-										<h6 class="text-white mb-10">Resolve</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-6 col-lg-3 col-xlg-3">
-								<div class="box box-inverse box-dark">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">964</h1>
-										<h6 class="text-white mb-10">Pending</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-						</div>
 						<div class="table-responsive">
 							<table id="transactions" class="table mt-0 table-hover no-wrap" data-page-size="10">
 								<thead>
