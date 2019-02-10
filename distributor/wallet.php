@@ -8,13 +8,20 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>e-KYC | BG Techno</title>
+    <title>Wallet | BG Techno</title>
   
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
-	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_components/Magnific-Popup-master/dist/magnific-popup.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/all.css">
+  <link rel="stylesheet" href="../assets/ser/css/master_style.css">
+  <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <style>
+form .hidden { display: none; }
+
+form .visible { display: block; }
+</style>
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -225,7 +232,7 @@ function getRandomImage(imgAr, path) {
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Wallet Top-up</h1>
+      <h1>My Wallet</h1>
     </section>
 
     
@@ -425,11 +432,20 @@ function getRandomImage(imgAr, path) {
 </div>
 <!-- ./wrapper -->
 
-	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
-	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
-	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
+  <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
   <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
-	<script src="../assets/ser/js/template.js"></script>
-	<script src="../assets/ser/js/demo.js"></script>
+  <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="../assets/assets/vendor_plugins/iCheck/icheck.min.js"></script>
+  <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+  <script src="../assets/ser/js/template.js"></script>
+  <script src="../assets/ser/js/demo.js"></script>
+  <script src="../assets/assets/vendor_components/jquery.formalist.min.js"></script>
+  <script>
+$(function(){
+  $('#withdraw-form').formalist();
+});
+</script>

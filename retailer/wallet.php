@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
   <style>
 form .hidden { display: none; }
-
 form .visible { display: block; }
 </style>
 	<!--[if lt IE 9]>
@@ -197,7 +196,6 @@ function getRandomImage(imgAr, path) {
 
     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    
     <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
@@ -327,7 +325,7 @@ function getRandomImage(imgAr, path) {
 			<a class="popup-with-form btn btn-success" href="#withdraw-form">Proceed</a>
 			
 			<!-- form itself -->
-			<form id="withdraw-form" class="mfp-hide white-popup-block" action="">
+			<form id="withdraw-form" class="form-element mfp-hide white-popup-block" action="">
 				<h1>Withdrawl Request</h1>
 				<fieldset style="border:0;">
 					<p>You can withdraw your money anytime by requesting here. You can choose any payment method like UPI, PayTm, PhonePe or directly to you account.</p>

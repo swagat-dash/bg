@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,8 +33,8 @@ function getRandomImage(imgAr, path) {
 </script>
 <style>.box-body {
     overflow-x: auto!important;
-}</style>
-	
+} 
+</style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -42,7 +42,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -82,7 +82,7 @@ function getRandomImage(imgAr, path) {
                 <p>Admin</p>
                   <p>Dynamic email by php variable</p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="#" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -109,7 +109,10 @@ function getRandomImage(imgAr, path) {
 
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="user-profile treeview">
         <a href="services.html">
@@ -118,7 +121,7 @@ function getRandomImage(imgAr, path) {
               <i class="fa fa-angle-right pull-right"></i>
             </span>
         </a>
-    <ul class="treeview-menu">
+ 		<ul class="treeview-menu">
             <li><a href="../pan.html" target="_blank">PAN card</a></li>
             <li><a href="../gst.html" target="_blank">GST</a></li>
             <li><a href="../aeps.html" target="_blank">AEPS</a></li>
@@ -133,7 +136,7 @@ function getRandomImage(imgAr, path) {
             <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
         </ul>
     </li>
-  <li class="nav-devider"></li>
+    <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
@@ -149,9 +152,9 @@ function getRandomImage(imgAr, path) {
           </ul>
         </li>
         <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
-        <li><a href="#"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
-        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
-    </ul>
+        <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
+        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>        
+</ul>
     </section>
   </aside>
   <!-- Content Wrapper. Contains page content -->
@@ -159,18 +162,18 @@ function getRandomImage(imgAr, path) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Offer Management System
+        Wallet Management
       </h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
-<div class="row">
-        <div class="col-12">
-          <div class="box">
+      <div class="row">
+       <div class="col-12">
+        <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">All Promo Codes</h3>
-
+              <h3 class="box-title">Wallet Money Pending Withdrawl Request</h3>
+              <h6 class="box-subtitle">Kindly pay all the withdrawl requests below.</h6>
               <div class="box-tools pull-right">
             <ul class="box-controls pull-right">
                   <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
@@ -178,47 +181,51 @@ function getRandomImage(imgAr, path) {
                   <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li>
              </ul>
           </div>
-			  </div>  
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <table class="table table-hover table-responsive">
-                <tr>
-                  <th>Promo Code</th>
-                  <th>Deadline</th>
-                  <th>Discount in Percentage</th>
-                  <th>Flat Cashback</th>
-                </tr>
-                <tr>
-          <td><span class="label label-primary">GRAB30</span></td>
-          <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 16, 2019</span></td>
-          <td>30</td>
-          <td>0</td>
-        </tr>
-                <tr>
-         <td><span class="label label-primary">FIRST40</span></td>
-          <td><span class="text-muted"><i class="fa fa-clock-o"></i> Jan 16, 2019</span></td>
-          <td>40</td>
-          <td>0</td>
-        </tr>
-                <tr>
-         <td><span class="label label-primary">123456</span></td>
-          <td><span class="text-muted"><i class="fa fa-clock-o"></i> Mar 16, 2019</span></td>
-          <td>0</td>
-          <td>100</td>
-        </tr>
-                <tr>
-         <td><span class="label label-primary">HDGSSF</span></td>
-          <td><span class="text-muted"><i class="fa fa-clock-o"></i> Jan 1, 2020</span></td>
-          <td>0</td>
-          <td>150</td>
-        </tr>
-              </table>
             </div>
-            <!-- /.box-body -->
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="member-list" class="table table-striped table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Withdraw Amount</th>	
+						<th>ID</th> <!-- retailer id/ distributor id -->
+						<th>Name</th> <!--  full name -->
+						<th>Payment Method</th> <!-- paytm/phonepe/upi/bank -->
+						<th>UPI</th> <!-- if upi is the payment method -->
+            			<th>Mobile Number</th> <!-- paytm/phonepe number (according to the selected payment method ) -->
+            			<th>Bank Name</th> <!-- if bank is the payment method -->
+            			<th>Bank Account Number</th> <!-- if bank is the payment method -->
+            			<th>IFSC Code</th> <!-- if bank is the payment method -->
+            			<th>Status</th> <!--- boolean: pending or completed -->
+					</tr>
+				</thead>
+				<tfoot>
+					<tr> 
+						<th>Withdraw Amount</th>
+            			<th>ID</th>
+						<th>Name</th>
+						<th>Payment Method</th>
+						<th>UPI</th>
+            			<th>Mobile Number</th>
+            			<th>Bank Name</th>
+            			<th>Bank Account Number</th>
+            			<th>IFSC Code</th>
+            			<th>Status</th>
+          </tr>
+				</tfoot>
+								<tbody>
+
+                  <!--- All retailers/distributors withdrawl request data here: -->
+               
+
+				</tbody>
+			</table>
+          	</div>
+          <!-- /.box-body -->
 			</div>
 			 <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Add New Promo Code</h3>
+              <h3 class="box-title">Update Withdrawl Request Status</h3>
               <div class="box-tools pull-right">
             <ul class="box-controls pull-right">
                   <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
@@ -232,23 +239,35 @@ function getRandomImage(imgAr, path) {
             <div class="box-body form-element">
             <br>
              <div class="input-group">
-                <input class="form-control" type="text" name="promo" pattern="^[A-Z\d]+$" placeholder="Enter a new promo code" required title="Uppercase letters and numbers only">
-                <span class="input-group-addon">Promo Code</span>
+                <input class="form-control" type="text" name="id" pattern="^[A-z\d]+$" placeholder="Enter the Retailer / Distributor ID" required>
+                <span class="input-group-addon">ID</span>
               </div>
               <br><br>
               <div class="input-group">
-                <input class="form-control" type="date" name="deadline" placeholder="Deadline" required>
-                <span class="input-group-addon">Deadline</span>
+                <select name="paymentMethod" class="select form-control">
+                	<option value="">Select payment method</option>
+                	<option value="upi">UPI</option>
+                	<option value="phonepe">PhonePe</option>
+                	<option value="paytm">PayTm</option>
+                	<option value="bank">Bank Transfer</option>
+                </select>
+                <span class="input-group-addon">Payment Method</span>
               </div>
               <br><br>
               <div class="input-group">
-                <input class="form-control" type="number" name="discount" min="0" max="100" placeholder="Enter discount in percentage" required>
-                <span class="input-group-addon">Discount in Percentage</span>
+                <input class="form-control" type="number" name="amount" min="0" placeholder="Enter the withdrawl amount" required>
+                <span class="input-group-addon">Amount</span>
               </div>
               <br><br>
               <div class="input-group">
-                <input class="form-control" type="number" name="cashback" min="0" placeholder="Enter amount to be deducted" required>
-                <span class="input-group-addon">Flat Cashback</span>
+                <select name="status" class="select form-control">
+                	<option value="">Choose a status</option>
+                	<option value="pending">Pending</option>
+                	<option value="completed">Completed</option>
+                	<option value="cancelled">Cancelled</option>
+                	<option value="processing">Processing</option>
+                </select>
+                <span class="input-group-addon">Request status</span>
               </div>
            <div class="box-footer" style="text-align: center">
                
@@ -258,10 +277,9 @@ function getRandomImage(imgAr, path) {
 				</div>
 				 </form>
 				 
-            <!-- /.box-body -->
-          </div>
-
-			</div></div>
+            <!-- /.box-body -->         
+        </div>
+    </div></div>
     </section>
     <!-- /.content -->
   </div>
@@ -286,11 +304,22 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
+  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.flash.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/jszip.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/pdfmake.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/ex-js/vfs_fonts.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../assets/ser/js/pages/data-table.js"></script>
 
 </body>
 
