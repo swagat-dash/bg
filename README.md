@@ -3,27 +3,29 @@
 
 DIRECTORY ACCESS PERMISSIONS:
 
-NAME(of file/directory)                                                USER
 
-distributor                                                          distributor only after logging
 
-retailer                                                              retailer only after logging
+NAME(of file/directory)                    ----------                            USER
 
-rahul                                                                  admin only after logging
+distributor                                ----------                          distributor only after logging
 
-assets                                                                  all
+retailer                                   ----------                           retailer only after logging
 
-js                                                                      all
+rahul                                       ----------                           admin only after logging
 
-css                                                                     all
+assets                                      ----------                           all
 
-fonts                                                                   all
+js                                          ----------                            all
 
-img                                                                     all
+css                                         ----------                            all
 
-php                                                                     all(but should not view the code)
+fonts                                       ----------                            all
 
-all other frontend files in root directory                              all
+img                                         ----------                            all
+
+php                                         ----------                            all(but should not view the code)
+
+all other frontend files in root directory   ----------                           all
 
 
 
