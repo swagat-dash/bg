@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+ ?>﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +26,6 @@
   <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
   <link rel="stylesheet" href="../assets/ser/css/master_style.css">
   <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -75,10 +85,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
                 <div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -168,7 +178,7 @@ function getRandomImage(imgAr, path) {
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
-        <p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+        <p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
         <p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
       </div>
       <div class="modal-footer">
@@ -236,115 +246,76 @@ function getRandomImage(imgAr, path) {
 						<h6 class="box-subtitle">List of past transactions of your retailers</h6>
 					</div>
 					<div class="box-body">
+						
+							<!-- Column -->
+							
+<?php
+
+require 'config.php';
+$ref=$_SESSION["refrallcode"];
+$ap1="SELECT * FROM distributors WHERE refrallcode=$ref";
+$ap2=mysqli_query($ap,$ap1);
+$ap3=mysqli_fetch_assoc($ap2);
+$ap4="SELECT * FROM transactions where r_id=$_SESSION[refrallcode]";
+$ap5=mysqli_query($ap,$ap4);
+
+
+
+
+							echo'		
+
+							<!-- Column -->
+						
 						<div class="table-responsive">
 							<table id="transactions" class="table mt-0 table-hover no-wrap" data-page-size="10">
 								<thead>
+
 									<tr>
-										<th>Retailer ID</th>
-										<th>Retailer Name</th>
+										<th> ID</th>
+										<th> Name</th>
 										<th>Product</th>
 										<th>Commission Amount</th>
 										<th>Date of Transaction</th>
 										<th>Transaction Status</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody>';
+while($ap6=mysqli_fetch_assoc($ap5))
+{
+echo'
 									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
+										<td>'.$ap6["email"].'</td>
+										<td>'.$ap6["r_name"].'</td>
+										<td>'.$ap6["product"].'</td>
+										<td>'.$ap6["commission"].'</td>
+										<td>'.$ap6["t_date"].'</td>';
+if($ap6["t_status"]=="complete")
+{
+                                                                       
+									echo'	<td><span class="label label-success">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="cancelled")
+{
+                                                                       
+									echo'	<td><span class="label label-danger">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="processing")
+{
+                                                                       
+									echo'	<td><span class="label label-inverse">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="pending")
+{
+                                                                       
+									echo'	<td><span class="label label-warning">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="ongoing")
+{
+                                                                       
+									echo'	<td><span class="label label-info">'.$ap6["t_status"].'</span> </td>';}
+}
+
+?>
+
+
 									</tr>
-									<tr>
-										<td>478fhw</td>
-										<td>Pranjal Trivedi</td>
-										<td>GST</td>
-										<td>950</td>
-										<td>1-1-2019</td>
-										<td><span class="label label-info">ongoing</span> </td>
-									</tr>
-									<tr>
-										<td>9j8d24</td>
-										<td>anurag pandey</td>
-										<td>aadhar card</td>
-										<td>20</td>
-										<td>16-7-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>45g644</td>
-										<td>Akshit Panchal</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>6fg544</td>
-										<td>dipen kalal</td>
-										<td>web design</td>
-										<td>1500</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-warning">Pending</span> </td>
-									</tr>
-									<tr>
-										<td>35434h</td>
-										<td>bhund</td>
-										<td>ITR</td>
-										<td>15</td>
-										<td>13-1-2018</td>
-										<td><span class="label label-danger">Cancelled</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-inverse">processing</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
-									<tr>
-										<td>hjd34h</td>
-										<td>swagat dash</td>
-										<td>pan card</td>
-										<td>15</td>
-										<td>13-10-2018</td>
-										<td><span class="label label-success">Complete</span> </td>
-									</tr>
+									
 								</tbody>
 							</table>
 						</div>
@@ -377,7 +348,6 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
   <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>

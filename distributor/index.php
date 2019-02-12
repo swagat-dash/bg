@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+ ?>﻿
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,7 +24,6 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -71,10 +82,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
                 <div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php  echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -91,7 +102,7 @@ function getRandomImage(imgAr, path) {
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
                   </div>				
                 </div>
       			</li>
@@ -163,7 +174,7 @@ function getRandomImage(imgAr, path) {
 			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 			</div>
 			<div class="modal-footer">
@@ -227,35 +238,52 @@ function getRandomImage(imgAr, path) {
 
             <div class="box box-solid">
                  <div class="box-header bg-orange">
-                <h4 class="box-title"><strong>GST Return With Sales &amp; Purchases</strong></h4>
+           <strong>     <h4 class="box-title"> GST Return With Sales &amp; Purchases</h4></strong>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
              <ul class="nav nav-tabs nav-tabs-orange nav-justified" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#11" role="tab"><i class="fa fa-home"></i></a>
+                  <a class="nav-link active" data-toggle="tab" href="#A11" role="tab"><i class="fa fa-home"></i></a>
                 </li>
+<?php
+$i=1;
+require 'config.php';
+$ap1="SELECT * FROM gst_return";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">GSTR1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#13" role="tab">GSTR2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#14" role="tab">GSTR3</a>
-                </li>
-				 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#15" role="tab">GSTR4</a>
-                </li>
-				 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#16" role="tab">GSTR5</a>
-                </li>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">GSTR'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
+               
               </ul>
                 <!-- Tab panes -->
               <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="11">
+                <div class="tab-pane fade active show" id="A11">
 					<div class="table-responsive">
                  <table class="table table-hover">
                 <thead>
@@ -267,144 +295,169 @@ function getRandomImage(imgAr, path) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-					<th scope="row">GSTR1</th>
-                    <td>GST Returns 3B Monthly</td>
-                    <td>300</td>
-					<td>150</td>
-                  </tr>
-                  <tr>
-					<th scope="row">GSTR2</th>
-                    <td>GST 1 Regular Return Quarterly (upto 100 sales and purchases bills)</td>
-                    <td>500</td>
-					<td>200</td>
-                  </tr>
-                   <tr>
-					<th scope="row">GSTR3</th>
-                    <td>GST Composition Return Quarterly (upto 100 sales and purchases bills)</td>
-                    <td>500</td>
-					<td>200</td>
-                  </tr>
-					 <tr>
-					<th scope="row">GSTR4</th>
-                    <td>GST 1 Regular &amp; Composition Return Quarterly (less than 500 sales and purchases bills)</td>
-                    <td>800</td>
-					<td>250</td>
-                  </tr>
-					 <tr>
-					<th scope="row">GSTR5</th>
-                    <td>GST 1 Regular &amp; Composition Return Quarterly (more than 500 sales and purchases bills)</td>
-                    <td>1000</td>
-					<td>350</td>
-                  </tr>
-                </tbody>
+                  
+<?php
+require ('config.php');
+$ap1="SELECT * FROM gst_return";
+$ap2=mysqli_query($ap,$ap1);
+
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">GSTR'.$ap3["id"].'</th>
+                    <td>'.$ap3["description"].'</td>
+                    <td>'.$ap3["price"].'</td>
+					<td>'.$ap3["commission"].'</td></tr>';
+}
+
+}
+mysqli_close($ap);
+
+echo '
+</tbody>
               </table>
 					</div>
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
-  <ul class="dropdown-menu">
-    <li><a href="checkout.php">GSTR1</a></li>
-    <li><a href="checkout.php">GSTR2</a></li>
-    <li><a href="checkout.php">GSTR3</a></li>
-	<li><a href="checkout.php">GSTR4</a></li>
-    <li><a href="checkout.php">GSTR5</a></li>
+  <ul class="dropdown-menu">';
+?>
+<?php
+require 'config.php';
+$ap1="SELECT * FROM gst_return";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"'.'>GSTR'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
+    
   </ul>
 </div>
                 </div>
-                <div class="tab-pane fade" id="12">
-				<h4>GST 3B Returns Monthly</h4>
+
+<?php
+require 'config.php';
+$ap1="SELECT * FROM gst_return";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results found';
+}
+
+else
+{
+$j=1;
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$j.'">
+				<h4>'.$ap3["header"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
-                <dd>3 - 4 working days</dd>
+                <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>List of all invoices issued to persons or companies.</dd>
+					<dd>'.$ap3["docs_required"].'</dd>
 					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-		<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="13">
-				<h4>GST 1 Regular Return Quarterly (upto 100 sales and purchases bills)</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>3 - 4 working days</dd>
-                <dt>Documents required</dt>
-					<dd>List of all invoices issued to persons or companies.</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-		<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="14">
-                 <h4>GST Composition Return Quarterly (upto 100 sales and purchases bills)</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>3 - 4 working days</dd>
-                <dt>Documents required</dt>
-					<dd>List of all invoices issued to persons or companies.</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-				  <div class="tab-pane fade" id="15">
-                 <h4>GST 1 Regular &amp; Composition Return Quarterly (less than 500 sales and purchases bills)</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>4 - 5 working days</dd>
-                <dt>Documents required</dt>
-					<dd>List of all invoices issued to persons or companies.</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-				  <div class="tab-pane fade" id="16">
-                 <h4>GST 1 Regular &amp; Composition Return Quarterly (more than 500 sales and purchases bills)</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>5 - 6 working days</dd>
-                <dt>Documents required</dt>
-					<dd>List of all invoices issued to persons or companies.</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p></div>   
+                ';
+$j++;
+
+}
+}
+
+mysqli_close($ap);
+echo'
+             
               </div>
             </div>
 
               <!-- 2 -->
 
-            <div class="box box-solid">
+        
+          <div class="box box-solid">
                  <div class="box-header bg-olive">
-                <strong><h4 class="box-title">Chartered Accounting Services</strong></h4>
+                <strong><h4 class="box-title">Chartered Accounting Services</strong></h4> </strong>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
              <ul class="nav nav-tabs nav-tabs-olive nav-justified" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#21" role="tab"><i class="fa fa-home"></i></a>
-                </li>
+                  <a class="nav-link active" data-toggle="tab" href="#A21" role="tab"><i class="fa fa-home"></i></a>
+                </li>';
+
+?>
+               <?php
+require 'config.php';
+$ap1="SELECT * FROM ca_services";
+$ap2=mysqli_query($ap,$ap1);
+$ap4=mysqli_num_rows($ap2);
+$_SESSION["rows"]=$ap4;
+$_SESSION["count"]=$i;
+if($ap4==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#22" role="tab">PBS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#23" role="tab">EBS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#24" role="tab">CAC</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#25" role="tab">PR</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#26" role="tab">ADT1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#27" role="tab">ADT2</a>
-                </li>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">CAS'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
               </ul>
                 <!-- Tab panes -->
               <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="21">
+                <div class="tab-pane fade active show" id="A21">
                  <div class="table-responsive">
                  <table class="table table-hover">
                 <thead>
@@ -416,142 +469,125 @@ function getRandomImage(imgAr, path) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-          <th scope="row">PBS</th>
-                    <td>Projected Balance Sheet</td>
-                    <td>800</td>
-          			<td>300</td>
-                  </tr>
-                  <tr>
-          <th scope="row">EBS</th>
-                    <td>Estimated Balance Sheet</td>
-                    <td>800</td>
-         			<td>300</td>
-                  </tr>
-                  <tr>
-          <th scope="row">CAC</th>
-                    <td>CA letter for opening Current Account</td>
-                    <td>3000</td>
-         			<td>1200</td>
-                  </tr>
-                  <tr>
-          <th scope="row">PR</th>
-                    <td>Project Report</td>
-                    <td>3000</td>
-         			<td>1200</td>
-                  </tr>
-                  <tr>
-          <th scope="row">ADT1</th>
-                    <td>Audit (School, NGO, Trust, Partnership Firm)</td>
-                    <td>3000</td>
-         			      <td>1000</td>
-                  </tr>
-                   <tr>
-          <th scope="row">ADT2</th>
-                    <td>Audit (PVT LTD, LLP, Company)</td>
-                    <td>6000</td>
-                    <td>1200</td>
-                  </tr>
-                </tbody>
+                 <?php
+require 'config.php';
+$ap1="SELECT * FROM ca_services";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+echo "error";
+}
+if($_SESSION["rows"]==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">CAS'.$ap3["id"].'</th>
+                    <td>'.$ap3["description"].'</td>
+                    <td>'.$ap3["price"].'</td>
+					<td>'.$ap3["commission"].'</td></tr>';
+}
+
+}
+mysqli_close($ap);
+
+echo '
+</tbody>
               </table>
-          </div>
-          <div class="btn-group">
-  <button class="btn bg-olive dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
-  <ul class="dropdown-menu">
-    <li><a href="checkout.php">PBS</a></li>
-    <li><a href="checkout.php">EBS</a></li>
-    <li><a href="checkout.php">CAC</a></li>
-    <li><a href="checkout.php">PR</a></li>
-    <li><a href="checkout.php">ADT1</a></li>
-    <li><a href="checkout.php">ADT2</a></li>
+					</div>';
+?>
+
+<?php
+
+echo'
+
+					<div class="btn-group">
+ <button class="btn bg-olive dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
+  <ul class="dropdown-menu">';
+
+
+require 'config.php';
+$ap1="SELECT * FROM ca_services";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+die(mysqli_error($ap));
+
+}
+
+if($_SESSION["rows"]==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=CAS"'.'>CAS'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
   </ul>
 </div>
                 </div>
-                <div class="tab-pane fade" id="22">
-                  <h4>Projected Balance Sheet</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>2 - 3 working days</dd>
-              </dl>
-            <p>The balance sheet provides a snapshot of a company's accounts at a given point in time. The balance sheet, along with the income and cash flow statement, is an important tool for owners but also for investors because it is used to gain insight into a company and its financial operations.</p>
-            <p>Projected balance sheet is used to analyse and predict the data for the next financial year.</p>
-          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="23">
-                  <h4>Estimated Balance Sheet</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>2 - 3 working days</dd>
-              </dl>
-            <p>The balance sheet provides a snapshot of a company's accounts at a given point in time. The balance sheet, along with the income and cash flow statement, is an important tool for owners but also for investors because it is used to gain insight into a company and its financial operations.</p>
-            <p>Projected balance sheet is used to analyse and predict the data for the current financial year.</p>
-          <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="24">
-                  <h4>CA Letter</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>2 - 3 working days</dd>
-                </dl>
-                <p>A letter by any certified chartered Accountant is a major requirement to open current account in any bank.</p>
-                <p>Other documents that are required by most banks to open current account are :</p>
-                <dl>
-                <dd><b>CA letter</b></dd>
-					<dd>PAN card</dd>
-					<dd>Partnership Deed (in case of Partnership Firm)</dd>
-					<dd>Certificate of Incorporation, COA, MOA (in case of Companies)</dd>
-					<dd>A cheque for opening bank account</dd>
-					<dd>Address proof of the Firm/Company/HUF</dd>
-					<dd>ID and address proof of all partners/directors</dd>
-				</dl>         
-            <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="25">
-                  <h4>Project Report</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>4 - 5 working days</dd>
-                </dl>
-                <p>Project Report is required for obtaining finance facility from any bank or financial institution like term loan for financing the project/cc limit for working capital requirement of the project. Project letter must be signed by any certified chartered Accountant.</p>
-                <p>The Project Report contains :</p>
-                <dl class="dl-horizontal">
-					<dd>Theoritical write-up</dd>
-					<dd>Financial Projections</dd>
-					<dd>Co-relating theory and financial figures</dd>
-					<dd>Appraisal of project report</dd>
-					<dd>Long-term projection and planning</dd>
-					<dd>5 years projected balance sheet &amp; Cashflow/Fundflow</dd>
-				</dl>        
-            <p align="center"><a href="checkout.php"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p>
-                </div>
-				  <div class="tab-pane fade" id="26">
-                 <h4>Audit (School or NGO or Trust or Partnership Firm)</h4>
+              <?php
+require 'config.php';
+$ap1="SELECT * FROM ca_services";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results found';
+}
+
+else
+{
+$tmp=$_SESSION["count"];
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$tmp.'">
+				<h4>'.$ap3["header"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
-                <dd>3 - 5 days</dd>
+                <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>Bank statement (April to March)</dd>
-					<dd>All expenses (April to March)</dd>
-					<dd>Sales and purchases bills</dd>
-					<dd>Tally backup data</dd>
+					<dd>'.$ap3["docs_required"].'</dd>
+					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-              <p>A tax audit is a formal examination conducted by the IRS to verify information or uncover fraud and inaccurate tax returns. The IRS selects tax returns to examine both randomly and intentionally. If the audit is selected randomly, the IRS will simply take a closer look to make sure all information are accurate.</p>
-	<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="27">
-                 <h4>Audit (PVT LTD or LLP or Company)</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>3 - 5 days</dd>
-                <dt>Documents required</dt>
-          <dd>Bank statement (April to March)</dd>
-          <dd>All expenses (April to March)</dd>
-          <dd>Sales and purchases bills</dd>
-          <dd>Tally backup data</dd>
-              </dl>
-              <p>A tax audit is a formal examination conducted by the IRS to verify information or uncover fraud and inaccurate tax returns. The IRS selects tax returns to examine both randomly and intentionally. If the audit is selected randomly, the IRS will simply take a closer look to make sure all information are accurate.</p>
-  <p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p></div>   
+                ';
+$tmp++;
+
+}
+}
+
+mysqli_close($ap);
+?>
               </div>
             </div>
           
@@ -563,24 +599,51 @@ function getRandomImage(imgAr, path) {
                  <div class="box-header bg-danger">
                 <h4 class="box-title"><strong>Director's Appointment or Resignation</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
              <ul class="nav nav-tabs nav-tabs-danger nav-justified" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#31" role="tab"><i class="fa fa-home"></i></a>
+                  <a class="nav-link active" data-toggle="tab" href="#A31" role="tab"><i class="fa fa-home"></i></a>
                 </li>
+                 <?php
+require 'config.php';
+$ap1="SELECT * FROM director_resig_reg";
+$ap2=mysqli_query($ap,$ap1);
+$ap4=mysqli_num_rows($ap2);
+$_SESSION["rows"]=$ap4;
+$_SESSION["count"]=$i;
+if($ap4==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#32" role="tab">DIR1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#33" role="tab">DIR2</a>
-                </li>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">DAR'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
               </ul>
                 <!-- Tab panes -->
               <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="31">
+                <div class="tab-pane fade active show" id="A31">
                  <div class="table-responsive">
                  <table class="table table-hover">
                 <thead>
@@ -592,204 +655,113 @@ function getRandomImage(imgAr, path) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-					<th scope="row">DIR1</th>
-                    <td>Add new director in company</td>
-                    <td>3500</td>
-					<td>500</td>
-                  </tr>
-                  <tr>
-					<th scope="row">DIR2</th>
-                    <td>Remove director from company</td>
-                    <td>3000</td>
-					<td>500</td>
-                  </tr>
+                  <?php
+require ('config.php');
+$ap1="SELECT * FROM director_resig_reg";
+$ap2=mysqli_query($ap,$ap1);
+
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">DAR'.$ap3["id"].'</th>
+                    <td>'.$ap3["description"].'</td>
+                    <td>'.$ap3["price"].'</td>
+					<td>'.$ap3["commission"].'</td></tr>';
+}
+
+}
+mysqli_close($ap);
+?>
                 </tbody>
               </table>
 					</div>
 					<div class="btn-group">
   <button class="btn bg-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.php">DIR1</a></li>
-    <li><a href="checkout.php">DIR2</a></li>
+<?php
+    require 'config.php';
+$ap1="SELECT * FROM director_resig_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+die(mysqli_error($ap));
+
+}
+
+if($_SESSION["rows"]==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=DAR"'.'>DAR'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
   </ul>
 </div>
                 </div>
-                <div class="tab-pane fade" id="32">
-                 <h4>Appoint new Director</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>4 - 5 days</dd>
-                <dt>Documents required</dt>
-					<dd>Digital Signature Certificate (DSC)</dd>
-					<dd>Director Identification Number (DIN)</dd>
-					<dd>PAN card</dd>
-					<dd>Proof of residence</dd>
-					<dd>Photograph</dd>
-              </dl>
-              <p>Directors are appointed by the shareholders of a Company for the management of a Company. As per Companies Law of 1956, a Private Limited Company is required to have a minimum of two Directors and a Limited Company is required to have a minimum of three Directors. On the other hand, a Limited Liability Partnership (LLP) has Designated Partners and Limited Liability Partnership Act, 2008 requires each LLP to have a minimum of two Designated Partners. Appointment or removal of a Director or Designated Partners maybe required due to various reasons. IndiaFilings can help you file the necessary filings to add or remove a Director from your Company or add or remove a Designated Partner from you LLP. To add a Director or Designated Partner, Digital Signature must first be obtained for the proposed Director. Once, Digital Signature is obtained, the proposed Director can be added into the Company with the consent of the shareholders. To remove a Director from a Company or LLP, it is important to ensure the Company or a LLP would have the minimum required number of Director or Designated Partner after removal of the Director. If so, then the resignation letter along with the required form must be filed to effect the resignation of the Director.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="33">
-                  <h4>Resignation of existing Director</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>4 - 5 days</dd>
-                <dt>Documents required</dt>
-					<dd>Digital Signature Certificate (DSC)</dd>
-					<dd>PAN card</dd>
-					<dd>Proof of residence</dd>
-					<dd>Photograph</dd>
-              </dl>
-              <p>Directors are the said to be brain of the company. They are the managerial personnel who control and administer the company’s operations. The rotation of directors takes place in one or the other way – either by appointment of new director or resignation of existing. Aim to carry out change of directors is always to ensure optimum combination of experts on board for interest of company. The authority to approve the resignation of the director lies with the members of BoD whereas the appointment must be made through consent of shareholders. Whether it is an appointment, removal or resignation, the change does not take effect until the intimation is made to Ministry of corporate affairs.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p>
-                </div>
-              </div>
-            </div>
+               <?php
+require 'config.php';
+$ap1="SELECT * FROM director_resig_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
 
- <!-- 4 -->
+echo 'no results found';
+}
 
-            <div class="box box-solid">
-                 <div class="box-header bg-teal">
-                <h4 class="box-title"><strong>Company Registration</strong></h4>
-                 <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
-                </ul>
-                </div>
-                 <!-- Nav tabs -->
-             <ul class="nav nav-tabs nav-tabs-teal nav-justified" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#41" role="tab"><i class="fa fa-home"></i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#42" role="tab">CMPR1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#43" role="tab">CMPR2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#44" role="tab">CMPR3</a>
-                </li>
-				 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#45" role="tab">CMPR4</a>
-                </li>
-				 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#46" role="tab">CMPR5</a>
-                </li>
-              </ul>
-                <!-- Tab panes -->
-              <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="41">
-                 <div class="table-responsive">
-                 <table class="table table-hover">
-                <thead>
-                  <tr>
-					<th scope="col">ID</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Commission</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-					<th scope="row">CMPR1</th>
-                    <td>NIDHI Company Registration</td>
-                    <td>75000</td>
-					<td>10000</td>
-                  </tr>
-                   <tr>
-					<th scope="row">CMPR2</th>
-                    <td>One Person Company (OPC) Registration</td>
-                    <td>13000</td>
-					<td>300</td>
-                  </tr>
-					 <tr>
-					<th scope="row">CMPR3</th>
-                    <td>Private Limited (PVT LTD) Company Registration</td>
-                    <td>14000</td>
-					<td>2000</td>
-                  </tr>
-					<tr>
-					<th scope="row">CMPR4</th>
-                    <td>Limited Company Registration</td>
-                    <td>32000</td>
-					<td>3500</td>
-                  </tr>
-					<tr>
-					<th scope="row">CMPR5</th>
-                    <td>Limited Liablity Partnership Company (LLP) Registration</td>
-                    <td>14000</td>
-					<td>1500</td>
-                  </tr>
-                </tbody>
-              </table>
-					</div>
-					<div class="btn-group">
-  <button class="btn bg-teal dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
-  <ul class="dropdown-menu">
-    <li><a href="checkout.php">CMPR1</a></li>
-    <li><a href="checkout.php">CMPR2</a></li>
-    <li><a href="checkout.php">CMPR3</a></li>
-	<li><a href="checkout.php">CMPR4</a></li>
-    <li><a href="checkout.php">CMPR5</a></li>
-  </ul>
-</div>
-                </div>
-                <div class="tab-pane fade" id="42">
-                 <h4>NIDHI Company Registration</h4>
+else
+{
+$tmp=$_SESSION["count"];
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$tmp.'">
+				<h4>'.$ap3["header"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
-                <dd>10 - 15 working days</dd>
-					<dt>Minimum Capital</dt>
-					<dd>10 Lacs</dd>
+                <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>Director Pan card</dd><dd>Aadhar card</dd><dd>5 Company name in Excel format</dd><dd>Director Identification Number (DIN)</dd><dd>Minumum 3
-director's education, mobile number, email ID etc information in excel format</dd>
+					<dd>'.$ap3["docs_required"].'</dd>
+					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-			<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="43">
-                <h4>One Person Company (OPC) Registration</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>10 - 15 working days</dd>
-                <dt>Documents required</dt>
-					<dd>Reservation application of name in INC-1</dd><dd>Identity proof, address proof and PAN card copy of nominee and member</dd><dd>Written Consent of Nominee in form INC-3</dd><dd>Memorandum and Affidavit of sharer for form INC-9</dd><dd>Application for Company Registration</dd><dd>Registrar Office Address in Form INC-22</dd><dd>Registered office's address proof</dd>
-              </dl>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="44">
-                 <h4>Private Limited (PVT LTD) Company Registration</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>10 - 15 working days</dd>
-                <dt>Documents required</dt>
-					<dd>Digital Signature Certificate</dd><dd>Director Identification Number (DIN)</dd><dd>Application for Reservation of Name of company in e-Form INC–1</dd><dd>Form SPICE INC-32</dd><dd>MOA(INC-33) and AOA(INC-34)</dd><dd>PAN(form 49A) and TAN(form 49B) Application</dd>
-              </dl><p>For Name availability under RUN Web service, there is no prior requirement to obtain DSC and DIN . It can be done with account login on MCA portal.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
-                </div>
-				  <div class="tab-pane fade" id="45">
-                 <h4>Limited Company Registration</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>10 - 15 working days</dd>
-                <dt>Documents required</dt>
-					<dd>PAN card copy with Self-attestation</dd><dd>Latest passport size photo</dd><dd>Copy of No Objection Certificate(NOC) from the owner of the property</dd><dd>If owned property, a copy of Sale Deed and Electricity bill is sufficient</dd><dd>Identity proof with self attestation</dd><dd>Latest Utility Bill or bank statement</dd><dd>Proof of Office registration, with rental or lease agreement</dd>
-              </dl>
-					  <p>In case of NRI or Foreign national, Passport copy has to be notarized at the Indian Embassy of the particular country.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
-                </div>
-				  <div class="tab-pane fade" id="46">
-                 <h4>Limited Liablity Partnership Company (LLP) Registration</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>10 - 15 working days</dd>
-                <dt>Documents required</dt>
-					<dd>PAN Card of the Partners</dd><dd>Address Proof of the Partners</dd><dd>Utility Bill of the proposed Registered Office of the LLP</dd><dd>No-Objection Certificate (NOC) from the Landlord</dd><dd>Rental Agreement Copy between the LLP and the Landlord</dd><dd>Director Identification Number (DIN) for Partners</dd><dd>Application for Reservation of Name</dd><dd>Filing for Incorporation</dd>
-              </dl>
-					  <p>The Partners then have 60 days to file the required incorporation documents and register the LLP. In case the LLP is not formed within 60 days of name approval letter, the approval for name for the LLP would have to be re-obtained.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p>
-                </div>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p></div>   
+                ';
+$tmp++;
+
+}
+}
+
+mysqli_close($ap);
+?>
               </div>
             </div>
 
@@ -800,21 +772,51 @@ director's education, mobile number, email ID etc information in excel format</d
                  <div class="box-header bg-purple">
                 <h4 class="box-title"><strong>GST Registration</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
              <ul class="nav nav-tabs nav-tabs-purple nav-justified" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#51" role="tab"><i class="fa fa-home"></i></a>
+                  <a class="nav-link active" data-toggle="tab" href="#A51" role="tab"><i class="fa fa-home"></i></a>
                 </li>
+                 <?php
+require 'config.php';
+$ap1="SELECT * FROM gst_reg";
+$ap2=mysqli_query($ap,$ap1);
+$ap4=mysqli_num_rows($ap2);
+$_SESSION["rows"]=$ap4;
+$_SESSION["count"]=$i;
+if($ap4==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#52" role="tab">Details</a>
-                </li>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">DAR'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
               </ul>
                 <!-- Tab panes -->
               <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="51">
+                <div class="tab-pane fade active show" id="A51">
                  <div class="table-responsive">
                  <table class="table table-hover">
                 <thead>
@@ -826,60 +828,170 @@ director's education, mobile number, email ID etc information in excel format</d
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-					<th scope="row">GSTN</th>
-                    <td>New GST Registration</td>
-                    <td>1500</td>
-					         <td>700</td>
-                  </tr>
+                <?php
+require ('config.php');
+$ap1="SELECT * FROM director_resig_reg";
+$ap2=mysqli_query($ap,$ap1);
+
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">DAR'.$ap3["id"].'</th>
+                    <td>'.$ap3["description"].'</td>
+                    <td>'.$ap3["price"].'</td>
+					<td>'.$ap3["commission"].'</td></tr>';
+}
+
+}
+mysqli_close($ap);
+?>
                 </tbody>
               </table>
-					</div>
-				<a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a>
+
+					
+          </div>
+					<div class="btn-group">
+  <button class="btn bg-purple dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
+  <ul class="dropdown-menu">
+<?php
+    require 'config.php';
+$ap1="SELECT * FROM gst_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+die(mysqli_error($ap));
+
+}
+
+if($_SESSION["rows"]==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=GST"'.'>GST'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
+  </ul>
+</div>
                 </div>
-                <div class="tab-pane fade" id="52">
-                  <h4>New GST Registration</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>8 - 10 working days</dd>
+               <?php
+require 'config.php';
+$ap1="SELECT * FROM gst_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results found';
+}
+
+else
+{
+$tmp=$_SESSION["count"];
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$tmp.'">
+				<h4>'.$ap3["header"].'</h4>
+				<dl class="dl-horizontal">
+				<dt>Time required</dt>
+                <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-          <dd>Passport sized Photographs</dd><dd>PAN card</dd><dd>Aadhar card</dd><dd>Rent agreement/registry copy of the registered office</dd><dd>Incorporation Certificate</dd><dd>Cancelled cheque</dd><dd>First page of passbook/bank statement</dd>
-          <dt>Other Details</dt>
-          <dd>Email Address</dd><dd>Mobile Number</dd><dd>Father and Mother's name</dd>
+					<dd>'.$ap3["docs_required"].'</dd>
+					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-            <p>All documents must be self attested and scanned pdf format</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p>
-                </div>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GST"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
+                ';
+$tmp++;
+
+}
+}
+
+mysqli_close($ap);
+?>
               </div>
             </div>
 
+                 
                    <!-- 6 -->
 
             <div class="box box-solid">
                  <div class="box-header bg-orange">
                 <h4 class="box-title"><strong>Intellectual Property</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
              <ul class="nav nav-tabs nav-tabs-orange nav-justified" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#61" role="tab"><i class="fa fa-home"></i></a>
+                  <a class="nav-link active" data-toggle="tab" href="#A61" role="tab"><i class="fa fa-home"></i></a>
                 </li>
+                <?php
+require 'config.php';
+$ap1="SELECT * FROM ipr";
+$ap2=mysqli_query($ap,$ap1);
+$ap4=mysqli_num_rows($ap2);
+$_SESSION["rows"]=$ap4;
+$_SESSION["count"]=$i;
+if($ap4==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#62" role="tab">ISO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#63" role="tab">TMP</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#64" role="tab">TMC</a>
-                </li>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">IPR'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
               </ul>
                 <!-- Tab panes -->
               <div class="box-body tab-content">
-                <div class="tab-pane fade active show" id="61">
+                <div class="tab-pane fade active show" id="A61">
                  <div class="table-responsive">
                  <table class="table table-hover">
                 <thead>
@@ -891,82 +1003,115 @@ director's education, mobile number, email ID etc information in excel format</d
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-					<th scope="row">ISO</th>
-                    <td>ISO (9001:2015) Certification</td>
-                    <td>12000</td>
-					<td>2500</td>
-                  </tr>
-                  <tr>
-					<th scope="row">TMP</th>
-                    <td>Trademarks (Individual / Propertiorship)</td>
-                    <td>9000</td>
-					<td>1000</td>
-                  </tr>
-                   <tr>
-					<th scope="row">TMC</th>
-                    <td>Trademarks (Partnership / LLP / Company)</td>
-                    <td>14000</td>
-					<td>1000</td>
-                  </tr>
+                 <?php
+require ('config.php');
+$ap1="SELECT * FROM ipr";
+$ap2=mysqli_query($ap,$ap1);
+
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">IPR'.$ap3["id"].'</th>
+                                         <td>'.$ap3["description"].'</td>
+                                         <td>'.$ap3["price"].'</td>
+		                         <td>'.$ap3["commission"].'</td></tr>';
+
+}
+
+}
+mysqli_close($ap);
+?>
                 </tbody>
               </table>
 					</div>
 					<div class="btn-group">
   <button class="btn bg-orange dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
   <ul class="dropdown-menu">
-    <li><a href="checkout.php">ISO</a></li>
-    <li><a href="checkout.php">TMP</a></li>
-    <li><a href="checkout.php">TMC</a></li>
+   <?php
+    require 'config.php';
+$ap1="SELECT * FROM gst_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+die(mysqli_error($ap));
+
+}
+
+if($_SESSION["rows"]==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=GST"'.'>GST'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
   </ul>
 </div>
                 </div>
-                <div class="tab-pane fade" id="62">
-                   <h4>ISO (9001 : 2015) Certification</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>10 - 15 days</dd>
-                <dt>Validity</dt>
-                <dd>3 Years</dd>
+               <?php
+require 'config.php';
+$ap1="SELECT * FROM ipr";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results found';
+}
+
+else
+{
+$tmp=$_SESSION["count"];
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$tmp.'">
+				<h4>'.$ap3["header"].'</h4>
+				<dl class="dl-horizontal">
+				<dt>Time required</dt>
+                <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-          <dd>Identity and residential proof</dd><dd>Address proof of the registered office</dd><dd>Email ID</dd><dd>Company's objectives, records and quality clause</dd>
+					<dd>'.$ap3["docs_required"].'</dd>
+					<dd>It should be uploaded in specified Excel format.</dd>
               </dl>
-            <p>ISO 9001:2015 specifies requirements for a quality management system when an organization:
-<ul>
-<li>Needs to demonstrate its ability to consistently provide products and services that meet customer and applicable statutory and regulatory requirements.</li>
-<li>Aims to enhance customer satisfaction through the effective application of the system, including processes for improvement of the system and the assurance of conformity to customer and applicable statutory and regulatory requirements.</li></ul>
-All the requirements of ISO 9001:2015 are generic and are intended to be applicable to any organization, regardless of its type or size, or the products and services it provides.
-</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="63">
-                   <h4>Trademarks Registration (Individual or Propertiorship)</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>5 - 10 days</dd>
-                <dt>Validity</dt>
-                <dd>10 Years</dd>
-                <dt>Documents required</dt>
-          <dd>Identity proof of the individual or Proprietor</dd><dd>Address proof of the individual or Proprietor</dd><dd>Signed Form-48</dd><dd>Copy of the logo or word</dd>
-              </dl>
-            <p>A trademark is a visual symbol, which may be a word, name, device, label or numerals used by a business to distinguish it goods or services from other similar goods or services originating from a different business. A registered trademark is an intangible asset or intellectual property for a business and is used to protect the company's investment in the brand or symbol. A trademark is registrable if it is distinctive for the goods and services you provide. Proposed trademarks that are similar or identical to an existing registered trademark cannot be registered. Also, trademarks are not registrable if it is offensive, generic, deceptive, not distinctive, contains specially protected emblems, etc.
-Trademarks in India are registered by the Controller General of Patents Designs and Trademarks, Ministry of Commerce and Industry, Government of India. Trademarks are registered under the Trademark Act, 1999 and provide the trademark owner with a right to sue for damages when infringements of trademarks occur. Once a trademark is registered, R symbol can be used and the registration will be valid for 10 years. Registered trademarks nearing expiry can be easily renewed by filing a trademark renewal application for a period of another 10 years.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
-                <div class="tab-pane fade" id="64">
-                  <h4>Trademarks Registration (Partnership or LLP or Company)</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>5 - 10 days</dd>
-                <dt>Validity</dt>
-                <dd>10 Years</dd>
-                <dt>Documents required</dt>
-          <dd>Identity proof of Signatory</dd><dd>Address proof of Signatory</dd><dd>Signed Form-48</dd><dd>Incorporation Certificate or Partnership Deed</dd><dd>Copy of Logo (Optional)</dd><dd>Aadhar Udhyog Registration Certificate (Optional)</dd>
-              </dl>
-            <p>A trademark is a visual symbol, which may be a word, name, device, label or numerals used by a business to distinguish it goods or services from other similar goods or services originating from a different business. A registered trademark is an intangible asset or intellectual property for a business and is used to protect the company's investment in the brand or symbol. A trademark is registrable if it is distinctive for the goods and services you provide. Proposed trademarks that are similar or identical to an existing registered trademark cannot be registered. Also, trademarks are not registrable if it is offensive, generic, deceptive, not distinctive, contains specially protected emblems, etc.
-Trademarks in India are registered by the Controller General of Patents Designs and Trademarks, Ministry of Commerce and Industry, Government of India. Trademarks are registered under the Trademark Act, 1999 and provide the trademark owner with a right to sue for damages when infringements of trademarks occur. Once a trademark is registered, R symbol can be used and the registration will be valid for 10 years. Registered trademarks nearing expiry can be easily renewed by filing a trademark renewal application for a period of another 10 years.</p>
-					<p align="center"><a href="checkout.php"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p>
-                </div>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=IPR"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
+                ';
+$tmp++;
+
+}
+}
+
+mysqli_close($ap);
+?>
               </div>
             </div>
 
@@ -983,7 +1128,7 @@ Trademarks in India are registered by the Controller General of Patents Designs 
                  <div class="box-header bg-teal">
                 <h4 class="box-title"><strong>Website Design &amp; Development</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1193,7 +1338,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                  <div class="box-header bg-purple">
                 <h4 class="box-title"><strong>Graphics Designing</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1308,7 +1453,7 @@ This simplicity is what makes landing pages the best option for increasing the c
                  <div class="box-header bg-orange">
                 <h4 class="box-title"><strong>Bulk SMS</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1465,7 +1610,7 @@ All SMS content needs to be transactional and should not contain any promotional
                  <div class="box-header bg-olive">
                 <h4 class="box-title"><strong>Digital Signature Certificate</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1549,7 +1694,7 @@ All SMS content needs to be transactional and should not contain any promotional
                  <div class="box-header bg-danger">
                 <h4 class="box-title"><strong>Non-Profits and Trust Registration</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1659,7 +1804,7 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
                  <div class="box-header bg-teal">
                 <h4 class="box-title"><strong>Tax Solutions</strong></h4>
                  <ul class="box-controls pull-right">
-                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li><li><a class="box-btn-fullscreen"></a></li>
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
                 </ul>
                 </div>
                  <!-- Nav tabs -->
@@ -1823,7 +1968,6 @@ A Section 8 Company is similar to a Trust or Society except, a section 8 Company
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>

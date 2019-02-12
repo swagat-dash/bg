@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["admin"]) || $_SESSION["admin"]!==true)
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
 {
 
-header("location: http://www.rmdtechnologies.in");
+header("location: http://www.bgtechno.in");
 
 }
 
@@ -26,7 +26,6 @@ header("location: http://www.rmdtechnologies.in");
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -86,10 +85,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -180,7 +179,7 @@ function getRandomImage(imgAr, path) {
 			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-			<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+			<p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 			</div>
 			<div class="modal-footer">
@@ -275,14 +274,10 @@ function getRandomImage(imgAr, path) {
 					
 <?php 
 
-$ap=mysqli_connect("sql310.epizy.com","epiz_23125428","JYuDJZ1qbAqqlK","epiz_23125428_anu");
-
-
-    if(!$ap)
-        {
-            die("connection failed:".mysqli_error());
-        }
-$ap5=mysqli_query($ap,"SELECT fname,lname,email,phn FROM retailers WHERE refrallcode='$_SESSION[refrallcode]' ");
+require 'config.php';
+$rcode=$_SESSION["refrallcode"];
+$anu="SELECT fname,lname,email,phn FROM retailers WHERE refrallcode='$rcode'";
+$ap5=mysqli_query($ap,$anu);
 
 if(!$ap5)
 
@@ -348,7 +343,6 @@ mysqli_close($ap);
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>

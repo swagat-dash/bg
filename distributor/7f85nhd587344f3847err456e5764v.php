@@ -1,3 +1,33 @@
+<?php
+session_start();
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+a:
+$t_id=mt_rand();
+require 'config.php';
+$ap1="SELECT t_id FROM transactions WHERE t_id=$t_id";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)!==0)
+{
+mysqli_close($ap);
+goto a;
+}
+
+else
+{
+
+$_SESSION["t_id"]=$t_id;
+
+}
+
+ ?>﻿
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +46,6 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -74,10 +103,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -168,7 +197,7 @@ function getRandomImage(imgAr, path) {
 			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 			</div>
 			<div class="modal-footer">
@@ -234,17 +263,17 @@ function getRandomImage(imgAr, path) {
         <div class="box-body">
           <div class="row">
             <div class="col">
-            	<form novalidate>
+            	<form action="verify.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">
 						<h5>Full Name <span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="text" name="name" class="form-control" required data-validation-required-message="Enter your full name"> </div>
+							<input type="text" name="uname" value="<?php echo $_SESSION["fname"].$_SESSION["lname"];?>" class="form-control" required data-validation-required-message="Enter your full name"> </div>
 						<div class="form-control-feedback"><small>This name should match your account's name.</small></div>
 					</div>
 					<div class="form-group">
 						<h5>Email <span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="email" name="email" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Enter your email"></div><div class="form-control-feedback"><small>This email should match your account's email.</small></div>
+							<input type="email" name="email" value="<?php echo $_SESSION["email"];?>" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Enter your email"></div><div class="form-control-feedback"><small>This email should match your account's email.</small></div>
 					</div>
 					<div class="form-group">
 						<h5>Payment Method <span class="text-danger">*</span></h5>
@@ -256,15 +285,15 @@ function getRandomImage(imgAr, path) {
 								<option value="3">PhonePe</option>
 								<option value="4">BHIM UPI</option>
 								<option value="5">Account Transfer</option>
-								<option value="6">NEFT</option>
-								<option value="7">IMPS</option>
+								<option value="5">NEFT</option>
+								<option value="5">IMPS</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<h5>Transaction ID / Reference Number<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="text" name="transaction-ID" class="form-control" required data-validation-required-message="Enter the transaction ID" pattern="^[a-z0-9]{6,72}$|^[A-Z0-9]{6,72}$"> </div>
+							<input type="text" name="t_id" value="<?php echo $_SESSION["t_id"];?>" class="form-control" required data-validation-required-message="Enter the transaction ID" pattern="^[0-9a-zA-Z]{6,}$"> </div>
 					</div>
 					<div class="form-group">
 						<h5>Confirm Transaction ID / Reference Number<span class="text-danger">*</span></h5>
@@ -274,7 +303,7 @@ function getRandomImage(imgAr, path) {
                		<div class="form-group">
                 <h5>Date of Transaction <span class="text-danger">*</span></h5>
                 <div class="input-group date">
-           <input type="text" class="form-control" id="datepicker" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+           <input type="text" class="form-control" id="datepicker" name="date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
 					<span class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </span>
@@ -284,7 +313,7 @@ function getRandomImage(imgAr, path) {
                 <div class="form-group">
                   <h5>Time of Transaction </h5>
                   <div class="input-group">
-                    <input type="text" class="form-control timepicker" id="timepicker">
+                    <input type="text" class="form-control timepicker" id="timepicker" name="time">
 					   <span class="input-group-addon">
                       <i class="fa fa-clock-o"></i>
                     </span>
@@ -364,7 +393,6 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 	<script src="../assets/assets/vendor_plugins/timepicker/bootstrap-timepicker.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
