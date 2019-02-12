@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+ ?>﻿
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +29,6 @@
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -76,10 +89,10 @@ document.write(imgStr); document.close();
 								<!-- User image -->
 								<li class="user-header">
               	<div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
 								<!-- Menu Body -->
@@ -170,7 +183,7 @@ document.write(imgStr); document.close();
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 					<div class="modal-body">
-						<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+						<p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 						<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 					</div>
 					<div class="modal-footer">
@@ -227,7 +240,7 @@ document.write(imgStr); document.close();
 			<section class="content-header">
 				<h1>
 					Checkout
-					<small>Order ID: 0154879</small>
+					
 				</h1>
 			</section>
 
@@ -245,7 +258,7 @@ document.write(imgStr); document.close();
 					<div class="col-12">
 						<h2 class="page-header">
 							INVOICE
-							<small class="pull-right">Date: 11/12/2018</small>
+							<small class="pull-right">Date: <?php $apt=time(); $apt1=date("d-m-Y",$apt); echo $apt1; ?></small>
 						</h2>
 					</div>
 					<!-- /.col -->
@@ -266,20 +279,90 @@ document.write(imgStr); document.close();
 					<div class="col-sm-6 invoice-col text-right">
 						To
 						<address>
-							<strong class="text-blue">Dynamic name</strong><br>
-							Dynamic address<br>
-							Dynamic address<br>
-							Phone: Dynamic phone<br>
-							Email: Dynamic mail
+							<strong class="text-blue"><?php echo $_SESSION["fname"];?></strong><br>
+							Phone: <?php echo $_SESSION["phn"];?><br>
+							Email: <?php echo $_SESSION["email"];?>
 						</address>
 					</div>
 					<!-- /.col -->
 					<div class="col-sm-12 invoice-col">
 						<div class="invoice-details row no-margin">
-							<div class="col-md-6 col-lg-4"><b>Order ID:</b> #0154879</div>
-							<div class="col-md-6 col-lg-4"><b>Timestamp:</b> 11/12/2018</div>
-							<div class="col-md-6 col-lg-4"><b>My ID:</b> 0q0a2d45</div>
+
+
+
+							 <?php 
+if(!isset($_GET["id"]) && !isset($_GET["type"]))
+{
+echo "error";
+header("location: http://www.bgtechno.in");
+}
+
+else
+{
+
+$o_id=mt_rand();
+$apt=time(); $apt1=date("d-m-Y",$apt);
+
+
+function ap($o_id)
+{
+require 'config.php';
+$ap1="SELECT * FROM t_order WHERE o_id=$o_id";
+$ap2=mysqli_query($ap,$ap1);
+
+if(!$ap2)
+{
+die(mysqli_error($ap));
+}
+if(mysqli_num_rows($ap2)==0)
+{
+$count=0;
+$pname=$_GET["type"];
+$_SESSION["ptype"]=$pname;
+$pid=$_GET["id"];
+$_SESSION["pid"]=$pid;
+$product=array("GSTR","CAS","DAR","IPR","GST");
+$product_table=array("gst_return","ca_services","director_resig_reg","ipr","gst_reg");
+a:
+if($pname==$product[$count])
+{
+$ap5="SELECT price,commission FROM $product_table[$count] WHERE id=$pid";
+$ap6=mysqli_query($ap,$ap5);
+$ap7=mysqli_fetch_assoc($ap6);
+$price=$ap7["price"];
+$_SESSION["commission"]=$ap7["commission"];
+$_SESSION["tmp_price"]=$price;
+}
+else
+{
+$count++;
+goto a;
+}
+
+$ap3="INSERT INTO t_order (reg_date,p_name,pid,total,o_id) VALUES('$apt1','$pname','$pid','$price','$o_id')";
+$ap4=mysqli_query($ap,$ap3);
+mysqli_close($ap);
+}
+
+
+else
+{
+ $o_id=mt_rand();
+ ap($o_id);
+  
+
+     }
+
+}
+ap($o_id);
+}
+echo'
+
+                                                <div class="col-md-6 col-lg-4"><b>Order ID:</b>'.$o_id.'</div>
+							<div class="col-md-6 col-lg-4"><b>Timestamp:</b>'.$apt1.'</div>
+							<div class="col-md-6 col-lg-4"><b>My ID:</b>'.$_SESSION["refrallcode"].'</div>
 						</div>
+
 					</div>
 					<!-- /.col -->
 				</div>
@@ -300,34 +383,11 @@ document.write(imgStr); document.close();
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>PAN Card</td>
-									<td>12345678912514</td>
-									<td class="text-right">52.00</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>AEPS</td>
-									<td>12345678912514</td>
-									<td class="text-right">1500.00</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Website design</td>
-									<td>12345678912514</td>
-									<td class="text-right">1080.00</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>ITR</td>
-									<td>12345678912514</td>
-									<td class="text-right">960.00</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Wallet Top-up</td>
-									<td>12345678912514</td>
-									<td class="text-right">2499.00</td>
-								</tr>
+									<td>'.$_GET["type"].'</td>
+									<td>'.$_GET["id"].'</td>
+									<td class="text-right" id="price">'.$_SESSION["tmp_price"].'</td>
+								</tr>';
+								?>
 							</tbody>
 						</table>
 					</div>
@@ -340,17 +400,42 @@ document.write(imgStr); document.close();
 					<div class="col-12 col-sm-6 no-print">
 
 						<!-- promo code -->
-						<form id="promocode" style="margin-top: 10px;">
+						
 							<div class="form-group col-sm-6">
 								<div class="controls">
 									<div class="input-group input-group-sm">
-										<input type="text" class="form-control" placeholder="Promo Code" pattern="^[A-Z\d]+$"> <span class="input-group-btn">
-											<button class="btn btn-info" type="submit">Apply</button>
+										<input type="text" id="promo" class="form-control" placeholder="Promo Code" pattern="^[A-Z\d]+$"> <span class="input-group-btn">
+											<button class="btn btn-info" onclick="promo()">Apply</button>
+
+
 										</span>
 									</div>
 								</div>
 							</div>
-						</form>
+						
+<script>
+function promo()
+{
+     var req;
+
+     req= new XMLHttpRequest();
+     req.onreadystatechange = function() {
+
+    if(this.readyState==4 && this.status==200){
+    document.getElementById("price").innerHTML=this.responseText;
+    document.getElementById("sub_price").innerHTML=this.responseText;
+    document.getElementById("tax").innerHTML=Number(this.responseText)*0.18;
+    document.getElementById("total").innerHTML=Number(this.responseText)+(0.18*Number(this.responseText));
+    }
+
+};
+
+var code="promo.php?code="+document.getElementById("promo").value;
+req.open("GET",code,true)
+req.send();
+}
+
+</script>
 						<!-- accepted payments column -->
 						<p class="lead"><b>Payment Methods:</b></p>
 						<img src="images/visa.png" alt="Visa">
@@ -371,14 +456,16 @@ document.write(imgStr); document.close();
 					<div class="col-12 col-sm-6 text-right">
 
 						<div>
-							<p>Sub - Total amount : &#8377; 3,592.00</p>
-							<p>Tax (18%) : &#8377; 646.56</p>
-							<p>Shipping : &#8377; 110.44</p>
+							<p id="sub_price">Sub - Total amount : &#8377; <?php echo  $_SESSION["tmp_price"]; ?></p>
+							<p id="tax">Tax (18%) : &#8377; <?php $tax=$_SESSION["tmp_price"]*0.18; echo $tax.'</p>
+							
 						</div>
 						<div class="total-payment">
-							<h3><b>Total :</b> &#8377; 4,349.00</h3>
+							<h3 id="total"><b>Total :</b> &#8377;';
+$finalprice=$_SESSION["tmp_price"]+$tax;
+echo $finalprice.'</h3>';?>
 						</div>
-						<label for="promocode" id="promobutton" class="no-print">I have a Promo Code</label>
+					<!--	<label for="promocode" id="promobutton" class="no-print" onclick="i_have_code()">I have a Promo Code</label>-->
 					</div>
 					<!-- /.col -->
 				</div>
@@ -487,31 +574,13 @@ document.write(imgStr); document.close();
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
 	<script src="../assets/assets/vendor_plugins/JqueryPrintArea/demo/jquery.PrintArea.js"></script>
 
-	<script>
-		$(document).ready(function() {
-			$("#promocode").hide();
-			$("#print").click(function() {
-				var mode = 'iframe'; //popup
-				var close = mode == "popup";
-				var options = {
-					mode: mode,
-					popClose: close
-				};
-				$("section.printableArea").printArea(options);
-			});
-		});
-$("#promobutton").click(function() {
-    
-    $("#promocode").slideToggle("slow");
-
-});</script>
+	
 </body>
 
 </html>

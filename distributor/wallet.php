@@ -8,20 +8,12 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Wallet | BG Techno</title>
+    <title>e-KYC | BG Techno</title>
   
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_components/Magnific-Popup-master/dist/magnific-popup.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/all.css">
-  <link rel="stylesheet" href="../assets/ser/css/master_style.css">
-  <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
-  <style>
-form .hidden { display: none; }
-
-form .visible { display: block; }
-</style>
+	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
+	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -232,51 +224,14 @@ function getRandomImage(imgAr, path) {
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>My Wallet</h1>
+      <h1>Wallet Top-up</h1>
     </section>
 
     
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-			<div class="col-12">
-				<div class="box">
-					<div class="box-header with-border">						
-						<h4 class="box-title">Add or Withdraw money easily</h4>
-						<h6 class="box-subtitle">You can withdraw your money anytime by PayTm, PhonePe or directly to you account.</h6>
-					</div>
-					<div class="box-body">
-						<div class="row mb-30">
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-success">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">2,064</h1>
-										<h6 class="text-white mb-10">Available Balance</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-danger">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1,738</h1>
-										<h6 class="text-white mb-10">Pending Add Request</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-warning">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1100</h1>
-										<h6 class="text-white mb-10">Pending Withdraw Request</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-						</div>
-              <div class="row no-gutters">
+		
+		<div class="row no-gutters">
 
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
@@ -292,7 +247,7 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-primary">
-                    <sup>&#8377;</sup>1999
+                    <sup>&#8377;</sup>1499
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
@@ -302,19 +257,20 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-info">
-                    <sup>&#8377;</sup>2999
+                    <sup>&#8377;</sup>1999
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
-					</div>
+
+            </div>
             <div class="row no-gutters">
 
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-danger">
-                    <sup>&#8377;</sup>3999
+                    <sup>&#8377;</sup>2499
                   </h3>
 
                   <br>
@@ -325,7 +281,7 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-primary">
-                    <sup>&#8377;</sup>4999
+                    <sup>&#8377;</sup>2999
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
@@ -335,80 +291,17 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-info">
-                    <sup>&#8377;</sup>5999
+                    <sup>&#8377;</sup>3499
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
-					</div>
-					 <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Withdraw Money</h3>
-        </div>
-        <div class="box-body">
-			<a class="popup-with-form btn btn-success" href="#withdraw-form">Proceed</a>
-			
-			<!-- form itself -->
-			<form id="withdraw-form" class="mfp-hide white-popup-block" action="">
-				<h1>Withdrawl Request</h1>
-				<fieldset style="border:0;">
-					<p>You can withdraw your money anytime by requesting here. You can choose any payment method like UPI, PayTm, PhonePe or directly to you account.</p>
-					<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="upi" checked/>
-						<label for="upi">UPI</label></div>
-						<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="phonepe" />
-							<label for="phonepe">PhonePe</label></div>
-							<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="paytm"/>
-								<label for="paytm">PayTm</label></div>
-								<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="bank" />
-									<label for="bank">Bank Transfer</label></div>
-    					<div class="box form-group" data-show="upi" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="text" class="form-control" name="upi" placeholder="Google Pay or BHIM UPI">
-							</div></div>
-    					<div class="box form-group" data-show="phonepe" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="tel" class="form-control" name="phonepe" placeholder="PhonePe Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div></div>
-   				 		<div class="box form-group" data-show="paytm" data-hide="paymentMethod">
-   				 		<div class="controls">
-						<input type="tel" class="form-control" name="paytm" placeholder="PayTm Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div></div>
-    					<div class="box form-group" data-show="bank" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="text" class="form-control" name="name" placeholder="Account Holder's Name" pattern="^[A-z ]{3,72}$">
-							</div>
-							<div class="controls">
-						<input type="text" class="form-control" name="phone" placeholder="registered mobile number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="accountNumber" placeholder="Account Number" pattern="^[\d]{11,17}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="bankName" placeholder="Bank name and branch" pattern="^[A-z,. \d]{3,72}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="ifsc" placeholder="IFSC Code" pattern="^[a-z0-9]{11}$|^[A-Z0-9]{11}$">
-							</div>
-  				 		</div>
-   				 		<button type="submit" class="btn btn-info">Withdraw</button>
-				</fieldset>
-				
-			</form>
-        </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
 
-					</div>
-				</div>
-		  </div>
-		</div>
+            </div>
+		
+			<br><br><br>
+		
     </section>
     <!-- /.content -->
 
@@ -432,20 +325,10 @@ function getRandomImage(imgAr, path) {
 </div>
 <!-- ./wrapper -->
 
-	 <script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
-  <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-   <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-    <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-  <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="../assets/assets/vendor_plugins/iCheck/icheck.min.js"></script>
-  <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
-  <script src="../assets/ser/js/template.js"></script>
-  <script src="../assets/ser/js/demo.js"></script>
-  <script src="../assets/assets/vendor_components/jquery.formalist.min.js"></script>
-  <script>
-$(function(){
-  $('#withdraw-form').formalist();
-});
-</script>
+	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
+	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
+	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+	<script src="../assets/ser/js/template.js"></script>
+	<script src="../assets/ser/js/demo.js"></script>
