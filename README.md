@@ -1,4 +1,8 @@
 # bgtechno
+id: jigyasakendra
+pass: 2R#)YWRCWO9
+link:https://linuxsupercloud.com:2083
+
 
 distributor/forget-password.php  - - -  incomplete backend
 distributor/wallet.php  - - -  incomplete backend
