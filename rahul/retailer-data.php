@@ -147,7 +147,7 @@ function getRandomImage(imgAr, path) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="distributor-data.html">Distributor</a></li>
+            <li><a href="distributor-data.php">Distributor</a></li>
             <li class="active"><a href="#">Retailer</a></li>
           </ul>
         </li>

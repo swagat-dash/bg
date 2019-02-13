@@ -24,7 +24,7 @@
 
   <div class="tab-content">
     <div id="signup">
-      <h1>Sign Up as Retailer</h1>
+      <h1>Sign Up as Distributor</h1>
 
       <form action="distributor/" method="post">
 
