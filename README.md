@@ -1,5 +1,17 @@
 # bgtechno
 
+distributor/forget-password.php  - - -  incomplete
+distributor/wallet.php  - - -  incomplete
+distributor/contact.php  - - -  incomplete
+
+notification system is incomplete in all panels
+
+retailer/  - - -  incomplete
+rahul/  - - -  incomplete
+
+
+
+
 
 DIRECTORY ACCESS PERMISSIONS:
 
