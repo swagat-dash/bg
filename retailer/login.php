@@ -8,14 +8,14 @@ $ap5=mysqli_query($ap,"SELECT email,phn,fname,lname,pass,refrallcode,r_id FROM r
 if(!$ap5)
 {
 
-echo "connection failed";
+echo "Connection failed.. Sorry for the inconvenience caused";
 
 }
 else
 {
     if(mysqli_num_rows($ap5)==0)
         { 
-          echo "user does not exist: please signup first";
+          echo "User does not exist. Please create a new account.";
         }
     else
         {
@@ -36,7 +36,7 @@ else
                  }
             else
                 {
-                     echo "the username or password is incorrect";
+                     echo "The username or password is incorrect";
                  }
           }
 }

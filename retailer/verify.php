@@ -32,7 +32,7 @@ if($_FILES["file"]["size"] > $maxsize )
 
 {
 
-  echo "upload file under 5 MB ";
+  echo "Upload file under 5 MB ";
 
 $ok=0;  
 }
@@ -50,7 +50,7 @@ if($ok==0)
 
 {
 
-echo " error";
+echo " Error";
 }
 else
 {

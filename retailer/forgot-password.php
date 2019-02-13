@@ -157,7 +157,6 @@ document.close();
 <!-- sidebar: style can be found in sidebar.less -->
 <section class="sidebar">
 <!-- sidebar menu: : style can be found in sidebar.less -->
-<h2 style="display: none;">Fill this kyc form to enable hassle free and fast checkout</h2>
 <ul class="sidebar-menu" data-widget="tree">
 <li class="user-profile treeview">
 	<a href="services.html"> <span>Services Basic Info</span> <span class="pull-right-container"> <i class="fa fa-angle-right pull-right"></i> </span> </a>

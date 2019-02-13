@@ -39,12 +39,12 @@ $ap5=mysqli_query($ap,"SELECT email FROM retailers WHERE email='$email'");
                          if(!$ap3)
         
                              {
-                                 echo "registrationfailed:user already exists";
+                                 echo "Registration failed.. User already exists";
                              }
 
                          else
                                 {
-                                    echo "registration successfull";
+                                    echo "Registration Successful";
                                     mysqli_close($ap);
                                  } 
                     
@@ -52,7 +52,7 @@ $ap5=mysqli_query($ap,"SELECT email FROM retailers WHERE email='$email'");
             }
     else
          {
-              echo "user already exists";
+              echo "User already exists";
           }
 
 
