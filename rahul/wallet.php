@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_components/Magnific-Popup-master/dist/magnific-popup.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
@@ -304,6 +305,8 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+  <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
   <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
