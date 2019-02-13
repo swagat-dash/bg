@@ -3,29 +3,22 @@
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Wallet | BG Techno</title>
+    <title>e-KYC | BG Techno</title>
   
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_components/Magnific-Popup-master/dist/magnific-popup.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/all.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
-  <style>
-form .hidden { display: none; }
-form .visible { display: block; }
-</style>
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-<script>
+<script type="text/javascript">
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png','avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png','avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png','avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png','avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
     
 function getRandomImage(imgAr, path) {
@@ -38,6 +31,9 @@ function getRandomImage(imgAr, path) {
 </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -73,14 +69,14 @@ function getRandomImage(imgAr, path) {
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <script>getRandomImage(random_images_array, '../assets/images/avatar/')</script>
+              <script type="text/javascript">getRandomImage(random_images_array, '../assets/images/avatar/')</script>
             </a>
             <ul class="dropdown-menu scale-up">
               <!-- User image -->
               <li class="user-header">
               	<div class="col-12">
-                <p>Dynamic name by php variable</p>
-                  <p>Dynamic email by php variable</p></div>
+                <p><?php echo "$_SESSION[fname]" ; ?></p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
                   <a href="#" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
@@ -95,7 +91,7 @@ function getRandomImage(imgAr, path) {
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
@@ -164,6 +160,27 @@ function getRandomImage(imgAr, path) {
 </div>
 <!-- inbox Modal ends -->
 
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <h4 class="modal-title">Referral Code</h4>
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
+
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -196,6 +213,7 @@ function getRandomImage(imgAr, path) {
 
     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+    <li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
     <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
@@ -206,51 +224,14 @@ function getRandomImage(imgAr, path) {
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>My Wallet</h1>
+      <h1>Wallet Top-up</h1>
     </section>
 
     
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-			<div class="col-12">
-				<div class="box">
-					<div class="box-header with-border">						
-						<h4 class="box-title">Add or Withdraw money easily</h4>
-						<h6 class="box-subtitle">You can withdraw your money anytime by PayTm, PhonePe or directly to you account.</h6>
-					</div>
-					<div class="box-body">
-						<div class="row mb-30">
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-success">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">2,064</h1>
-										<h6 class="text-white mb-10">Available Balance</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-danger">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1,738</h1>
-										<h6 class="text-white mb-10">Pending Add Request</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-							<div class="col-md-4 col-lg-4 col-xs-12">
-								<div class="box box-inverse box-warning">
-									<div class="box-body text-center">
-										<h1 class="font-light text-white">1100</h1>
-										<h6 class="text-white mb-10">Pending Withdraw Request</h6>
-									</div>
-								</div>
-							</div>
-							<!-- Column -->
-						</div>
-              <div class="row no-gutters">
+		
+		<div class="row no-gutters">
 
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
@@ -266,7 +247,7 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-primary">
-                    <sup>&#8377;</sup>1999
+                    <sup>&#8377;</sup>1499
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
@@ -276,19 +257,20 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-info">
-                    <sup>&#8377;</sup>2999
+                    <sup>&#8377;</sup>1999
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
-					</div>
+
+            </div>
             <div class="row no-gutters">
 
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-danger">
-                    <sup>&#8377;</sup>3999
+                    <sup>&#8377;</sup>2499
                   </h3>
 
                   <br>
@@ -299,7 +281,7 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-primary">
-                    <sup>&#8377;</sup>4999
+                    <sup>&#8377;</sup>2999
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-primary" href="checkout.php">Add Money</a>
@@ -309,80 +291,17 @@ function getRandomImage(imgAr, path) {
               <div class="col-lg-4">
                 <div class="box p-60 text-center">
                   <h3 class="price text-info">
-                    <sup>&#8377;</sup>5999
+                    <sup>&#8377;</sup>3499
                   </h3>
                   <br>
                   <a class="btn btn-bold btn-block btn-round btn-info" href="checkout.php">Add Money</a>
                 </div>
               </div>
-					</div>
-					 <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Withdraw Money</h3>
-        </div>
-        <div class="box-body">
-			<a class="popup-with-form btn btn-success" href="#withdraw-form">Proceed</a>
-			
-			<!-- form itself -->
-			<form id="withdraw-form" class="form-element mfp-hide white-popup-block" action="">
-				<h1>Withdrawl Request</h1>
-				<fieldset style="border:0;">
-					<p>You can withdraw your money anytime by requesting here. You can choose any payment method like UPI, PayTm, PhonePe or directly to you account.</p>
-					<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="upi" checked/>
-						<label for="upi">UPI</label></div>
-						<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="phonepe" />
-							<label for="phonepe">PhonePe</label></div>
-							<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="paytm"/>
-								<label for="paytm">PayTm</label></div>
-								<div class="form-group">
-					<input name="paymentMethod" type="radio" class="with-gap" id="bank" />
-									<label for="bank">Bank Transfer</label></div>
-    					<div class="box form-group" data-show="upi" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="text" class="form-control" name="upi" placeholder="Google Pay or BHIM UPI">
-							</div></div>
-    					<div class="box form-group" data-show="phonepe" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="tel" class="form-control" name="phonepe" placeholder="PhonePe Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div></div>
-   				 		<div class="box form-group" data-show="paytm" data-hide="paymentMethod">
-   				 		<div class="controls">
-						<input type="tel" class="form-control" name="paytm" placeholder="PayTm Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div></div>
-    					<div class="box form-group" data-show="bank" data-hide="paymentMethod">
-    					<div class="controls">
-						<input type="text" class="form-control" name="name" placeholder="Account Holder's Name" pattern="^[A-z ]{3,72}$">
-							</div>
-							<div class="controls">
-						<input type="text" class="form-control" name="phone" placeholder="registered mobile number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="accountNumber" placeholder="Account Number" pattern="^[\d]{11,17}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="bankName" placeholder="Bank name and branch" pattern="^[A-z,. \d]{3,72}$">
-							</div>
- 				 		<div class="controls">
-						<input type="text" class="form-control" name="ifsc" placeholder="IFSC Code" pattern="^[a-z0-9]{11}$|^[A-Z0-9]{11}$">
-							</div>
-  				 		</div>
-   				 		<button type="submit" class="btn btn-info">Withdraw</button>
-				</fieldset>
-				
-			</form>
-        </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
 
-					</div>
-				</div>
-		  </div>
-		</div>
+            </div>
+		
+			<br><br><br>
+		
     </section>
     <!-- /.content -->
 
@@ -409,17 +328,7 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	 <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-    <script src="../assets/assets/vendor_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="../assets/assets/vendor_plugins/iCheck/icheck.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
 	<script src="../assets/ser/js/demo.js"></script>
-	<script src="../assets/assets/vendor_components/jquery.formalist.min.js"></script>
-	<script>
-$(function(){
-  $('#withdraw-form').formalist();
-});
-</script>

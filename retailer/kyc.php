@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="../assets/ser/css/master_style.css">
 <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-<link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 <script>
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png', 'avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png', 'avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png', 'avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
@@ -59,17 +58,17 @@ document.close();
 			<!-- User image -->
 			<li class="user-header">
 				<div class="col-12">
-					<p>Dynamic name by php variable</p>
-					<p>Dynamic email by php variable</p>
+					<p><?php echo "$_SESSION[fname]" ; ?></p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p>
 				</div>
-				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a> </div>
+				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a> </div>
 			</li>
 			<!-- Menu Body -->
 			<li class="user-body">
 				<div class="row no-gutters">
 				<div class="col-12 text-left"> <a href="#"><i class="ion ion-person"></i> My e-KYC</a> </div>
 					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a> </div>
-					<div class="col-12 text-left"> <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a> </div>
+					<div class="col-12 text-left"> <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a> </div>
 					<div role="separator" class="divider col-12"></div>
 					<div class="col-12 text-left"> <a href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
 				</div>
@@ -133,6 +132,26 @@ document.close();
 </div>
 </div>
 <!-- inbox Modal ends -->
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+	<h4 class="modal-title">Referral Code</h4>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+	<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+	<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+	<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+</div>
+</div>
+</div>
+</div>
+<!-- /.modal -->
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 <!-- sidebar: style can be found in sidebar.less -->
@@ -159,6 +178,7 @@ document.close();
 </li>
 <li class="nav-devider"></li>
 <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
+<li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
 <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
 <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 </ul>
@@ -755,7 +775,6 @@ document.close();
 <script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
 <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 <script src="../assets/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>

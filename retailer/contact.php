@@ -8,14 +8,13 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Support | BG Techno</title>
+    <title>Dashboard | BG Techno</title>
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
 	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/flat/blue.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_components/sweetalert/sweetalert.css">
+  <link href="../assets/assets/vendor_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -78,10 +77,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
                 <div class="col-12">
-                <p>Dynamic name by php variable</p>
-                  <p>Dynamic email by php variable</p></div>
+                <p><?php echo "$_SESSION[fname]" ; ?></p>
+                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -94,7 +93,7 @@ function getRandomImage(imgAr, path) {
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="forgot-password.php"><i class="fa fa-unlock-alt"></i> Settings</a>
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">
@@ -162,6 +161,27 @@ function getRandomImage(imgAr, path) {
 	</div>
 </div>
 <!-- inbox Modal ends -->
+
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <h4 class="modal-title">Referral Code</h4>
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
   
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -195,7 +215,7 @@ function getRandomImage(imgAr, path) {
 
     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    
+    <li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
     <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li class="active"><a href="#"><i class="fa fa-envelope"></i><span>Support</span></a></li>
     </ul>
@@ -279,7 +299,6 @@ function getRandomImage(imgAr, path) {
 	</script>
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
 	<script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
