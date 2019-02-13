@@ -6,7 +6,12 @@ distributor/contact.php  - - -  incomplete
 
 notification system is incomplete in all panels
 
-retailer/  - - -  incomplete
+retailer/forget-password.php  - - -  incomplete
+retailer/wallet.php  - - -  incomplete
+retailer/contact.php  - - -  incomplete
+
+retailer panel homepage confusion (dashboard.php vs index.php)
+
 rahul/  - - -  incomplete
 
 
