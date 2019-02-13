@@ -1,18 +1,18 @@
 # bgtechno
 
-distributor/forget-password.php  - - -  incomplete
-distributor/wallet.php  - - -  incomplete
-distributor/contact.php  - - -  incomplete
+distributor/forget-password.php  - - -  incomplete backend
+distributor/wallet.php  - - -  incomplete backend
+distributor/contact.php  - - -  incomplete backend
 
 notification system is incomplete in all panels
 
-retailer/forget-password.php  - - -  incomplete
-retailer/wallet.php  - - -  incomplete
-retailer/contact.php  - - -  incomplete
+retailer/forget-password.php  - - -  incomplete backend
+retailer/wallet.php  - - -  incomplete backend
+retailer/contact.php  - - -  incomplete backend
 
 retailer panel homepage confusion (dashboard.php vs index.php)
 
-rahul/  - - -  incomplete
+rahul/   (whole admin panel)  - - -  incomplete backend
 
 
 
