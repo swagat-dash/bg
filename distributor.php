@@ -106,6 +106,13 @@
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/login.js"></script>
     <script src="js/validate.js"></script>
+        <script src="js/magnetCurs.js"></script>
+    <script>
+    magnetCurs.init({
+    click:1000,
+    pointer:true
+});
+</script>
 
 </body>
 

@@ -55,6 +55,44 @@ html, body {
    max-width: 100%;
    overflow-x: hidden;
 }
+*{cursor: auto;
+cursor: crosshair;
+cursor: none;}
+#cursor{
+    border-radius: 1000px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffa100;
+    margin: -15px;
+    transition-duration: 150ms;
+    z-index: 10000;
+    padding: 0;
+    box-sizing: border-box;
+}   
+#pointer{
+    border-radius: 1000px;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #062241;
+    margin: -5px;
+    z-index: 10001;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes cursorClick{
+    from,to{
+        border: 2px solid #ffa100;
+        transform: scale(1);
+    }
+    60%{
+        border: 0.5px solid #062241;
+        transform: scale(2);
+    }
+    70%{
+        border: 2px solid #ffa100;
+        transform: scale(1);
+    }
+}
 .floatleft {
 	float:left;
 }
