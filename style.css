@@ -57,8 +57,9 @@ html, body {
 }
 *{cursor: auto;
 cursor: crosshair;
-cursor: none;}
-#cursor{
+cursor:none;
+}
+#cursor:not(*:root){
     border-radius: 1000px;
     width: 30px;
     height: 30px;
@@ -69,7 +70,7 @@ cursor: none;}
     padding: 0;
     box-sizing: border-box;
 }   
-#pointer{
+#pointer:not(*:root){
     border-radius: 1000px;
     width: 10px;
     height: 10px;
@@ -92,6 +93,14 @@ cursor: none;}
         border: 2px solid #ffa100;
         transform: scale(1);
     }
+}
+@supports (-ms-ime-align: auto) {
+  * {
+        cursor: auto;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+*{cursor:auto!important;}
 }
 .floatleft {
 	float:left;
