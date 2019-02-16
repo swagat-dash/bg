@@ -1,0 +1,4 @@
+[15-Feb-2019 20:03:19 Asia/Kolkata] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/jigyasakendra/public_html/login.php on line 5
+[15-Feb-2019 20:03:19 Asia/Kolkata] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/jigyasakendra/public_html/login.php on line 10
+[15-Feb-2019 20:03:55 Asia/Kolkata] PHP Warning:  mysqli_connect(): (HY000/2002): Connection refused in /home/jigyasakendra/public_html/login.php on line 5
+[15-Feb-2019 20:03:55 Asia/Kolkata] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/jigyasakendra/public_html/login.php on line 10

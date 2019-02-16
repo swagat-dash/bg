@@ -1,5 +1,5 @@
 <?php
-$ap=mysqli_connect("localhost","1088132","rahul12345","1088132");
+$ap=mysqli_connect("localhost:3306","jigyasak_anurag","anurag9586821104","jigyasak_anu");
 if(!$ap)
 
 {

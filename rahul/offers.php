@@ -134,7 +134,7 @@ function getRandomImage(imgAr, path) {
         </ul>
     </li>
   <li class="nav-devider"></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
           <a href="#">
