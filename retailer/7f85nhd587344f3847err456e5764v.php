@@ -280,13 +280,13 @@ function getRandomImage(imgAr, path) {
 						<div class="controls">
 							<select name="payment" id="payment" required class="form-control">
 								<option value="">Select Your Payment Method</option>
-								<option value="1">Google Pay</option>
-								<option value="2">Paytm</option>
-								<option value="3">PhonePe</option>
-								<option value="4">BHIM UPI</option>
-								<option value="5">Account Transfer</option>
-								<option value="5">NEFT</option>
-								<option value="5">IMPS</option>
+								<option value="Google Pay">Google Pay</option>
+								<option value="Paytm">Paytm</option>
+								<option value="PhonePe">PhonePe</option>
+								<option value="BHIM UPI">BHIM UPI</option>
+								<option value="Account Transfer">Account Transfer</option>
+								<option value="NEFT">NEFT</option>
+								<option value="IMPS">IMPS</option>
 							</select>
 						</div>
 					</div>

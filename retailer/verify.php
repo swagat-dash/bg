@@ -16,8 +16,9 @@ $email=$_SESSION["email"];
 $pay_method=$_POST["payment"];
 $time=$_POST["time"];
 $date=$_POST["date"]."time:".$time;
+$type="retailer";
 require 'config.php';
-$ap3="INSERT INTO transactions(r_name,product,commission,t_date,t_status,t_id,email,product_id,promo_code,r_id,ref_id) VALUES('$fullname','$_SESSION[ptype]','$_SESSION[commission]','$date','pending','$t_id','$_SESSION[email]','$_SESSION[pid]','$_SESSION[promo_code]','$_SESSION[r_id]','$_SESSION[refrallcode]')";
+$ap3="INSERT INTO transactions(r_name,product,commission,t_date,t_status,t_id,email,product_id,promo_code,r_id,ref_id,ptype,utype) VALUES('$fullname','$_SESSION[ptype]','$_SESSION[commission]','$date','pending','$t_id','$_SESSION[email]','$_SESSION[pid]','$_SESSION[promo_code]','$_SESSION[r_id]','$_SESSION[refrallcode]','$pay_method','$type')";
 mysqli_query($ap,$ap3);
 mysqli_close($ap);
 
@@ -32,7 +33,7 @@ if($_FILES["file"]["size"] > $maxsize )
 
 {
 
-  echo "Upload file under 5 MB ";
+  echo "upload file under 5 MB ";
 
 $ok=0;  
 }
@@ -50,7 +51,7 @@ if($ok==0)
 
 {
 
-echo " Error";
+echo " error";
 }
 else
 {

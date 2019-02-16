@@ -43,7 +43,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="transactions.php" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
 		  <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -138,7 +138,7 @@ function getRandomImage(imgAr, path) {
         </ul>
     </li>
     <li class="nav-devider"></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
           <a href="#">

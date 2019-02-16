@@ -300,7 +300,7 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
 	<script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
-	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
   <script src="../assets/assets/vendor_plugins/iCheck/icheck.js"></script>
   <script src="../assets/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
