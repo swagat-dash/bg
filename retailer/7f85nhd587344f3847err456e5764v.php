@@ -241,7 +241,6 @@ function getRandomImage(imgAr, path) {
 
     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-    
     <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>

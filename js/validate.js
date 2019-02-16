@@ -1,11 +1,11 @@
 var password = document.getElementById("password");
-var confirm_password = document.getElementById("confirm_password");
+var password2 = document.getElementById("password2");
 
 function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
+  if(password.value != password2.value) {
+    password2.setCustomValidity("Passwords Don't Match");
   } else {
-    confirm_password.setCustomValidity('');
+    password2.setCustomValidity('');
   }
 }
 

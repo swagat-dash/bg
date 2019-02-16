@@ -33,14 +33,14 @@
             <label>
                 First Name<span class="req">*</span>
               </label>
-            <input type="text" name="fname" required autocomplete="off" pattern="^[A-z ]*$" title="Tip: First name cannot include numbers or symbols." />
+            <input type="text" name="fname" required pattern="^[A-z ]*$" title="Tip: First name cannot include numbers or symbols." />
           </div>
 
           <div class="field-wrap">
             <label>
                 Last Name<span class="req">*</span>
               </label>
-            <input type="text" name="lname" required autocomplete="off" pattern="^[A-z ]*$" title="Tip: Last name cannot include numbers or symbols." />
+            <input type="text" name="lname" required pattern="^[A-z ]*$" title="Tip: Last name cannot include numbers or symbols." />
           </div>
         </div>
 
@@ -48,7 +48,14 @@
           <label>
               Email Address<span class="req">*</span>
             </label>
-          <input type="email" name="email" required autocomplete="off" pattern="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" />
+          <input type="email" name="email" required pattern="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+              Phone<span class="req">*</span>
+            </label>
+          <input type="phone" name="phone" required pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$" />
         </div>
 
         <div class="field-wrap">
@@ -62,7 +69,7 @@
           <label>
               Confirm Password<span class="req">*</span>
             </label>
-          <input type="password" id="confirm_password" name="confirm_password" required autocomplete="off" title="Tip: Both the password must be same." />
+          <input type="password" id="password2" name="password2" required autocomplete="off" title="Tip: Both the password must be same." />
         </div>
 
         <button type="submit" class="button button-block" />Get Started</button>
@@ -80,7 +87,7 @@
           <label>
               Email Address<span class="req">*</span>
             </label>
-          <input type="email" name="email" required autocomplete="off" pattern="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" />
+          <input type="email" name="email" required pattern="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" /> <!-- name="username" in the old login.html -->
         </div>
 
         <div class="field-wrap">

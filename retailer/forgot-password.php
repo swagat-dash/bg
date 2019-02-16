@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -177,7 +177,6 @@ document.close();
 </li>
 <li class="nav-devider"></li>
 <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-<li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
 <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
 <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 </ul>
