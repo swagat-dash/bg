@@ -97,22 +97,22 @@ document.write(imgStr); document.close();
               </li>
 								<!-- Menu Body -->
 								<li class="user-body">
-									<div class="row no-gutters">
-										<div class="col-12 text-left">
-											<a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
-										</div>
-										<div role="separator" class="divider col-12"></div>
-										<div class="col-12 text-left">
-											<a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
-										</div>
-									</div>
-								</li>
+                <div class="row no-gutters">
+                  <div class="col-12 text-left">
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                  </div>
+				<div role="separator" class="divider col-12"></div>
+				  <div class="col-12 text-left">
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>				
+                </div>
+      			</li>
 							</ul>
 						</li>
 					</ul>
@@ -291,7 +291,7 @@ document.write(imgStr); document.close();
 
 
 							 <?php 
-if(!isset($_GET["id"]) && !isset($_GET["type"]))
+if(!isset($_GET["price"]) && !isset($_GET["type"]))
 {
 echo "error";
 header("location: http://www.bgtechno.in");
@@ -438,10 +438,10 @@ req.send();
 </script>
 						<!-- accepted payments column -->
 						<p class="lead"><b>Payment Methods:</b></p>
-						<img src="images/visa.png" alt="Visa">
-						<img src="images/mastercard.png" alt="Mastercard">
-						<img src="images/american-express.png" alt="American Express">
-						<img src="images/paypal2.png" alt="Paypal">
+						<img src="../assets/images/visa.png" alt="Visa">
+						<img src="../assets/images/mastercard.png" alt="Mastercard">
+						<img src="../assets/images/american-express.png" alt="American Express">
+						<img src="../assets/images/paypal2.png" alt="Paypal">
 
 						<p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
 							Securely pay for your products or services. We have multiple payments options like NEFT, IMPS, Bank Transfer, PayPal, Paytm wallet, PhonePay wallet, UPI etc taxfree. We also have a payment gateway which provides various options like Credit Card, Debit Card, Netbanking etc.

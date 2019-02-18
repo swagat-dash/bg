@@ -1,10 +1,10 @@
-
 <?php
-$email=$_POST['username'];
-$pass=$_POST['password'];
+session_start();
 require 'config.php';
-
-$ap5=mysqli_query($ap,"SELECT email,phn,fname,lname,pass,refrallcode FROM distributors WHERE email='$email'");
+$email=$_POST['email'];
+$pass=$_POST['password'];
+$anu="SELECT * FROM distributors WHERE email='$email'";
+$ap5=mysqli_query($ap,$anu);
 if(!$ap5)
 {
 
@@ -24,7 +24,7 @@ else
             $ap6=mysqli_fetch_assoc($ap5);
                if(password_verify($pass,$ap6["pass"]))
                {
-                    session_start();
+                    
                     $_SESSION["login"]= true;
                     $_SESSION["email"]= $ap6["email"];
                     $_SESSION["fname"]=$ap6["fname"];

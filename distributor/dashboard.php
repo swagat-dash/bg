@@ -85,7 +85,7 @@ function getRandomImage(imgAr, path) {
                 <p><?php  echo $_SESSION["fname"] ; ?></p>
                   <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -382,17 +382,15 @@ while($ap3=mysqli_fetch_assoc($ap2))
 
 echo'
 
-                <div class="tab-pane fade" id="'.$j.'">
-				<h4>'.$ap3["header"].'</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
+                 <div class="tab-pane fade" id="'.$j.'">
+        <h4>'.$ap3["description"].'</h4>
+        <dl class="dl-horizontal">
+        <dt>Time required</dt>
                 <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>'.$ap3["docs_required"].'</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p></div>   
-                ';
+          '.$ap3["docs_required"].'</dl>
+              <p>'.$ap3["content"].'</p>
+    <p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p></div>';
 $j++;
 
 }
@@ -571,16 +569,13 @@ while($ap3=mysqli_fetch_assoc($ap2))
 echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
-				<h4>'.$ap3["header"].'</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
+        <h4>'.$ap3["description"].'</h4>
+        <dl class="dl-horizontal">
+        <dt>Time required</dt>
                 <dd>'.$ap3["time_required"].'</dd>
-                <dt>Documents required</dt>
-					<dd>'.$ap3["docs_required"].'</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
-		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p></div>   
-                ';
+                </dl>
+              <p>'.$ap3["content"].'</p>
+    <p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p></div>';
 $tmp++;
 
 }
@@ -745,14 +740,13 @@ while($ap3=mysqli_fetch_assoc($ap2))
 echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
-				<h4>'.$ap3["header"].'</h4>
+				<h4>'.$ap3["description"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
                 <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>'.$ap3["docs_required"].'</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
+          <dd>'.$ap3["docs_required"].'</dd></dl>
+              <p>'.$ap3["detail"].'</p>
 		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p></div>   
                 ';
 $tmp++;
@@ -920,14 +914,13 @@ while($ap3=mysqli_fetch_assoc($ap2))
 echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
-				<h4>'.$ap3["header"].'</h4>
+				<h4>'.$ap3["description"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
                 <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>'.$ap3["docs_required"].'</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
+          '.$ap3["docs_required"].'</dl>
+              '.$ap3["content"].'
 		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GST"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
                 ';
 $tmp++;
@@ -1095,14 +1088,13 @@ while($ap3=mysqli_fetch_assoc($ap2))
 echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
-				<h4>'.$ap3["header"].'</h4>
+				<h4>'.$ap3["description"].'</h4>
 				<dl class="dl-horizontal">
 				<dt>Time required</dt>
                 <dd>'.$ap3["time_required"].'</dd>
                 <dt>Documents required</dt>
-					<dd>'.$ap3["docs_required"].'</dd>
-					<dd>It should be uploaded in specified Excel format.</dd>
-              </dl>
+          '.$ap3["docs_required"].'</dl>
+              '.$ap3["content"].'
 		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=IPR"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
                 ';
 $tmp++;

@@ -8,18 +8,19 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Dashboard | BG Techno</title>
-	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
-	<link rel="stylesheet" href="../assets/ser/css/master_style.css">
+    <title>Support | BG Techno</title>
+  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
+  <link rel="stylesheet" href="../assets/ser/css/master_style.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/iCheck/flat/blue.css">
-  <link href="../assets/assets/vendor_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+  <link rel="stylesheet" href="../assets/assets/vendor_components/sweetalert/sweetalert.css">
+  <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
+  <link rel="stylesheet" href="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 <script type="text/javascript">
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png','avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png','avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png','avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png','avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
     
@@ -61,15 +62,15 @@ function getRandomImage(imgAr, path) {
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-		  
-		  <li class="search-box">
+      
+      <li class="search-box">
             <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
             <form class="app-search" style="display: none;">
                 <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-			</form>
-          </li>			
+      </form>
+          </li>     
 
-		   <li class="dropdown user user-menu">
+       <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <script type="text/javascript">getRandomImage(random_images_array, '../assets/images/avatar/')</script>
             </a>
@@ -77,10 +78,10 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
                 <div class="col-12">
-                <p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p></div>
+                <p><?php  echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -97,7 +98,7 @@ function getRandomImage(imgAr, path) {
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
                   </div>        
                 </div>
             </li>
@@ -110,79 +111,77 @@ function getRandomImage(imgAr, path) {
               
    <!-- inbox Modal -->
 <div class="modal center-modal fade" data-backdrop="true" id="inbox" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-body">
-			<!--message starts-->
-				<div class="box box-inverse box-success">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
-           				<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-               			e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties.
-    				</div>
-				</div>
-			<!--message starts-->
-				<div class="box box-inverse box-info">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-            			<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-               			Dynamic body
-    				</div>
-				</div>
-			<!--message starts-->
-				<div class="box box-inverse box-danger">
-    				<div class="box-header">
-        			<h4 class="box-title"><strong>Dynamic title</strong></h4>
-            			<div class="box-tools pull-right">					
-							<ul class="box-controls">
-					 			<li><a class="box-btn-close" href="#"></a></li>
-							</ul>
-						</div>
-    				</div>
-					<div class="box-body">
-                		Dynamic body
-    				</div>
-				</div>
-			<!-- content ends -->
-			</div>
-		</div>
-	</div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      <!--message starts-->
+        <div class="box box-inverse box-success">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+                    e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties.
+            </div>
+        </div>
+      <!--message starts-->
+        <div class="box box-inverse box-info">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Dynamic title</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+                    Dynamic body
+            </div>
+        </div>
+      <!--message starts-->
+        <div class="box box-inverse box-danger">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Dynamic title</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+                    Dynamic body
+            </div>
+        </div>
+      <!-- content ends -->
+      </div>
+    </div>
+  </div>
 </div>
 <!-- inbox Modal ends -->
-
-<!-- referral Modal -->
+  <!-- referral Modal -->
 <div class="modal modal-primary fade" id="share">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-			  <h4 class="modal-title">Referral Code</h4>
-			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<div class="modal-body">
-				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
-				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
-			</div>
-		</div>
-	</div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Referral Code</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <p id="to-copy">http://www.bgtechno.in/retailer/<?php echo "index.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+        <p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- /.modal -->
-  
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -197,7 +196,7 @@ function getRandomImage(imgAr, path) {
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
-		  <ul class="treeview-menu">
+      <ul class="treeview-menu">
             <li><a href="../pan.html" target="_blank">PAN card</a></li>
             <li><a href="../gst.html" target="_blank">GST</a></li>
             <li><a href="../aeps.html" target="_blank">AEPS</a></li>
@@ -213,7 +212,7 @@ function getRandomImage(imgAr, path) {
         </ul>
     </li>
 
-    <li class="nav-devider"></li>
+     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     <li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
     <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
@@ -233,8 +232,8 @@ function getRandomImage(imgAr, path) {
   
      <section class="content">
       <div class="row">
-			<div class="col-12">
-				<div class="box">
+      <div class="col-12">
+        <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">Submit a ticket</h3>
             </div>
@@ -256,7 +255,7 @@ function getRandomImage(imgAr, path) {
                   <i class="fa fa-paperclip"></i> Attachment
                   <input type="file" name="attachment">
                 </div>
-                <p class="help-block">Max. 32MB</p>
+                <p class="help-block">Max. 3MB</p>
               </div>
             </div>
             <!-- /.box-body -->
@@ -270,8 +269,8 @@ function getRandomImage(imgAr, path) {
             <!-- /.box-footer -->
     </div>
   </div>
-		 </div>
-	  </section>
+     </div>
+    </section>
 
   </div>
   <!-- /.content-wrapper -->
@@ -290,29 +289,30 @@ function getRandomImage(imgAr, path) {
     </footer>
 
  </div>
-	 
+   
 
-	<script src="../assets/assets/vendor_components/jquery/dist/jquery.js"></script>
-	<script src="../assets/assets/vendor_components/jquery-ui/jquery-ui.js"></script>
-	<script>
-	  $.widget.bridge('uibutton', $.ui.button);
-	</script>
-	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
-	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
-	<script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
-	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
-	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+  <script src="../assets/assets/vendor_components/jquery/dist/jquery.js"></script>
+  <script src="../assets/assets/vendor_components/jquery-ui/jquery-ui.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
+  <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
+  <script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
+  <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+  <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
   <script src="../assets/assets/vendor_plugins/iCheck/icheck.js"></script>
   <script src="../assets/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
   <script src="../assets/assets/vendor_components/sweetalert/jquery.sweet-alert.custom.js"></script>
-	<script src="../assets/ser/js/template.js"></script>
-	 <script>
+  <script src="../assets/ser/js/template.js"></script>
+   <script>
     $(function () {
     //Add text editor
     $("#compose-textarea").wysihtml5();
     });
   </script>
-	
+  
 </body>
 
 </html>

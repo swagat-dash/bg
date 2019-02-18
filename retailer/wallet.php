@@ -92,14 +92,14 @@ function getRandomImage(imgAr, path) {
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                    <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-settings"></i> Settings</a>
                   </div>
-				<div role="separator" class="divider col-12"></div>
-				  <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
-                  </div>				
+        <div role="separator" class="divider col-12"></div>
+          <div class="col-12 text-left">
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>        
                 </div>
-      			</li>
+            </li>
             </ul>
           </li>
        </ul>
@@ -160,27 +160,6 @@ function getRandomImage(imgAr, path) {
 	</div>
 </div>
 <!-- inbox Modal ends -->
-
-<!-- referral Modal -->
-<div class="modal modal-primary fade" id="share">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-			  <h4 class="modal-title">Referral Code</h4>
-			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<div class="modal-body">
-				<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
-				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- /.modal -->
 
   <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">

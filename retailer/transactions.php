@@ -101,7 +101,7 @@ function getRandomImage(imgAr, path) {
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                    <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-settings"></i> Settings</a>
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">

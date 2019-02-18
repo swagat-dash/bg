@@ -105,7 +105,7 @@ function getRandomImage(imgAr, path) {
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
                   </div>        
                 </div>
             </li>

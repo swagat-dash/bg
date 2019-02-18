@@ -97,22 +97,22 @@ document.write(imgStr); document.close();
               </li>
 								<!-- Menu Body -->
 								<li class="user-body">
-									<div class="row no-gutters">
-										<div class="col-12 text-left">
-											<a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
-										</div>
-										<div role="separator" class="divider col-12"></div>
-										<div class="col-12 text-left">
-											<a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
-										</div>
-									</div>
-								</li>
+                <div class="row no-gutters">
+                  <div class="col-12 text-left">
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-settings"></i> Settings</a>
+                  </div>
+				<div role="separator" class="divider col-12"></div>
+				  <div class="col-12 text-left">
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>				
+                </div>
+      			</li>
 							</ul>
 						</li>
 					</ul>
@@ -498,7 +498,7 @@ echo $finalprice.'</h3>';?>
 						<div class="vtabs">
 							<ul class="nav nav-tabs tabs-vertical" role="tablist">
 								<li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#account" role="tab"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Bank Transfer, NEFT, IMPS</span></a> </li>
-								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#paytm" role="tab"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Paytm</span></a> </li>
+								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#upi" role="tab"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">UPI</span></a> </li>
 								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#phonepe" role="tab"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">PhonePe</span></a> </li>
 							</ul>
 							<!-- Tab panes -->
@@ -508,26 +508,26 @@ echo $finalprice.'</h3>';?>
 										<h3>Account Details</h3>
 										<dl class="dl-horizontal">
 											<dt>Bank Name</dt>
-											<dd>A description li</dd>
+											<dd>State Bank Of India</dd>
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
+											<dd>Rahul Kumar</dd>
 											<dt>Account Number</dt>
-											<dd>Etiam mollis euismod.</dd>
-											<dt>Branch name and Address</dt>
-											<dd>Fusce massa justo</dd>
+											<dd>37168343896</dd>
 											<dt>IFSC Code</dt>
-											<dd>Fusce justo</dd>
+											<dd>SBIN0000061</dd>
 										</dl>
 									</div>
 								</div>
-								<div class="tab-pane pad" id="paytm" role="tabpanel">
+								<div class="tab-pane pad" id="upi" role="tabpanel">
 									<div class="pad">
-										<h3>Paytm Wallet</h3>
+										<h3>UPI</h3>
 										<dl class="dl-horizontal">
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
-											<dt>Paytm Number</dt>
-											<dd>Etiam mollis euismod.</dd>
+											<dd>Rahul Kumar</dd>
+											<dt>Phone Number</dt>
+											<dd>+91 7209439979</dd>
+											<dt>UPI ID</dt>
+											<dd>krishna@ybl</dd>
 										</dl>
 									</div>
 								</div>
@@ -536,9 +536,9 @@ echo $finalprice.'</h3>';?>
 										<h3>PhonePe wallet</h3>
 										<dl class="dl-horizontal">
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
+											<dd>Rahul Kumar</dd>
 											<dt>PhonePe Number</dt>
-											<dd>Etiam mollis euismod.</dd>
+											<dd>+91 7209439979</dd>
 										</dl>
 									</div>
 								</div>

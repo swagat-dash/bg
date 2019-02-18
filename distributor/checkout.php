@@ -97,22 +97,22 @@ document.write(imgStr); document.close();
               </li>
 								<!-- Menu Body -->
 								<li class="user-body">
-									<div class="row no-gutters">
-										<div class="col-12 text-left">
-											<a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-										</div>
-										<div class="col-12 text-left">
-											<a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
-										</div>
-										<div role="separator" class="divider col-12"></div>
-										<div class="col-12 text-left">
-											<a href="#"><i class="fa fa-power-off"></i> Logout</a>
-										</div>
-									</div>
-								</li>
+                <div class="row no-gutters">
+                  <div class="col-12 text-left">
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                  </div>
+				<div role="separator" class="divider col-12"></div>
+				  <div class="col-12 text-left">
+                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>				
+                </div>
+      			</li>
 							</ul>
 						</li>
 					</ul>
@@ -358,9 +358,9 @@ ap($o_id);
 }
 echo'
 
-                                                <div class="col-md-6 col-lg-4"><b>Order ID:</b>'.$o_id.'</div>
-							<div class="col-md-6 col-lg-4"><b>Timestamp:</b>'.$apt1.'</div>
-							<div class="col-md-6 col-lg-4"><b>My ID:</b>'.$_SESSION["refrallcode"].'</div>
+                            <div class="col-md-6 col-lg-4"><b>Order ID:</b>'.$o_id.'</div>
+							<div class="col-md-6 col-lg-4"><b>Date : </b>'.$apt1.'</div>
+							<div class="col-md-6 col-lg-4"><b>My Distributor : </b>'.$_SESSION["refrallcode"].'</div>
 						</div>
 
 					</div>
@@ -438,10 +438,10 @@ req.send();
 </script>
 						<!-- accepted payments column -->
 						<p class="lead"><b>Payment Methods:</b></p>
-						<img src="images/visa.png" alt="Visa">
-						<img src="images/mastercard.png" alt="Mastercard">
-						<img src="images/american-express.png" alt="American Express">
-						<img src="images/paypal2.png" alt="Paypal">
+						<img src="../assets/images/visa.png" alt="Visa">
+						<img src="../assets/images/mastercard.png" alt="Mastercard">
+						<img src="../assets/images/american-express.png" alt="American Express">
+						<img src="../assets/images/paypal2.png" alt="Paypal">
 
 						<p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
 							Securely pay for your products or services. We have multiple payments options like NEFT, IMPS, Bank Transfer, PayPal, Paytm wallet, PhonePay wallet, UPI etc taxfree. We also have a payment gateway which provides various options like Credit Card, Debit Card, Netbanking etc.
@@ -499,7 +499,7 @@ echo $finalprice.'</h3>';?>
 						<div class="vtabs">
 							<ul class="nav nav-tabs tabs-vertical" role="tablist">
 								<li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#account" role="tab"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Bank Transfer, NEFT, IMPS</span></a> </li>
-								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#paytm" role="tab"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Paytm</span></a> </li>
+								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#upi" role="tab"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">UPI</span></a> </li>
 								<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#phonepe" role="tab"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">PhonePe</span></a> </li>
 							</ul>
 							<!-- Tab panes -->
@@ -509,26 +509,26 @@ echo $finalprice.'</h3>';?>
 										<h3>Account Details</h3>
 										<dl class="dl-horizontal">
 											<dt>Bank Name</dt>
-											<dd>A description li</dd>
+											<dd>State Bank Of India</dd>
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
+											<dd>Rahul Kumar</dd>
 											<dt>Account Number</dt>
-											<dd>Etiam mollis euismod.</dd>
-											<dt>Branch name and Address</dt>
-											<dd>Fusce massa justo</dd>
+											<dd>37168343896</dd>
 											<dt>IFSC Code</dt>
-											<dd>Fusce justo</dd>
+											<dd>SBIN0000061</dd>
 										</dl>
 									</div>
 								</div>
-								<div class="tab-pane pad" id="paytm" role="tabpanel">
+								<div class="tab-pane pad" id="upi" role="tabpanel">
 									<div class="pad">
-										<h3>Paytm Wallet</h3>
+										<h3>UPI</h3>
 										<dl class="dl-horizontal">
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
-											<dt>Paytm Number</dt>
-											<dd>Etiam mollis euismod.</dd>
+											<dd>Rahul Kumar</dd>
+											<dt>Phone Number</dt>
+											<dd>+91 7209439979</dd>
+											<dt>UPI ID</dt>
+											<dd>krishna@ybl</dd>
 										</dl>
 									</div>
 								</div>
@@ -537,9 +537,9 @@ echo $finalprice.'</h3>';?>
 										<h3>PhonePe wallet</h3>
 										<dl class="dl-horizontal">
 											<dt>Account Holder's Name</dt>
-											<dd>Vestibulum id ligula elit.</dd>
+											<dd>Rahul Kumar</dd>
 											<dt>PhonePe Number</dt>
-											<dd>Etiam mollis euismod.</dd>
+											<dd>+91 7209439979</dd>
 										</dl>
 									</div>
 								</div>

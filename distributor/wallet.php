@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>My wallet | BG Techno</title>
+    <title>My Wallet | BG Techno</title>
   
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
@@ -83,7 +83,7 @@ function getRandomImage(imgAr, path) {
                 </div>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
+             <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
                     <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
@@ -94,12 +94,12 @@ function getRandomImage(imgAr, path) {
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
                   </div>
-				<div role="separator" class="divider col-12"></div>
-				  <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
-                  </div>				
+        <div role="separator" class="divider col-12"></div>
+          <div class="col-12 text-left">
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>        
                 </div>
-      			</li>
+            </li>
             </ul>
           </li>
        </ul>
@@ -215,14 +215,14 @@ function getRandomImage(imgAr, path) {
     <li class="nav-devider"></li>
     <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
     <li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
-    <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+    <li class="active"><a href="#"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 		</ul>
     </section>
   </aside>
 
-   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>My Wallet</h1>

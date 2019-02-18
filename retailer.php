@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["refrallcode"]=$_GET["refrallcode"];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +30,7 @@
     <div id="signup">
       <h1>Sign Up as Retailer</h1>
 
-      <form action="retailer/" method="post">
+      <form action="signupr.php" method="post">
 
         <div class="top-row">
           <div class="field-wrap">
@@ -62,7 +66,7 @@
           <label>
               Set A Password<span class="req">*</span>
             </label>
-          <input type="password" id="password" name="password" required autocomplete="off" pattern="^(?=[\040-\176]*?[A-Z])(?=[\040-\176]*?[a-z])(?=[\040-\176]*?[0-9])(?=[\040-\176]*?[#?!@$%^&*-])[\040-\176]{8,72}$" title="Tip: Password should contain atleast one uppercase letter, one lowercase letter, one number, one symbol and should be 8 - 72 characters long." />
+          <input type="password" id="password" name="password" required autocomplete="off" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30}$" title="Tip: Password should contain atleast one uppercase letter, one lowercase letter, one number, one symbol and should be 8 - 72 characters long." />
         </div>
 
         <div class="field-wrap">
@@ -81,7 +85,7 @@
     <div id="login">
       <h1>Welcome Back!</h1>
 
-      <form action="retailer/" method="post">
+      <form action="loginr.php" method="post">
 
         <div class="field-wrap">
           <label>
@@ -94,7 +98,7 @@
           <label>
               Password<span class="req">*</span>
             </label>
-           <input type="password" id="password" name="password" required autocomplete="off" pattern="^(?=[\040-\176]*?[A-Z])(?=[\040-\176]*?[a-z])(?=[\040-\176]*?[0-9])(?=[\040-\176]*?[#?!@$%^&*-])[\040-\176]{8,72}$" />
+           <input type="password" id="password" name="password" required autocomplete="off" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30}$" />
         </div>
 
         <p class="forgot"><a href="7hf633fsryt7bnct34573ncb4tv5q1.php">Forgot Password?</a></p>

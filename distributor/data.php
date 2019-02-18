@@ -92,7 +92,7 @@ function getRandomImage(imgAr, path) {
                 </div>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
+             <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
                     <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
@@ -103,12 +103,12 @@ function getRandomImage(imgAr, path) {
                   <div class="col-12 text-left">
                     <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
                   </div>
-				<div role="separator" class="divider col-12"></div>
-				  <div class="col-12 text-left">
-                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
-                  </div>				
+        <div role="separator" class="divider col-12"></div>
+          <div class="col-12 text-left">
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>        
                 </div>
-      			</li>
+            </li>
             </ul>
           </li>
        </ul>
