@@ -51,7 +51,13 @@ import icon and fonts Styles
 
 Body :      Kodchasan, sans-serif;
 -------------------------------------------------------------------*/
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 /*Body, layout*/
 .layout-boxed body, .layout-boxed html, .wrapper, body, html {
     height: 100%}

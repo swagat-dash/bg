@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION["login"]) || $_SESSION["login"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +25,13 @@
 <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="../assets/ser/css/master_style.css">
 <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
+<style>input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}</style>
 <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 <script>
 var random_images_array = ['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png', 'avatar12.png', 'avatar13.png', 'avatar14.png', 'avatar15.png', 'avatar16.png', 'avatar17.png', 'avatar18.png', 'avatar19.png', 'avatar20.png', 'avatar21.png', 'avatar22.png', 'avatar23.png', 'avatar24.png', 'avatar25.png', 'avatar26.png', 'avatar27.png', 'avatar28.png', 'avatar29.png', 'avatar30.png', 'avatar31.png', 'avatar32.png', 'avatar33.png', 'avatar34.png', 'avatar35.png', 'avatar36.png', 'avatar37.png', 'avatar38.png', 'avatar39.png', 'avatar40.png', 'avatar41.png', 'avatar42.png', 'avatar43.png', 'avatar44.png'];
@@ -58,8 +76,8 @@ document.close();
 			<!-- User image -->
 			<li class="user-header">
 				<div class="col-12">
-					<p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p>
+					<p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p>
 				</div>
 				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a> </div>
 			</li>
@@ -73,7 +91,7 @@ document.close();
                     <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                    <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-settings"></i> Settings</a>
                   </div>
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
@@ -149,7 +167,7 @@ document.close();
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 <div class="modal-body">
-	<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+	<p id="to-copy">http://www.bgtchno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 	<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 </div>
 <div class="modal-footer">
@@ -186,7 +204,6 @@ document.close();
 </li>
 <li class="nav-devider"></li>
 <li><a href="index.php"><i class="fa fa-shopping-cart"></i><span>Buy Now</span></a></li>
-<li><a href="data.php"><i class="fa fa-users"></i><span>Retailers</span></a></li>
 <li><a href="transactions.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
 <li><a href="contact.php"><i class="fa fa-envelope"></i><span>Support</span></a></li>
 </ul>
@@ -209,7 +226,7 @@ document.close();
 <div class="box-body">
 	<div class="row">
 		<div class="col">
-			<form novalidate>
+			<form method="post" action="kycverify.php" enctype="multipart/form-data" novalidate>
 				<div class="form-group">
 					<h5>Full Name <span class="text-danger">*</span></h5>
 					<div class="controls">
@@ -331,10 +348,10 @@ document.close();
 		<div class="form-group">
 						<h5>Upload Scanned Documents<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="file" name="file" class="form-control"> </div>
+							<input type="file" name="kyc_doc" class="form-control"> </div>
 					</div>
 						<div class="text-xs-right">
-					<button type="submit" class="btn bg-olive">Submit</button>
+					<button type="submit" name="personal" class="btn bg-olive">Submit</button>
 				</div>
 			</form>
 		</div>
@@ -357,7 +374,7 @@ document.close();
 <div class="box-body">
 	<div class="row">
 		<div class="col">
-			<form novalidate>
+			<form method="post" action="kycverify.php" enctype="multipart/form-data" novalidate>
 				<div class="form-group">
 				<h5>Company Name <span class="text-danger">*</span></h5>
 					<div class="controls">
@@ -494,16 +511,16 @@ document.close();
 			<div class="form-group">
 					<h5>Tell us more 
 					<div class="controls">
-						<textarea name="textarea" id="com-info" rows="10" class="form-control" required placeholder="Describe your business..."></textarea>
+						<textarea name="more" id="com-info" rows="10" class="form-control" required placeholder="Describe your business..."></textarea>
 					</div>
 				</div>
 		<div class="form-group">
 						<h5>Upload Scanned Documents</h5>
 						<div class="controls">
-							<input type="file" name="file" class="form-control"> </div>
+							<input type="file" name="business" class="form-control"> </div>
 					</div>
 						<div class="text-xs-right">
-					<button type="submit" class="btn bg-purple">Submit</button>
+					<button type="submit" class="btn bg-purple" name="business">Submit</button>
 				</div>
 			</form>
 		</div>
@@ -541,7 +558,6 @@ document.close();
 "use strict";
 $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
 }(window, document, jQuery);
-
 </script>
 </body>
 

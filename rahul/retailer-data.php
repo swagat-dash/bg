@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION["login_admin"]) || $_SESSION["login_admin"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+exit();
+}
+
+
+?>﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +92,7 @@ function getRandomImage(imgAr, path) {
               <li class="user-header">
                 <div class="col-12">
                 <p>Admin</p>
-                  <p>Dynamic email by php variable</p></div>
+                  <p><?php echo $_SESSION["email"];?></p></div>
                   <div class="col-12">
                   <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
                 </div>
@@ -180,33 +192,70 @@ function getRandomImage(imgAr, path) {
               <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
 				<thead>
 					<tr>	
-						<th>Account ID</th>
-            			<th>Referral ID</th>
-						<th>Full Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Address</th>
-            			<th>Date of Joining</th>
-            			<th>Wallet Balance</th>
-            			<th>KYC status</th>
+						  <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Distributor Code</th>
+            <th>Wallet Balance</th>
+            <th>Personal e-KYC</th>
+            <th>Business e-KYC</th>
 					</tr>
 				</thead>
 				<tfoot>
 					<tr> 
-            <th>Account ID</th>
-            <th>Referral ID</th>
-            <th>Full Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Address</th>
-            <th>Date of Joining</th>
+            <th>Distributor Code</th>
             <th>Wallet Balance</th>
-            <th>KYC status</th>
+            <th>Personal e-KYC</th>
+            <th>Business e-KYC</th>
           </tr>
 				</tfoot>
 								<tbody>
 
-                  <!--- All retailers data here: account ID, referral ID (to identify their distributor), name,email,phone,address,date of joining, kyc status(boolean) etc -->
+                  <?php 
+
+require 'config.php';
+$rcode=$_SESSION["refrallcode"];
+$anu="SELECT fname,lname,email,phn,refrallcode FROM retailers";
+$ap5=mysqli_query($ap,$anu);
+
+if(!$ap5)
+
+{
+    echo "error";
+}
+
+
+
+    if(mysqli_num_rows($ap5)>0)
+{
+        
+    while($anu=mysqli_fetch_assoc($ap5))
+      {
+            
+     echo "<tr> <td>".$anu["fname"]."</td><td>".$anu["lname"]."</td><td>".$anu["email"]."</td><td>".$anu["phn"]."</td><td>".$anu["refrallcode"]."</td></tr>" ;
+					
+					
+	}				
+					
+}					
+else
+         {
+
+
+             echo "no retailers found";
+
+
+            }
+
+mysqli_close($ap);
+
+
+?>
 
 				</tbody>
 			</table>

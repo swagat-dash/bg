@@ -10,15 +10,22 @@ header("location: http://www.bgtechno.in");
 
  ?>﻿
 <?php
+require 'config.php';
 $t_id=$_SESSION["t_id"];
 $fullname=$_SESSION["fname"].$_SESSION["lname"];
 $email=$_SESSION["email"];
-$pay_method=$_POST["payment"];
+$pay_method=mysqli_real_escape_string($ap,$_POST["payment"]);
 $time=$_POST["time"];
 $date=$_POST["date"]."time:".$time;
-require 'config.php';
-$ap3="INSERT INTO transactions(r_name,product,commission,t_date,t_status,t_id,email,product_id,promo_code,r_id) VALUES('$fullname','$_SESSION[ptype]','$_SESSION[commission]','$date','pending','$t_id','$_SESSION[email]','$_SESSION[pid]','$_SESSION[promo_code]','$_SESSION[refrallcode]')";
-mysqli_query($ap,$ap3);
+$wallet=$_SESSION["wallet"];
+$type="distributor";
+$ap3="INSERT INTO transactions(r_name,product,commission,t_date,t_status,t_id,email,product_id,promo_code,r_id,ptype,utype,wallet_recharge) VALUES('$fullname','$_SESSION[ptype]','$_SESSION[commission]','$date','pending','$t_id','$_SESSION[email]','$_SESSION[pid]','$_SESSION[promo_code]','$_SESSION[refrallcode]','$pay_method','$type','$wallet')";
+$ap4=mysqli_query($ap,$ap3);
+if(!$ap4)
+{
+
+die(mysqli_error($ap));
+}
 mysqli_close($ap);
 
 

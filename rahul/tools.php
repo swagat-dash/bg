@@ -34,8 +34,7 @@ function getRandomImage(imgAr, path) {
 <style>.box-body {
     overflow-x: auto!important;
 }</style>
-	
-</style>
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -242,7 +241,7 @@ function getRandomImage(imgAr, path) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Tables
+        Tools
       </h1>
     </section>
 
@@ -251,98 +250,99 @@ function getRandomImage(imgAr, path) {
       <div class="row">
        <div class="col-12">
         <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Distributor Table</h3>
-              <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+            <div class="box-header">
+              <h3 class="box-title">For Retailers</h3>
+              <div class="box-tools pull-right">
+            <ul class="box-controls pull-right">
+                  <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li>
+             </ul>
+          </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-					<th>Account Type</th>
-                    <th>Distributor ID</th>
-                    <th>Retailer's ID</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-					<th>Account Type</th>
-                    <th>Distributor ID</th>
-                    <th>Retailer's ID</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-				</tfoot>
-				<tbody>
-					<tr>
-						<td>retailer</td>
-						<td>r4543s</td>
-						<td>j6gdge</td>
-						<td>swagat dash</td>
-						<td>SWagat308@gmail.com</td>
-						<td>9904405175</td>
-						<td>c-307 samarpan tower, 132 ft ring road, ankur, naranpura, ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfdsfsdfsdf llp</td>
-						<td>no</td>
-						<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-					<tr>
-						<td>retailer</td>
-						<td>r4543s</td>
-						<td>p2h127</td>
-						<td>Dipen Kalal</td>
-						<td>171080107009.acet@gmail.com</td>
-						<td>9998627821</td>
-						<td>7 shakti flats, vejalpur ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfdsfsdfsdf llp</td>
-						<td>no</td>
-						<th>Address</th>
-					<th>Date of Birth</th>
-					<th>Business Name</th>
-					<th>KYC status</th>
-					</tr>
-					<tr>
-						<td>Distributor</td>
-						<td>hrf434</td>
-						<td>6g57gh</td>
-						<td>Anurag Pandey</td>
-						<td>ethicalhackeranuragpandey@gmail.com</td>
-						<td>9512793422</td>
-						<td>Sarkhej ka patta, ahmedabad</td>
-						<td>13-10-2018</td>
-						<td>dfd pvt ltd</td>
-						<td>yes</td>
-					</tr>
-				</tbody>
-			</table>
-          	</div>
-          <!-- /.box -->          
+            <form class="form-element">
+
+            <div class="box-body form-element">
+            <br>
+             <div class="input-group">
+                <input class="form-control" type="text" name="id" pattern="^[A-z\d]+$" placeholder="Enter the Retailer ID" required>
+                <span class="input-group-addon">Retailer ID</span>
+              </div>
+              <br><br>
+               <div class="input-group">
+                <select name="business-status" class="select form-control">
+                	<option value="">Business e-KYC status</option>
+                	<option value="pending">Pending</option>
+                	<option value="completed">Completed</option>
+                	<option value="cancelled">Cancelled</option>
+                </select>
+                <span class="input-group-addon">Business e-KYC Status</span>
+              </div>
+			<br><br>
+              <div class="input-group">
+                <select name="personal-status" class="select form-control">
+                	<option value="">Personal e-KYC status</option>
+                	<option value="pending">Pending</option>
+                	<option value="completed">Completed</option>
+                	<option value="cancelled">Cancelled</option>
+                </select>
+                <span class="input-group-addon">Personal e-KYC Status</span>
+              </div>
+           <div class="box-footer" style="text-align: center">
+               
+                <button type="submit" class="btn btn-success">Update</button>
+                
+              </div>
+				</div>
+				 </form>        
+        </div>
+    </div></div>
+    <div class="row">
+       <div class="col-12">
+        <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">For Distributors</h3>
+              <div class="box-tools pull-right">
+            <ul class="box-controls pull-right">
+                  <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
+                  <li><a class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></a></li>
+             </ul>
+          </div>
+            </div>
+            <form class="form-element">
+
+            <div class="box-body form-element">
+            <br>
+             <div class="input-group">
+                <input class="form-control" type="text" name="id" pattern="^[A-z\d]+$" placeholder="Enter the Distributor ID" required>
+                <span class="input-group-addon">Distributor ID</span>
+              </div>
+              <br><br>
+               <div class="input-group">
+                <select name="business-status" class="select form-control">
+                	<option value="">Business e-KYC status</option>
+                	<option value="pending">Pending</option>
+                	<option value="completed">Completed</option>
+                	<option value="cancelled">Cancelled</option>
+                </select>
+                <span class="input-group-addon">Business e-KYC Status</span>
+              </div>
+			<br><br>
+              <div class="input-group">
+                <select name="personal-status" class="select form-control">
+                	<option value="">Personal e-KYC status</option>
+                	<option value="pending">Pending</option>
+                	<option value="completed">Completed</option>
+                	<option value="cancelled">Cancelled</option>
+                </select>
+                <span class="input-group-addon">Personal e-KYC Status</span>
+              </div>
+           <div class="box-footer" style="text-align: center">
+               
+                <button type="submit" class="btn btn-success">Update</button>
+                
+              </div>
+				</div>
+				 </form>        
         </div>
     </div></div>
     </section>

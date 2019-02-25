@@ -8,7 +8,7 @@ header("location: http://www.bgtechno.in");
 
 }
 
- ?>﻿
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,7 +105,7 @@ function getRandomImage(imgAr, path) {
                   </div>
         <div role="separator" class="divider col-12"></div>
           <div class="col-12 text-left">
-                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
                   </div>        
                 </div>
             </li>
@@ -256,7 +256,7 @@ $ref=$_SESSION["refrallcode"];
 $ap1="SELECT * FROM distributors WHERE refrallcode=$ref";
 $ap2=mysqli_query($ap,$ap1);
 $ap3=mysqli_fetch_assoc($ap2);
-$ap4="SELECT * FROM transactions where r_id=$_SESSION[refrallcode]";
+$ap4="SELECT * FROM transactions where r_id=$_SESSION[refrallcode] OR ref_id=$ref";
 $ap5=mysqli_query($ap,$ap4);
 
 
@@ -277,6 +277,7 @@ $ap5=mysqli_query($ap,$ap4);
 										<th>Commission Amount</th>
 										<th>Date of Transaction</th>
 										<th>Transaction Status</th>
+										<th>Screenshot</th>
 									</tr>
 								</thead>
 								<tbody>';
@@ -312,6 +313,8 @@ if($ap6["t_status"]=="ongoing")
 }
 
 ?>
+
+ <!-- <td><a href="../upload/"><i class="fa fa-info"></i></a></td> -->
 
 
 									</tr>

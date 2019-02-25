@@ -10,3 +10,27 @@
 [15-Feb-2019 23:11:42 Asia/Kolkata] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpK0Jtrh' to 'scr_shots/488892681.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 60
 [15-Feb-2019 23:16:20 Asia/Kolkata] PHP Warning:  move_uploaded_file(scr_shots/108014291.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 60
 [15-Feb-2019 23:16:20 Asia/Kolkata] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSBb079' to 'scr_shots/108014291.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 60
+[16-Feb-2019 19:11:17 UTC] PHP Warning:  move_uploaded_file(scr_shots/769516062.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[16-Feb-2019 19:11:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpNd75Ha' to 'scr_shots/769516062.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[17-Feb-2019 09:19:20 UTC] PHP Warning:  move_uploaded_file(scr_shots/513566504.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[17-Feb-2019 09:19:20 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpL8SjWa' to 'scr_shots/513566504.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[17-Feb-2019 17:19:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/retailer/checkout.php:12) in /home/jigyasakendra/public_html/retailer/checkout.php on line 296
+[17-Feb-2019 17:20:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/retailer/checkout.php:12) in /home/jigyasakendra/public_html/retailer/checkout.php on line 296
+[22-Feb-2019 16:19:39 UTC] PHP Warning:  move_uploaded_file(scr_shots/695113006.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 16:19:39 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpicZrPQ' to 'scr_shots/695113006.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 16:44:34 UTC] PHP Warning:  move_uploaded_file(scr_shots/846321515.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 16:44:34 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFoJKDt' to 'scr_shots/846321515.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 17:22:43 UTC] PHP Warning:  move_uploaded_file(scr_shots/240002595.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 17:22:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpUqdBpV' to 'scr_shots/240002595.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 17:33:38 UTC] PHP Warning:  move_uploaded_file(scr_shots/1181688185.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[22-Feb-2019 17:33:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phptPp2mr' to 'scr_shots/1181688185.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 12:44:22 UTC] PHP Warning:  move_uploaded_file(scr_shots/1137015954.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 12:44:22 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpLydnge' to 'scr_shots/1137015954.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 13:52:52 UTC] PHP Warning:  move_uploaded_file(scr_shots/1518727047.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 13:52:52 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php0mYhq2' to 'scr_shots/1518727047.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 13:56:00 UTC] PHP Warning:  move_uploaded_file(scr_shots/410026988.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 13:56:00 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKIiv1h' to 'scr_shots/410026988.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 14:12:58 UTC] PHP Warning:  move_uploaded_file(scr_shots/779312967.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 14:12:58 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2LILZW' to 'scr_shots/779312967.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 14:16:07 UTC] PHP Warning:  move_uploaded_file(scr_shots/958201277.jpg): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/retailer/verify.php on line 61
+[23-Feb-2019 14:16:07 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php6taFH8' to 'scr_shots/958201277.jpg' in /home/jigyasakendra/public_html/retailer/verify.php on line 61

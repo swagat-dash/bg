@@ -16,7 +16,6 @@
   <link href="../assets/assets/vendor_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
   <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
-	<link rel="stylesheet" href="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -171,29 +170,24 @@ function getRandomImage(imgAr, path) {
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+            	<form action="" method="post">
               <div class="form-group">
-                <input class="form-control" placeholder="To:">
+                <input class="form-control" name="n-to" placeholder="To:">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Subject:">
+                <input class="form-control" name="n-subject" placeholder="Subject:">
               </div>
               <div class="form-group">
-                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                    <p>Your Message Here.... + dynamically generated attached file link (example, www.bgtechno.in/upload/file.jpeg)</p>
+                    <textarea class="form-control" name="notification" style="height: 300px">
+                   <!-- <p>Your Message Here.... + dynamically generated attached file link (example, www.bgtechno.in/upload/file.jpeg)</p>
                     <p>Type "R" to send notification to all retailers. </p>
                     <p>Type "D" to send notifications to all distributors.</p>
                     <p>Type "ALL" to send notifications to everyone.</p>
-                    <p>Type retailer/distributor ID to send it to that specific person.</p>
+                    <p>Type retailer/distributor ID to send it to that specific person.</p>-->
                     </textarea>
               </div>
-              <div class="form-group">
-                <div class="btn btn-info btn-file">
-                  <i class="fa fa-paperclip"></i> Attachment
-                  <input type="file" name="attachment">
-                </div>
-                <p class="help-block">Max. 32MB</p>
-              </div>
             </div>
+        </form>
             <!-- /.box-body -->
             <div class="box-footer">
               <div class="pull-right">
@@ -234,19 +228,12 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
   <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-	<script src="../assets/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
   <script src="../assets/assets/vendor_plugins/iCheck/icheck.js"></script>
   <script src="../assets/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
   <script src="../assets/assets/vendor_components/sweetalert/jquery.sweet-alert.custom.js"></script>
 	<script src="../assets/ser/js/template.js"></script>
-	 <script>
-    $(function () {
-    //Add text editor
-    $("#compose-textarea").wysihtml5();
-    });
-  </script>
 	
 </body>
 

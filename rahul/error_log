@@ -41,3 +41,164 @@
 [16-Feb-2019 00:13:15 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
 [16-Feb-2019 00:13:15 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
 [16-Feb-2019 00:13:15 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 09:59:42 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:15:26 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:25:41 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/jigyasakendra/public_html/rahul/index.php on line 206
+[16-Feb-2019 10:29:54 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:29:54 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:29:54 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:29:54 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 10:45:18 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:45:18 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:45:18 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:45:18 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 10:48:22 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:48:22 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:48:22 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:48:22 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 10:52:08 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/jigyasakendra/public_html/rahul/index.php on line 295
+[16-Feb-2019 10:52:13 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/jigyasakendra/public_html/rahul/index.php on line 295
+[16-Feb-2019 10:52:18 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/jigyasakendra/public_html/rahul/index.php on line 295
+[16-Feb-2019 10:57:57 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:57:57 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 10:57:57 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 10:57:57 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 11:02:20 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:02:20 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:02:20 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 11:02:20 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 11:07:43 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:07:43 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:07:43 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 11:07:43 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 11:10:07 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:10:07 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:10:07 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 11:13:48 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:13:48 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 11:13:48 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 11:13:48 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 12:55:08 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:55:08 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:55:08 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 12:55:08 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 219
+[16-Feb-2019 12:58:52 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:58:52 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:58:52 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 12:58:52 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 12:59:46 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:59:46 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 12:59:46 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 12:59:46 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 13:01:18 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:01:18 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:01:18 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:01:18 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 13:03:40 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:03:40 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:03:40 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:03:40 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 13:08:05 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:08:05 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:08:05 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:08:05 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 13:08:56 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:08:56 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:08:56 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:08:56 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 220
+[16-Feb-2019 13:10:48 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:10:48 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:10:48 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:10:48 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 231
+[16-Feb-2019 13:11:54 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:11:54 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:11:54 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:11:54 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 231
+[16-Feb-2019 13:15:04 Asia/Kolkata] PHP Warning:  phpinfo() has been disabled for security reasons in /home/jigyasakendra/public_html/rahul/index.php on line 3
+[16-Feb-2019 13:15:04 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:15:04 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:15:04 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 9
+[16-Feb-2019 13:15:04 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 231
+[16-Feb-2019 13:15:54 Asia/Kolkata] PHP Warning:  phpinfo() has been disabled for security reasons in /home/jigyasakendra/public_html/rahul/test.php on line 4
+[16-Feb-2019 13:18:08 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:13) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[16-Feb-2019 13:18:15 Asia/Kolkata] PHP Warning:  phpinfo() has been disabled for security reasons in /home/jigyasakendra/public_html/rahul/index.php on line 3
+[16-Feb-2019 13:18:15 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 4
+[16-Feb-2019 13:18:15 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 231
+[16-Feb-2019 13:21:36 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 3
+[16-Feb-2019 13:21:36 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 234
+[16-Feb-2019 13:21:43 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 3
+[16-Feb-2019 13:21:43 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 234
+[16-Feb-2019 13:22:24 Asia/Kolkata] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 3
+[16-Feb-2019 13:22:24 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/index.php:2) in /home/jigyasakendra/public_html/rahul/index.php on line 8
+[16-Feb-2019 13:22:24 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 234
+[16-Feb-2019 13:25:32 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:13) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[16-Feb-2019 13:25:44 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 233
+[16-Feb-2019 13:27:17 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 233
+[16-Feb-2019 13:29:26 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:13) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[16-Feb-2019 13:29:50 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 233
+[16-Feb-2019 13:30:37 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 230
+[16-Feb-2019 13:30:50 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 230
+[16-Feb-2019 13:32:26 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 230
+[16-Feb-2019 13:36:48 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 230
+[16-Feb-2019 13:38:34 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 232
+[16-Feb-2019 13:40:00 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 232
+[16-Feb-2019 13:49:39 Asia/Kolkata] PHP Fatal error:  Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php on line 232
+[16-Feb-2019 08:30:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:12) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[16-Feb-2019 08:31:05 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php:232
+Stack trace:
+#0 {main}
+  thrown in /home/jigyasakendra/public_html/rahul/index.php on line 232
+[16-Feb-2019 08:32:29 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php:232
+Stack trace:
+#0 {main}
+  thrown in /home/jigyasakendra/public_html/rahul/index.php on line 232
+[16-Feb-2019 08:46:41 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php:229
+Stack trace:
+#0 {main}
+  thrown in /home/jigyasakendra/public_html/rahul/index.php on line 229
+[16-Feb-2019 09:14:58 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:15:02 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:15:35 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:17:03 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:17:07 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:17:12 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 225
+[16-Feb-2019 09:19:03 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 215
+[16-Feb-2019 09:20:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:12) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[16-Feb-2019 09:20:09 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 215
+[16-Feb-2019 09:21:00 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/transaction.php on line 215
+[16-Feb-2019 09:23:07 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 215
+[16-Feb-2019 09:23:11 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 09:23:14 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 09:23:38 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 09:23:43 UTC] PHP Parse error:  syntax error, unexpected '$ap3' (T_VARIABLE), expecting ',' or ';' in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 09:33:16 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php:224
+Stack trace:
+#0 {main}
+  thrown in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 09:39:19 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli as array in /home/jigyasakendra/public_html/rahul/index.php:224
+Stack trace:
+#0 {main}
+  thrown in /home/jigyasakendra/public_html/rahul/index.php on line 224
+[16-Feb-2019 13:57:11 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/jigyasakendra/public_html/rahul/index.php on line 273
+[23-Feb-2019 14:23:07 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/jigyasakendra/public_html/rahul/index.php on line 273
+[23-Feb-2019 14:23:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:12) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[24-Feb-2019 17:08:04 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/jigyasakendra/public_html/rahul/index.php on line 273
+[25-Feb-2019 11:56:42 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/jigyasakendra/public_html/rahul/index.php on line 273
+[25-Feb-2019 11:56:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/jigyasakendra/public_html/rahul/index.php on line 273
+[25-Feb-2019 11:57:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:12) in /home/jigyasakendra/public_html/rahul/login.php on line 44
+[25-Feb-2019 13:11:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jigyasakendra/public_html/rahul/login.php:12) in /home/jigyasakendra/public_html/rahul/login.php on line 44

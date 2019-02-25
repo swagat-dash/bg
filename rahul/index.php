@@ -1,6 +1,4 @@
-
 <?php
-
 session_start();
 if(!isset($_SESSION["login_admin"]) || $_SESSION["login_admin"]!==true)
 
@@ -10,7 +8,8 @@ header("location: http://www.bgtechno.in");
 
 }
 
- ?>﻿
+
+?>﻿
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +22,12 @@ header("location: http://www.bgtechno.in");
     <meta name="author" content="">
     <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Transactions | BG techno</title>
+    <title>Distributor's Dashboard | BG techno</title>
 
   <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css">
   <link rel="stylesheet" href="../assets/ser/css/master_style.css">
   <link rel="stylesheet" href="../assets/ser/css/skins/_all-skins.css">
-  <link rel="stylesheet" href="../assets/assets/vendor_plugins/pace/pace.min.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -52,7 +50,7 @@ function getRandomImage(imgAr, path) {
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
     <b class="logo-mini">
       <span class="light-logo"><img src="../assets/images/aries-light.png" alt="logo"></span>
@@ -89,24 +87,27 @@ function getRandomImage(imgAr, path) {
               <!-- User image -->
               <li class="user-header">
                 <div class="col-12">
-                <p>Admin</p>
-                  <p><?php echo $_SESSION["email"];?></p></div>
+                <p> ADMIN</p>
+                  <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a>
                 </div>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
-                <div class="col-12 text-left">
-                  <a href="tools.php"><i class="ion ion-person"></i> Tools</a>
-                 </div>
-                 <div class="col-12 text-left">
-                  <a href="7f85nhd587344f3847err456e5764v.php"><i class="ion ion-person"></i>  Update Transactions</a>
-                 </div>
+                  <div class="col-12 text-left">
+                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+                  </div>
         <div role="separator" class="divider col-12"></div>
-        <div class="col-12 text-left">
-                  <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+          <div class="col-12 text-left">
+                    <a href="#"><i class="fa fa-power-off"></i> Logout</a>
                   </div>        
                 </div>
             </li>
@@ -116,10 +117,86 @@ function getRandomImage(imgAr, path) {
       </div>
     </nav>
   </header>
+  <!-- inbox Modal -->
+<div class="modal center-modal fade" data-backdrop="true" id="inbox" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      <!-- message starts-->
+        <div class="box box-inverse box-success">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Complete your e-KYC</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+               e-KYC helps us to know you or your business properly, so that you can buy any products or services very quickly as we would have all the required documents or details handy. In case of personal services, we would like to know details like your PAN number, Aadhar number etc. In case of business services, we would like to know about your business like GST number, DIN, etc. Next time when you buy any products, you would not be asked again for those details. We understand your privacy and so we do not share any of your details with 3rd parties.
+            </div>
+        </div>
+      <!-- message starts -->
+        <div class="box box-inverse box-info">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Dynamic title</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+                    Dynamic body
+            </div>
+        </div>
+      <!-- message starts -->
+        <div class="box box-inverse box-danger">
+            <div class="box-header">
+              <h4 class="box-title"><strong>Dynamic title</strong></h4>
+                  <div class="box-tools pull-right">          
+              <ul class="box-controls">
+                <li><a class="box-btn-close" href="#"></a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="box-body">
+                    Dynamic body
+            </div>
+        </div>
+      <!-- content ends -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- inbox Modal ends-->
+
+<!-- referral Modal -->
+<div class="modal modal-primary fade" id="share">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Referral Code</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <p id="to-copy">http://www.bgtechno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+        <p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline float-right" onClick="CopyToClipboard('to-copy')">Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal -->
 
   <!-- Left side column. contains the logo and sidebar -->
- <aside class="main-sidebar">
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+       <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="user-profile treeview">
         <a href="services.html">
@@ -143,8 +220,9 @@ function getRandomImage(imgAr, path) {
             <li><a href="../bulksms.html" target="_blank">Bulk SMS</a></li>
         </ul>
     </li>
-  <li class="nav-devider"></li>
-    <li class="active"><a href="#"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
+
+    <li class="nav-devider"></li>
+    <li><a href="index.php"><i class="fa fa-credit-card"></i><span>Transactions</span></a></li>
     <li><a href="notification.php"><i class="fa fa-bell"></i><span>Notifications</span></a></li>
     <li class="treeview">
           <a href="#">
@@ -155,13 +233,13 @@ function getRandomImage(imgAr, path) {
           </a>
           <ul class="treeview-menu">
             <li><a href="distributor-data.php">Distributor</a></li>
-            <li><a href="retailer-data.php">Retailer</a></li>
+            <li class="active"><a href="#">Retailer</a></li>
           </ul>
         </li>
         <li><a href="products.php"><i class="fa fa-shopping-cart"></i><span>Products</span></a></li>
         <li><a href="offers.php"><i class="fa fa-rupee"></i><span>Offers</span></a></li>
-        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>
-    </ul>
+        <li><a href="tools.php"><i class="fa fa-wrench"></i><span>Tools</span></a></li>    
+		</ul>
     </section>
   </aside>
   <!-- Content Wrapper. Contains page content -->
@@ -176,125 +254,90 @@ function getRandomImage(imgAr, path) {
     <!-- Main content -->
     <section class="content">
       <div class="row">
-      <div class="col-12">
-        <div class="box">
-          <div class="box-header with-border">            
-            <h4 class="box-title">All Transactions Status</h4>
-            <h6 class="box-subtitle">Manual transactions must be verified by <a href="7f85nhd587344f3847err456e5764v.php"> clicking here</a></h6>
-          </div>
-          <div class="box-body">
-            <div class="row mb-30">
-              
-            </div>
-            <div class="table-responsive">
-              <table id="transactions" class="table mt-0 table-hover no-wrap" data-page-size="10">
-                <thead>
-                  <tr>
-                    <th>Account Type</th>
-                    <th> ID</th>
-                    <th>Payment Method</th>
-                    <th>Transaction ID</th>
-                    <th>Name</th>
-                    <th>Product ID</th>
-                    <th>Commission Amount</th>
-                    <th>Date of Transaction</th>
-                    <th>Transaction Status</th>
-                  </tr>
-                </thead>
-                <tbody>
+			<div class="col-12">
+				<div class="box">
+					<div class="box-header with-border">						
+						<h4 class="box-title">Recent Transactions</h4>
+						<h6 class="box-subtitle">List of past transactions of your retailers</h6>
+					</div>
+					<div class="box-body">
+						
+							<!-- Column -->
+							
 <?php
-require 'config.php';
 
-$ap1="SELECT * FROM transactions";
+require 'config.php';
+$ref=$_SESSION["refrallcode"];
+$ap1="SELECT * FROM distributors WHERE refrallcode=$ref";
 $ap2=mysqli_query($ap,$ap1);
-while($ap3=mysqli_fetch_assoc($ap2))
-{
-if($ap3["utype"]!=="distributor")
+$ap3=mysqli_fetch_assoc($ap2);
+$ap4="SELECT * FROM transactions";
+$ap5=mysqli_query($ap,$ap4);
+
+
+
+
+							echo'		
+
+							<!-- Column -->
+						
+						<div class="table-responsive">
+							<table id="transactions" class="table mt-0 table-hover no-wrap" data-page-size="10">
+								<thead>
+
+									<tr>
+										<th> ID</th>
+										<th> Name</th>
+										<th>Product</th>
+										<th>Commission Amount</th>
+										<th>Date of Transaction</th>
+										<th>Transaction Status</th>
+									</tr>
+								</thead>
+								<tbody>';
+while($ap6=mysqli_fetch_assoc($ap5))
 {
 echo'
-                  <tr>
-                    <td>Retailers</td>
-                    <td>'.$ap3["r_id"].'</td>
-                    <td>'.$ap3["ptype"].'</td>
-                    <td>'.$ap["t_id"].'</td>
-                    <td>'.$ap3["r_name"].'</td>
-                    <td>'.$ap3["product"].$ap3["product_id"].'</td>
-                    <td>'.$ap3["commission"].'</td>
-                    <td>'.$ap3["t_date"].'</td>
-                    ';
-if($ap3["t_status"]=="complete")
+									<tr>
+										<td>'.$ap6["email"].'</td>
+										<td>'.$ap6["r_name"].'</td>
+										<td>'.$ap6["product"].'</td>
+										<td>'.$ap6["commission"].'</td>
+										<td>'.$ap6["t_date"].'</td>';
+if($ap6["t_status"]=="complete")
 {
                                                                        
-									echo'	<td><span class="label label-success">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="cancelled")
+									echo'	<td><span class="label label-success">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="cancelled")
 {
                                                                        
-									echo'	<td><span class="label label-danger">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="processing")
+									echo'	<td><span class="label label-danger">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="processing")
 {
                                                                        
-									echo'	<td><span class="label label-inverse">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="pending")
+									echo'	<td><span class="label label-inverse">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="pending")
 {
                                                                        
-									echo'	<td><span class="label label-warning">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="ongoing")
+									echo'	<td><span class="label label-warning">'.$ap6["t_status"].'</span> </td>';}
+if($ap6["t_status"]=="ongoing")
 {
                                                                        
-									echo'	<td><span class="label label-info">'.$ap3["t_status"].'</span> </td> ';}
-
-
-echo '</tr>';
-
-
+									echo'	<td><span class="label label-info">'.$ap6["t_status"].'</span> </td>';}
 }
 
-else
-{
-
-echo '                <tr>
-                 
-                    <td>Distributor</td>
-                  <td>'.$ap3["ref_id"].'</td>
-                    <td>'.$ap3["ptype"].'</td>
-                    <td>'.$ap["t_id"].'</td>
-                    <td>'.$ap3["r_name"].'</td>
-                    <td>'.$ap3["product"].$ap3["product_id"].'</td>
-                    <td>'.$ap3["commission"].'</td>
-                    <td>'.$ap3["t_date"].'</td>
-                    ';
-if($ap3["t_status"]=="complete")
-{
-                                                                       
-									echo'	<td><span class="label label-success">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="cancelled")
-{
-                                                                       
-									echo'	<td><span class="label label-danger">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="processing")
-{
-                                                                       
-									echo'	<td><span class="label label-inverse">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="pending")
-{
-                                                                       
-									echo'	<td><span class="label label-warning">'.$ap3["t_status"].'</span> </td>';}
-if($ap3["t_status"]=="ongoing")
-{
-                                                                       
-									echo'	<td><span class="label label-info">'.$ap3["t_status"].'</span> </td> ';}
-}
-
-echo '</tr>';
-}
 ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
       <!-- /.row -->
 
     </section>
@@ -317,20 +360,19 @@ echo '</tr>';
 
 </div>
 <!-- ./wrapper -->
-  <script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
-  <script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../assets/assets/vendor_components/PACE/pace.min.js"></script>
-  <script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<script src="../assets/assets/vendor_components/jquery/dist/jquery.min.js"></script>
+	<script src="../assets/assets/vendor_components/popper/dist/popper.min.js"></script>
+	<script src="../assets/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="../assets/assets/vendor_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
   <script src="../assets/assets/vendor_plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>
-  <script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
-  <script src="../assets/ser/js/template.js"></script>
-  <script src="../assets/ser/js/demo.js"></script>
-  <script src="../assets/ser/js/pages/data-table.js"></script>
-  
-  
+	<script src="../assets/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+	<script src="../assets/ser/js/template.js"></script>
+	<script src="../assets/ser/js/demo.js"></script>
+	<script src="../assets/ser/js/pages/data-table.js"></script>
+	
+	
 </body>
 
 </html>

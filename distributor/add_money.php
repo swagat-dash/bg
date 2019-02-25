@@ -97,22 +97,22 @@ document.write(imgStr); document.close();
               </li>
 								<!-- Menu Body -->
 								<li class="user-body">
-                <div class="row no-gutters">
-                  <div class="col-12 text-left">
-                    <a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
-                  </div>
-                  <div class="col-12 text-left">
-                    <a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
-                  </div>
-				<div role="separator" class="divider col-12"></div>
-				  <div class="col-12 text-left">
-                    <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
-                  </div>				
-                </div>
-      			</li>
+									<div class="row no-gutters">
+										<div class="col-12 text-left">
+											<a href="kyc.php"><i class="ion ion-person"></i> My e-KYC</a>
+										</div>
+										<div class="col-12 text-left">
+											<a href="#" data-toggle="modal" data-target="#inbox"><i class="ion ion-email-unread"></i> Inbox</a>
+										</div>
+										<div class="col-12 text-left">
+											<a href="#" data-toggle="modal" data-target="#share"><i class="ion ion-share"></i> Share &amp; refer</a>
+										</div>
+										<div role="separator" class="divider col-12"></div>
+										<div class="col-12 text-left">
+											<a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -291,7 +291,7 @@ document.write(imgStr); document.close();
 
 
 							 <?php 
-if(!isset($_GET["price"]) && !isset($_GET["type"]))
+if(!isset($_GET["id"]) && !isset($_GET["type"]))
 {
 echo "error";
 header("location: http://www.bgtechno.in");
@@ -385,7 +385,7 @@ echo'
 									<td>1</td>
 									<td>'.$_GET["type"].'</td>
 									<td>'.$_GET["id"].'</td>
-									<td class="text-right" id="price">'.$_SESSION["tmp_price"].'</td>
+									<td class="text-right" id="price">'.$_GET["price"].'</td>
 								</tr>';
 								?>
 							</tbody>
@@ -401,17 +401,7 @@ echo'
 
 						<!-- promo code -->
 						
-							<div class="form-group col-sm-6">
-								<div class="controls">
-									<div class="input-group input-group-sm">
-										<input type="text" id="promo" class="form-control" placeholder="Promo Code" pattern="^[A-Z\d]+$"> <span class="input-group-btn">
-											<button class="btn btn-info" onclick="promo()">Apply</button>
-
-
-										</span>
-									</div>
-								</div>
-							</div>
+							
 						
 <script>
 function promo()
@@ -438,10 +428,10 @@ req.send();
 </script>
 						<!-- accepted payments column -->
 						<p class="lead"><b>Payment Methods:</b></p>
-						<img src="../assets/images/visa.png" alt="Visa">
-						<img src="../assets/images/mastercard.png" alt="Mastercard">
-						<img src="../assets/images/american-express.png" alt="American Express">
-						<img src="../assets/images/paypal2.png" alt="Paypal">
+						<img src="images/visa.png" alt="Visa">
+						<img src="images/mastercard.png" alt="Mastercard">
+						<img src="images/american-express.png" alt="American Express">
+						<img src="images/paypal2.png" alt="Paypal">
 
 						<p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
 							Securely pay for your products or services. We have multiple payments options like NEFT, IMPS, Bank Transfer, PayPal, Paytm wallet, PhonePay wallet, UPI etc taxfree. We also have a payment gateway which provides various options like Credit Card, Debit Card, Netbanking etc.
@@ -456,13 +446,14 @@ req.send();
 					<div class="col-12 col-sm-6 text-right">
 
 						<div>
-							<p id="sub_price">Sub - Total amount : &#8377; <?php echo  $_SESSION["tmp_price"]; ?></p>
-							<p id="tax">Tax (18%) : &#8377; <?php $tax=$_SESSION["tmp_price"]*0.18; echo $tax.'</p>
+							<p id="sub_price">Sub - Total amount : &#8377; <?php echo  $_GET["price"]; ?></p>
+							<p id="tax">Tax (18%) : &#8377; <?php $tax=0; echo $tax.'</p>
 							
 						</div>
 						<div class="total-payment">
 							<h3 id="total"><b>Total :</b> &#8377;';
-$finalprice=$_SESSION["tmp_price"]+$tax;
+$finalprice=$_GET["price"]+$tax;
+$_SESSION["wallet"]=$finalprice;
 echo $finalprice.'</h3>';?>
 						</div>
 					<!--	<label for="promocode" id="promobutton" class="no-print" onclick="i_have_code()">I have a Promo Code</label>-->

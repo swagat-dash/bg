@@ -8,7 +8,7 @@ header("location: http://www.bgtechno.in");
 
 }
 
- ?>﻿
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -273,9 +273,9 @@ $ap5=mysqli_query($ap,$ap4);
 										<th> ID</th>
 										<th> Name</th>
 										<th>Product</th>
-										
 										<th>Date of Transaction</th>
 										<th>Transaction Status</th>
+										<th>Screenshot</th>
 									</tr>
 								</thead>
 								<tbody>';
@@ -310,6 +310,8 @@ if($ap6["t_status"]=="ongoing")
 }
 
 ?>
+
+ <!-- <td><a href="../upload/"><i class="fa fa-info"></i></a></td> -->
 
 
 									</tr>

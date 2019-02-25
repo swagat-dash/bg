@@ -8,7 +8,7 @@ header("location: http://www.bgtechno.in");
 
 }
 
- ?>﻿
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,7 @@ function getRandomImage(imgAr, path) {
                 <p><?php  echo $_SESSION["fname"] ; ?></p>
                   <p><?php echo $_SESSION["email"] ; ?></p></div>
                   <div class="col-12">
-                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">Wallet : 0.00</a>
+                  <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet:<?php echo $_SESSION["wallet_balance"];?></a>
                 </div>
               </li>
               <!-- Menu Body -->
@@ -174,7 +174,7 @@ function getRandomImage(imgAr, path) {
 			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-				<p id="to-copy">http://www.bgtechno.in/retailer/<?php echo "index.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+				<p id="to-copy">http://www.bgtechno.in/retailer.php?<?php echo "refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 				<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 			</div>
 			<div class="modal-footer">
@@ -382,15 +382,15 @@ while($ap3=mysqli_fetch_assoc($ap2))
 
 echo'
 
-                 <div class="tab-pane fade" id="'.$j.'">
-        <h4>'.$ap3["description"].'</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>'.$ap3["time_required"].'</dd>
-                <dt>Documents required</dt>
-          '.$ap3["docs_required"].'</dl>
-              <p>'.$ap3["content"].'</p>
-    <p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p></div>';
+                <div class="tab-pane fade" id="'.$j.'">
+				<h4>'.$ap3["description"].'</h4>
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GSTR"><button type="button" class="btn bg-orange margin">Buy Now</button></a></p></div>';
 $j++;
 
 }
@@ -569,13 +569,14 @@ while($ap3=mysqli_fetch_assoc($ap2))
 echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
-        <h4>'.$ap3["description"].'</h4>
-        <dl class="dl-horizontal">
-        <dt>Time required</dt>
-                <dd>'.$ap3["time_required"].'</dd>
-                </dl>
-              <p>'.$ap3["content"].'</p>
-    <p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p></div>';
+				<h4>'.$ap3["description"].'</h4>
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-olive margin">Buy Now</button></a></p></div>';
 $tmp++;
 
 }
@@ -741,14 +742,13 @@ echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
 				<h4>'.$ap3["description"].'</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>'.$ap3["time_required"].'</dd>
-                <dt>Documents required</dt>
-          <dd>'.$ap3["docs_required"].'</dd></dl>
-              <p>'.$ap3["detail"].'</p>
-		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CAS"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p></div>   
-                ';
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=DAR"><button type="button" class="btn bg-danger margin">Buy Now</button></a></p></div>';
 $tmp++;
 
 }
@@ -758,6 +758,178 @@ mysqli_close($ap);
 ?>
               </div>
             </div>
+
+            <!-- 4 -->
+
+
+            <div class="box box-solid">
+                 <div class="box-header bg-teal">
+                <h4 class="box-title"><strong>Company Registration</strong></h4>
+                 <ul class="box-controls pull-right">
+                  <li><a class="box-btn-fullscreen" href="#"></a></li>
+                </ul>
+                </div>
+                 <!-- Nav tabs -->
+             <ul class="nav nav-tabs nav-tabs-teal nav-justified" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#A41" role="tab"><i class="fa fa-home"></i></a>
+                </li>
+                 <?php
+require 'config.php';
+$ap1="SELECT * FROM company_reg";
+$ap2=mysqli_query($ap,$ap1);
+$ap4=mysqli_num_rows($ap2);
+$_SESSION["rows"]=$ap4;
+$_SESSION["count"]=$i;
+if($ap4==0)
+{
+
+echo  '<li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#12" role="tab">no results found</a>
+                </li>';
+
+}
+
+
+else
+{
+
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+echo '
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">CMPR'.$ap3["id"].'</a>
+                </li>';
+$i++;
+}
+
+}
+mysqli_close($ap);
+
+?>
+              </ul>
+                <!-- Tab panes -->
+              <div class="box-body tab-content">
+                <div class="tab-pane fade active show" id="A41">
+                 <div class="table-responsive">
+                 <table class="table table-hover">
+                <thead>
+                  <tr>
+					<th scope="col">ID</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Commission</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+require ('config.php');
+$ap1="SELECT * FROM company_reg";
+$ap2=mysqli_query($ap,$ap1);
+
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo '<th scope="row"> no results </th>
+                    <td> no results</td>
+                    <td> no results</td>
+		    <td> no results</td>';
+}
+
+else
+{
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+
+				echo	'<tr> <th scope="row">CMPR'.$ap3["id"].'</th>
+                    <td>'.$ap3["description"].'</td>
+                    <td>'.$ap3["price"].'</td>
+					<td>'.$ap3["commission"].'</td></tr>';
+}
+
+}
+mysqli_close($ap);
+?>
+                </tbody>
+              </table>
+					</div>
+					<div class="btn-group">
+  <button class="btn bg-teal dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Buy Now</button>
+  <ul class="dropdown-menu">
+<?php
+    require 'config.php';
+$ap1="SELECT * FROM company_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(!$ap2)
+{
+
+die(mysqli_error($ap));
+
+}
+
+if($_SESSION["rows"]==0)
+{
+
+echo 'no results';
+
+}
+
+else
+{  
+while($ap3=mysqli_fetch_assoc($ap2))
+{
+  
+echo '
+<li><a href="checkout.php?id='.$ap3["id"].'&type=DAR"'.'>CMPR'.$ap3["id"].'</a></li> ';
+
+}
+}
+mysqli_close($ap);
+
+?>
+  </ul>
+</div>
+                </div>
+               <?php
+require 'config.php';
+$ap1="SELECT * FROM company_reg";
+$ap2=mysqli_query($ap,$ap1);
+if(mysqli_num_rows($ap2)==0)
+{
+
+echo 'no results found';
+}
+
+else
+{
+$tmp=$_SESSION["count"];
+while($ap3=mysqli_fetch_assoc($ap2))
+
+{
+
+echo'
+
+                <div class="tab-pane fade" id="'.$tmp.'">
+				<h4>'.$ap3["description"].'</h4>
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=CMPR"><button type="button" class="btn bg-teal margin">Buy Now</button></a></p></div>';
+$tmp++;
+
+}
+}
+
+mysqli_close($ap);
+?>
+              </div>
+            </div>
+
 
 
            <!-- 5 -->
@@ -798,7 +970,7 @@ while($ap3=mysqli_fetch_assoc($ap2))
 {
 echo '
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">DAR'.$ap3["id"].'</a>
+                  <a class="nav-link" data-toggle="tab" href="#'.$i.'" role="tab">GST'.$ap3["id"].'</a>
                 </li>';
 $i++;
 }
@@ -824,7 +996,7 @@ mysqli_close($ap);
                 <tbody>
                 <?php
 require ('config.php');
-$ap1="SELECT * FROM director_resig_reg";
+$ap1="SELECT * FROM gst_reg";
 $ap2=mysqli_query($ap,$ap1);
 
 if(mysqli_num_rows($ap2)==0)
@@ -843,7 +1015,7 @@ while($ap3=mysqli_fetch_assoc($ap2))
 {
 
 
-				echo	'<tr> <th scope="row">DAR'.$ap3["id"].'</th>
+				echo	'<tr> <th scope="row">GST'.$ap3["id"].'</th>
                     <td>'.$ap3["description"].'</td>
                     <td>'.$ap3["price"].'</td>
 					<td>'.$ap3["commission"].'</td></tr>';
@@ -915,14 +1087,13 @@ echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
 				<h4>'.$ap3["description"].'</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>'.$ap3["time_required"].'</dd>
-                <dt>Documents required</dt>
-          '.$ap3["docs_required"].'</dl>
-              '.$ap3["content"].'
-		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GST"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
-                ';
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=GST"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>';
 $tmp++;
 
 }
@@ -1036,7 +1207,7 @@ mysqli_close($ap);
   <ul class="dropdown-menu">
    <?php
     require 'config.php';
-$ap1="SELECT * FROM gst_reg";
+$ap1="SELECT * FROM ipr";
 $ap2=mysqli_query($ap,$ap1);
 if(!$ap2)
 {
@@ -1058,7 +1229,7 @@ while($ap3=mysqli_fetch_assoc($ap2))
 {
   
 echo '
-<li><a href="checkout.php?id='.$ap3["id"].'&type=GST"'.'>GST'.$ap3["id"].'</a></li> ';
+<li><a href="checkout.php?id='.$ap3["id"].'&type=IPR"'.'>IPR'.$ap3["id"].'</a></li> ';
 
 }
 }
@@ -1089,14 +1260,13 @@ echo'
 
                 <div class="tab-pane fade" id="'.$tmp.'">
 				<h4>'.$ap3["description"].'</h4>
-				<dl class="dl-horizontal">
-				<dt>Time required</dt>
-                <dd>'.$ap3["time_required"].'</dd>
-                <dt>Documents required</dt>
-          '.$ap3["docs_required"].'</dl>
-              '.$ap3["content"].'
-		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=IPR"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>   
-                ';
+				<dl class="dl-horizontal">'
+             .$ap3["data_list_a"]
+			.$ap3["data_list_b"]
+			.$ap3["data_list_c"].
+			'</dl><p>'.$ap3["content"].
+             '</p>
+		<p align="center"><a href="checkout.php?id='.$ap3["id"].'&type=IPR"><button type="button" class="btn bg-purple margin">Buy Now</button></a></p></div>';
 $tmp++;
 
 }

@@ -41,7 +41,7 @@ $ap5=mysqli_query($ap,"SELECT email FROM userlist WHERE email='$email'");
           
 */
 
-                         $ap2="INSERT INTO distributors (fname,lname,email,phn,pass) VALUES('$fname','$lname','$email','$phn','$pass')";
+                         $ap2="INSERT INTO distributors (fname,lname,email,phn,pass,wallet_balance) VALUES('$fname','$lname','$email','$phn','$pass','0')";
 
 
                          $ap3=mysqli_query($ap,$ap2);

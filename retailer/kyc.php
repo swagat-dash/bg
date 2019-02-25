@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION["login_retailer"]) || $_SESSION["login_retailer"]!==true)
+
+{
+
+header("location: http://www.bgtechno.in");
+
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,8 +76,8 @@ document.close();
 			<!-- User image -->
 			<li class="user-header">
 				<div class="col-12">
-					<p><?php echo "$_SESSION[fname]" ; ?></p>
-                  <p><?php echo "$_SESSION[email]" ; ?></p>
+					<p><?php echo $_SESSION["fname"] ; ?></p>
+                  <p><?php echo $_SESSION["email"] ; ?></p>
 				</div>
 				<div class="col-12"> <a href="wallet.php" class="btn btn-success btn-sm btn-rounded">My Wallet</a> </div>
 			</li>
@@ -156,7 +167,7 @@ document.close();
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 <div class="modal-body">
-	<p id="to-copy">http://www.rmdtechnologies.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
+	<p id="to-copy">http://www.bgtchno.in/<?php echo "retailer.php?refrallcode=".$_SESSION["refrallcode"]."/" ; ?></p>
 	<p>Copy the referral code and share it with your friends to enroll them as your retailers.</p>
 </div>
 <div class="modal-footer">
@@ -215,7 +226,7 @@ document.close();
 <div class="box-body">
 	<div class="row">
 		<div class="col">
-			<form novalidate>
+			<form method="post" action="kycverify.php" enctype="multipart/form-data" novalidate>
 				<div class="form-group">
 					<h5>Full Name <span class="text-danger">*</span></h5>
 					<div class="controls">
@@ -337,10 +348,10 @@ document.close();
 		<div class="form-group">
 						<h5>Upload Scanned Documents<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="file" name="file" class="form-control"> </div>
+							<input type="file" name="kyc_doc" class="form-control"> </div>
 					</div>
 						<div class="text-xs-right">
-					<button type="submit" class="btn bg-olive">Submit</button>
+					<button type="submit" name="personal" class="btn bg-olive">Submit</button>
 				</div>
 			</form>
 		</div>
@@ -363,7 +374,7 @@ document.close();
 <div class="box-body">
 	<div class="row">
 		<div class="col">
-			<form novalidate>
+			<form method="post" action="kycverify.php" enctype="multipart/form-data" novalidate>
 				<div class="form-group">
 				<h5>Company Name <span class="text-danger">*</span></h5>
 					<div class="controls">
@@ -500,16 +511,16 @@ document.close();
 			<div class="form-group">
 					<h5>Tell us more 
 					<div class="controls">
-						<textarea name="textarea" id="com-info" rows="10" class="form-control" required placeholder="Describe your business..."></textarea>
+						<textarea name="more" id="com-info" rows="10" class="form-control" required placeholder="Describe your business..."></textarea>
 					</div>
 				</div>
 		<div class="form-group">
 						<h5>Upload Scanned Documents</h5>
 						<div class="controls">
-							<input type="file" name="file" class="form-control"> </div>
+							<input type="file" name="business" class="form-control"> </div>
 					</div>
 						<div class="text-xs-right">
-					<button type="submit" class="btn bg-purple">Submit</button>
+					<button type="submit" class="btn bg-purple" name="business">Submit</button>
 				</div>
 			</form>
 		</div>

@@ -34,8 +34,7 @@ function getRandomImage(imgAr, path) {
 <style>.box-body {
     overflow-x: auto!important;
 }</style>
-	
-</style>
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -170,7 +169,7 @@ function getRandomImage(imgAr, path) {
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">Add Products</h3>
-          <h6 class="box-subtitle">You can add new products or services from here. </a></h6>
+          <h6 class="box-subtitle">You can add new products or services from here.</h6>
           <div class="box-tools pull-right">
             <ul class="box-controls pull-right">
                   <li><a class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></a></li>
@@ -186,110 +185,80 @@ function getRandomImage(imgAr, path) {
 				<h6>Title</h6>
 				<section>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="form-group">
-								<label for="mainHeader">Main Header :</label>
-								<input type="text" class="form-control" id="mainHeader"> </div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="theme">Theme :</label>
-								<select class="custom-select form-control" id="theme" name="theme">
-									<option value="">Select Theme</option>
-									<option value="orange">Orange</option>
-									<option value="blue">Blue</option>
-									<option value="green">Green</option>
-									<option value="purple">Purple</option>
-									<option value="red">Red</option>
+								<label for="category">Category :</label>
+								<select class="custom-select form-control" id="category" name="category">
+									<option value="">Select Category</option>
+									<option value="ca_services">Chartered Accounting Services</option>
+									<option value="company_reg">Legal Business Registration</option>
+									<option value="digital_certi">Digital Signature Certificate</option>
+									<option value="gst_reg">GST Registration</option>
+									<option value="gst_return">GST Return with Sales &amp; Purchases</option>
+									<option value="ngo_reg">Non-Profits and Trust Registration</option>
+									<option value="tax_services">Tax Solutions</option>
+									<option value="web_design_dev">Website Design &amp; Development</option>
+									<option value="ipr">Intellectual Property</option>
+									<option value="bulk_sms">Bulk SMS</option>
+									<option value="graphics_designing">Graphics Designing</option>
+									<option value="director_resig_reg">Add or Remove Directors</option>
 								</select>
 							</div>
+						</div>
 					</div>
-					
-					</div>
+					<div class="row">
+					<div class="col-md-12">
+							<div class="form-group">
+								<label for="description">Name :</label>	<!--its actually descripton-->
+								<input type="text" class="form-control" name="description" id="description"> </div>
+						</div>
+						</div>
 				</section>
 				<!-- Step 2 -->
-				<h6>Home Tab</h6>
+				<h6>Pricings</h6>
 				<section>
-					<div class="row fieldGroupTab">
-						<div class="col-md-3">
-							<div class="form-group">
-								<label for="productId">ID :</label>
-								<input type="text" name="productId[]" class="form-control" id="productId[]"> </div>
-						</div>
-						<div class="col-md-5">
-							<div class="form-group">
-								<label for="productName">Name :</label>
-								<input type="text" name="productId[]" class="form-control" id="productName[]">
-							</div>
-						</div>
-						<div class="col-md-2">
+					<div class="row">
+						<div class="col-md-6">
 							<div class="form-group">
 								<label for="price">Price :</label>
-								<input type="number" name="price[]" id="price[]" class="form-control">
+								<input type="number" name="price" id="price" class="form-control">
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-6">
 							<div class="form-group">
 								<label for="commission">Commission :</label>
-								<input type="number" name="commission[]" id="commission[]" class="form-control">
+								<input type="number" name="commission" id="commission" class="form-control">
 							</div>
 						</div>
-						<a href="#" class="btn btn-success addMoreTab"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
-					</div>
-
-					<div class="row fieldGroupTabCopy" style="display: none;">
-						<div class="col-md-3">
-							<div class="form-group">
-								<label for="productId">ID :</label>
-								<input type="text" name="productId[]" class="form-control" id="productId[]"> </div>
-						</div>
-						<div class="col-md-5">
-							<div class="form-group">
-								<label for="productName">Name :</label>
-								<input type="text" name="productId[]" class="form-control" id="productName[]">
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<label for="price">Price :</label>
-								<input type="number" name="price[]" id="price[]" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<label for="commission">Commission :</label>
-								<input type="number" name="commission[]" id="commission[]" class="form-control">
-							</div>
-						</div>
-						<a href="#" class="btn btn-danger removeTab"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</a>
 					</div>
 				</section>
 				<!-- Step 3 -->
-				<h6>Tab Contents</h6>
+				<h6>Details</h6>
 				<section>
-					<div class="row fieldGroupContent">
-							<div class="col-md-12">
-								<div class="form-group">
-								<label for="heading">Tab Heading :</label>
-								<input type="text" class="form-control" id="heading">
-							</div>
-							<div class="form-group">
-								<label for="tabContents">Tab Contents :</label>
-								<textarea name="tabContents" id="tabContents" rows="6" class="form-control"></textarea>
-							</div>
-							<a href="#" class="btn btn-success addMoreContent"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
+				<div class="row">
+						<div class="col-md-4">
+					<div class="form-group">
+								<label for="data_list_a">Data 1 :</label>
+								<input type="text" class="form-control" name="data_list_a" id="data_list_a"> </div>
 					</div>
-					<div class="row fieldGroupContentCopy" style="display: none;">
-							<div class="col-md-12">
-								<div class="form-group">
-								<label for="heading">Tab Heading :</label>
-								<input type="text" class="form-control" id="heading">
+					<div class="col-md-4">
+					<div class="form-group">
+								<label for="data_list_b">Data 2 :</label>
+								<input type="text" class="form-control" name="data_list_b" id="data_list_b"> </div>
+					</div>
+					<div class="col-md-4">
+					<div class="form-group">
+								<label for="data_list_c">Data 3 :</label>
+								<input type="text" class="form-control" name="data_list_c" id="data_list_c"> </div>
+					</div>
+					</div>
+				<div class="row">
+						<div class="col-md-12">
+					<div class="form-group">
+								<label for="content">Detailed Info :</label>
+								<textarea name="content" id="content" rows="6" class="form-control"></textarea>
 							</div>
-							<div class="form-group">
-								<label for="tabContents">Tab Contents :</label>
-								<textarea name="tabContents" id="tabContents" rows="6" class="form-control"></textarea>
-							</div>
-							<a href="#" class="btn btn-danger removeContent"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</a>
+					</div>
 					</div>
 				</section>
 			</form>
@@ -329,38 +298,6 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/assets/vendor_components/jquery-steps-master/build/jquery.steps.js"></script>
 	<script src="../assets/ser/js/pages/steps.js"></script>
 
-<script>
-	$(document).ready(function(){
-    //group add limit
-    var maxGroup = 7;
-    //add more fields group
-    $(".addMoreTab").click(function(){
-        if($('body').find('.fieldGroupTab').length < maxGroup){
-            var fieldHTML = '<div class="row fieldGroupTab">'+$(".fieldGroupTabCopy").html()+'</div>';
-            $('body').find('.fieldGroupTab:last').after(fieldHTML);
-        }else{
-            alert('Maximum '+maxGroup+' groups are allowed.');
-        }
-    });
-    //remove fields group
-    $("body").on("click",".removeTab",function(){ 
-        $(this).parents(".fieldGroupTab").remove();
-    });
-
-    $(".addMoreContent").click(function(){
-        if($('body').find('.fieldGroupContent').length < maxGroup){
-            var fieldHTML = '<div class="row fieldGroupContent">'+$(".fieldGroupContentCopy").html()+'</div>';
-            $('body').find('.fieldGroupContent:last').after(fieldHTML);
-        }else{
-            alert('Maximum '+maxGroup+' groups are allowed.');
-        }
-    });
-    //remove fields group
-    $("body").on("click",".removeContent",function(){ 
-        $(this).parents(".fieldGroupContent").remove();
-    });
-});
-</script>
 
 </body>
 
