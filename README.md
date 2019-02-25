@@ -1,6 +1,13 @@
 # bgtechno
 
-MAKE THE CONTACT.PHP NAD THE NOTIFICATION SYSTEM
+Gmail:
+Id: bg.techno.in@gmail.com
+Pass: Rahul@12345
+
+
+
+
+MAKE THE CONTACT.PHP AND THE NOTIFICATION SYSTEM
 
 
 id: jigyasakendra
