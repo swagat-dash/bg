@@ -12,7 +12,7 @@ Pass: Rahul@12345
 
 
 id: jigyasakendra
-pass: 2R#)YWRCWO9
+pass: W~3~d$:(&&[ZBF(@
 link:https://linuxsupercloud.com:2083
 
 
